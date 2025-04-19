@@ -32,7 +32,7 @@ namespace Infrastructure.Repository.CouncelorRepository
          ( counselors_id, user_id, full_name, specialization, short_bio, mobile_number, is_verified, experience,  hourly_rate, upi_id, avg_rating, image_url, is_deleted)
           VALUES 
           (UUID(), @user_id, @full_name, @specialization, @short_bio, @mobile_number, @is_verified, @experience, @hourly_rate, @upi_id, @avg_rating, @image_url, @is_deleted)";
-            Console.WriteLine(JsonConvert.SerializeObject(counselor));
+           
             using  var connection=_context.CreateConnection();
             var result =await connection.ExecuteAsync(sql, counselor);
             return result > 0;

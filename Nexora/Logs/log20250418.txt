@@ -1,0 +1,766 @@
+2025-04-18 09:56:19.203 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 09:56:19.413 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 09:56:19.415 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 09:56:19.501 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 09:56:19.503 +05:30 [INF] Hosting environment: Development
+2025-04-18 09:56:19.506 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 09:56:20.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 09:56:20.659 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 398.5983ms
+2025-04-18 09:56:20.746 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 09:56:20.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 09:56:20.759 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.6623ms
+2025-04-18 09:56:20.836 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.6483ms
+2025-04-18 09:56:20.926 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 09:56:20.953 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.6107ms
+2025-04-18 10:03:49.257 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 10:03:49.276 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 19.0948ms
+2025-04-18 10:03:49.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 10:03:49.335 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 11.8889ms
+2025-04-18 10:03:49.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 10:03:49.367 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.5827ms
+2025-04-18 10:03:49.484 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 10:03:49.506 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.2065ms
+2025-04-18 15:46:26.334 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 15:46:26.747 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 15:46:26.752 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 15:46:26.956 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 15:46:26.959 +05:30 [INF] Hosting environment: Development
+2025-04-18 15:46:26.960 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 15:46:27.529 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 15:46:27.804 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 277.361ms
+2025-04-18 15:46:27.825 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 15:46:27.826 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 15:46:27.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.5894ms
+2025-04-18 15:46:27.881 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.1ms
+2025-04-18 15:46:28.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 15:46:28.088 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7695ms
+2025-04-18 15:47:18.842 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - application/json 81
+2025-04-18 15:47:19.186 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-Apr-25 2:42:24 PM', Current time (UTC): '18-Apr-25 10:17:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 15:47:19.251 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-Apr-25 2:42:24 PM', Current time (UTC): '18-Apr-25 10:17:19 AM'.
+2025-04-18 15:47:19.268 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 15:47:19.354 +05:30 [INF] Route matched with {action = "AddBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddBooking(Application.DTO.BookingRequestDto, System.Guid) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 15:47:19.723 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.AddBooking (Nexora) in 352.8402ms
+2025-04-18 15:47:19.733 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 15:47:19.738 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.Booking.BookingController.AddBooking(BookingRequestDto bookingRequestDto, Guid CounceloorId) in C:\Nexora\Nexora\Controllers\Booking\BookingController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 15:47:19.802 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 500 null text/plain; charset=utf-8 960.4317ms
+2025-04-18 15:51:29.717 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 15:51:30.006 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 15:51:30.010 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 15:51:30.087 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 15:51:30.089 +05:30 [INF] Hosting environment: Development
+2025-04-18 15:51:30.092 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 15:51:30.383 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 15:51:30.625 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 244.2431ms
+2025-04-18 15:51:30.661 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 15:51:30.661 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 15:51:30.669 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.1861ms
+2025-04-18 15:51:30.693 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.3564ms
+2025-04-18 15:51:30.910 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 15:51:30.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.5977ms
+2025-04-18 15:51:52.652 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-18 15:51:52.745 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-Apr-25 2:42:24 PM', Current time (UTC): '18-Apr-25 10:21:52 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 15:51:52.768 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-Apr-25 2:42:24 PM', Current time (UTC): '18-Apr-25 10:21:52 AM'.
+2025-04-18 15:51:52.781 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 15:51:52.835 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-18 15:51:52.895 +05:30 [INF] Login endpoint called
+2025-04-18 15:51:54.392 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 15:51:54.423 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 1573.1651ms
+2025-04-18 15:51:54.434 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 15:51:54.436 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 1783.9862ms
+2025-04-18 15:52:34.509 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - application/json 83
+2025-04-18 15:52:34.529 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 15:52:34.538 +05:30 [INF] Route matched with {action = "AddBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddBooking(Application.DTO.BookingRequestDto, System.Guid) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 15:52:34.673 +05:30 [INF] Booking created: "ffda3772-110b-4814-8112-1a694bca0912"
+2025-04-18 15:52:34.681 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 15:52:34.698 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.AddBooking (Nexora) in 156.8093ms
+2025-04-18 15:52:34.703 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 15:52:34.708 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 198.143ms
+2025-04-18 16:24:06.838 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 16:24:07.021 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 16:24:07.025 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 16:24:07.137 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 16:24:07.141 +05:30 [INF] Hosting environment: Development
+2025-04-18 16:24:07.141 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 16:24:07.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 16:24:07.925 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 282.8637ms
+2025-04-18 16:24:07.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 16:24:07.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 16:24:07.965 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.7713ms
+2025-04-18 16:24:07.990 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.5436ms
+2025-04-18 16:24:08.048 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 16:24:08.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.8746ms
+2025-04-18 16:25:53.885 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/request_payment - null null
+2025-04-18 16:25:54.160 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 16:25:54.273 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 16:25:55.365 +05:30 [INF] Booking status updated to request_payment for BookingId: "ffda3772-110b-4814-8112-1a694bca0912"
+2025-04-18 16:25:55.386 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 16:25:55.416 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 1124.6624ms
+2025-04-18 16:25:55.423 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 16:25:55.430 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/request_payment - 200 null application/json; charset=utf-8 1544.944ms
+2025-04-18 17:07:05.202 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 17:07:05.398 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 17:07:05.400 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 17:07:05.486 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 17:07:05.489 +05:30 [INF] Hosting environment: Development
+2025-04-18 17:07:05.491 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 17:07:06.028 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 17:07:06.258 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 230.0985ms
+2025-04-18 17:07:06.265 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 17:07:06.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 13.2372ms
+2025-04-18 17:07:06.284 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 17:07:06.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.3714ms
+2025-04-18 17:07:06.403 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 17:07:06.429 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.8387ms
+2025-04-18 17:07:25.290 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:07:25.496 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 11:21:54 AM', Current time (UTC): '18-Apr-25 11:37:25 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 17:07:25.579 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 11:21:54 AM', Current time (UTC): '18-Apr-25 11:37:25 AM'.
+2025-04-18 17:07:25.593 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:07:25.658 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:07:25.922 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 247.4991ms
+2025-04-18 17:07:25.932 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:07:25.943 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings() in C:\Nexora\Nexora\Controllers\Booking\BookingController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 17:07:26.018 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 500 null text/plain; charset=utf-8 727.4589ms
+2025-04-18 17:07:44.727 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-18 17:07:44.738 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 11:21:54 AM', Current time (UTC): '18-Apr-25 11:37:44 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 17:07:44.743 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 11:21:54 AM', Current time (UTC): '18-Apr-25 11:37:44 AM'.
+2025-04-18 17:07:44.750 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 17:07:44.777 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-18 17:07:44.868 +05:30 [INF] Login endpoint called
+2025-04-18 17:07:46.769 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:07:46.799 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 2010.6083ms
+2025-04-18 17:07:46.805 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 17:07:46.814 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 2087.4223ms
+2025-04-18 17:07:54.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:07:54.400 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:07:54.407 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:07:54.423 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:07:54.494 +05:30 [WRN] No bookings found for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020" with pending or request payment status
+2025-04-18 17:07:54.500 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:07:54.533 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 114.8054ms
+2025-04-18 17:07:54.543 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:07:54.550 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 404 null application/json; charset=utf-8 181.6161ms
+2025-04-18 17:10:18.197 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 17:10:18.461 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 17:10:18.464 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 17:10:18.725 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 17:10:18.730 +05:30 [INF] Hosting environment: Development
+2025-04-18 17:10:18.734 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 17:10:19.238 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 17:10:19.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 293.8954ms
+2025-04-18 17:10:19.554 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 17:10:19.554 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 17:10:19.563 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.3011ms
+2025-04-18 17:10:19.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2971ms
+2025-04-18 17:10:19.640 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 17:10:19.654 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.5446ms
+2025-04-18 17:10:25.405 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:10:25.692 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:10:25.774 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:10:26.085 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:10:27.053 +05:30 [INF] Found 1 bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:10:27.081 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:10:27.190 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 1403.6106ms
+2025-04-18 17:10:27.195 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:10:27.201 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 200 null application/json; charset=utf-8 1796.0649ms
+2025-04-18 17:19:14.932 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - application/json 83
+2025-04-18 17:19:14.958 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 17:19:14.988 +05:30 [INF] Route matched with {action = "AddBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddBooking(Application.DTO.BookingRequestDto, System.Guid) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:19:15.222 +05:30 [INF] Booking created: "70ac4343-c157-4996-9faf-d94a81a00240"
+2025-04-18 17:19:15.230 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:19:15.244 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.AddBooking (Nexora) in 246.7537ms
+2025-04-18 17:19:15.251 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.AddBooking (Nexora)'
+2025-04-18 17:19:15.259 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Booking/Add-Booking?CounceloorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 326.7421ms
+2025-04-18 17:20:24.087 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:20:24.103 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:20:24.109 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:20:24.120 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:20:24.179 +05:30 [INF] Found 2 bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:20:24.189 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:20:24.197 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 80.2344ms
+2025-04-18 17:20:24.204 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:20:24.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 200 null application/json; charset=utf-8 125.1393ms
+2025-04-18 17:22:41.070 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 17:22:41.244 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 17:22:41.248 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 17:22:41.362 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 17:22:41.364 +05:30 [INF] Hosting environment: Development
+2025-04-18 17:22:41.366 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 17:22:41.871 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 17:22:42.041 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 169.6074ms
+2025-04-18 17:22:42.055 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 17:22:42.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.5805ms
+2025-04-18 17:22:42.074 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 17:22:42.118 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.6027ms
+2025-04-18 17:22:42.227 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 17:22:42.250 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.6855ms
+2025-04-18 17:22:53.425 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:22:53.635 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:22:53.699 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:22:53.957 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:22:54.717 +05:30 [INF] Found 2 bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:22:54.740 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:22:54.806 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 1087.294ms
+2025-04-18 17:22:54.815 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:22:54.822 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 200 null application/json; charset=utf-8 1397.4056ms
+2025-04-18 17:30:02.933 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 17:30:03.116 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 17:30:03.118 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 17:30:03.216 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 17:30:03.217 +05:30 [INF] Hosting environment: Development
+2025-04-18 17:30:03.219 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 17:30:03.818 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 17:30:03.999 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 181.9602ms
+2025-04-18 17:30:04.006 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 17:30:04.018 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.7846ms
+2025-04-18 17:30:04.025 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 17:30:04.064 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.9889ms
+2025-04-18 17:30:04.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 17:30:04.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.9542ms
+2025-04-18 17:30:09.852 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 17:30:09.996 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:30:10.061 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 17:30:10.319 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 17:30:11.164 +05:30 [INF] Found bookings for students
+2025-04-18 17:30:11.194 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 17:30:11.266 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 1190.1055ms
+2025-04-18 17:30:11.270 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 17:30:11.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 200 null application/json; charset=utf-8 1421.8711ms
+2025-04-18 18:15:46.945 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 18:15:47.234 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 18:15:47.239 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 18:15:47.336 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 18:15:47.339 +05:30 [INF] Hosting environment: Development
+2025-04-18 18:15:47.340 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 18:15:47.757 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 18:15:47.918 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 161.0603ms
+2025-04-18 18:15:47.938 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 18:15:47.944 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 18:15:47.949 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.4244ms
+2025-04-18 18:15:47.995 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.5778ms
+2025-04-18 18:15:48.113 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 18:15:48.158 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.4445ms
+2025-04-18 18:16:10.627 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Booking/student/Accepctandpaid?bookingId=70ac4343-c157-4996-9faf-d94a81a00240 - null 0
+2025-04-18 18:16:10.825 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 12:46:10 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 18:16:10.923 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 12:46:10 PM'.
+2025-04-18 18:16:10.938 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdatePaymentAndAccepct (Nexora)'
+2025-04-18 18:16:11.013 +05:30 [INF] Route matched with {action = "UpdatePaymentAndAccepct", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePaymentAndAccepct(System.Guid) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:16:12.001 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:16:12.036 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdatePaymentAndAccepct (Nexora) in 1003.8042ms
+2025-04-18 18:16:12.046 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdatePaymentAndAccepct (Nexora)'
+2025-04-18 18:16:12.056 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Booking/student/Accepctandpaid?bookingId=70ac4343-c157-4996-9faf-d94a81a00240 - 200 null application/json; charset=utf-8 1429.0845ms
+2025-04-18 18:34:46.524 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 18:34:46.723 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 18:34:46.726 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 18:34:46.844 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 18:34:46.847 +05:30 [INF] Hosting environment: Development
+2025-04-18 18:34:46.848 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 18:34:47.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 18:34:47.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 193.6972ms
+2025-04-18 18:34:47.603 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 18:34:47.603 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 18:34:47.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.1182ms
+2025-04-18 18:34:47.639 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.0282ms
+2025-04-18 18:34:47.740 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 18:34:47.759 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.7779ms
+2025-04-18 18:37:42.134 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 18:37:42.293 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 18:37:42.298 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 18:37:42.393 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 18:37:42.397 +05:30 [INF] Hosting environment: Development
+2025-04-18 18:37:42.399 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 18:37:42.834 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 18:37:43.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 215.844ms
+2025-04-18 18:37:43.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 18:37:43.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 18:37:43.084 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.3228ms
+2025-04-18 18:37:43.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.8793ms
+2025-04-18 18:37:43.167 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 18:37:43.187 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.1569ms
+2025-04-18 18:37:51.712 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - null null
+2025-04-18 18:37:51.961 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 1:07:51 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 18:37:52.008 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 1:07:51 PM'.
+2025-04-18 18:37:52.021 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:37:52.101 +05:30 [INF] Route matched with {action = "GetScheduledBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:37:52.383 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora) in 263.7824ms
+2025-04-18 18:37:52.392 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:37:52.401 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.Booking.BookingController.GetScheduledBookings() in C:\Nexora\Nexora\Controllers\Booking\BookingController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 18:37:52.481 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - 500 null text/plain; charset=utf-8 769.1411ms
+2025-04-18 18:38:07.749 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-18 18:38:07.766 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 1:08:07 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 18:38:07.772 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 12:37:46 PM', Current time (UTC): '18-Apr-25 1:08:07 PM'.
+2025-04-18 18:38:07.775 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 18:38:07.801 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-18 18:38:07.890 +05:30 [INF] Login endpoint called
+2025-04-18 18:38:09.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:38:09.950 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 2137.7478ms
+2025-04-18 18:38:09.958 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 18:38:09.968 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 2219.3452ms
+2025-04-18 18:38:14.225 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - null null
+2025-04-18 18:38:14.258 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:38:14.264 +05:30 [INF] Route matched with {action = "GetScheduledBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:38:14.305 +05:30 [INF] Found bookings for students
+2025-04-18 18:38:14.311 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:38:14.352 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora) in 79.85ms
+2025-04-18 18:38:14.359 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:38:14.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - 200 null application/json; charset=utf-8 140.743ms
+2025-04-18 18:38:46.496 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-18 18:38:46.503 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 18:38:46.515 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:38:46.531 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 18:38:46.549 +05:30 [INF] Found bookings for students
+2025-04-18 18:38:46.554 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:38:46.564 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 41.4198ms
+2025-04-18 18:38:46.568 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-18 18:38:46.573 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 200 null application/json; charset=utf-8 76.937ms
+2025-04-18 18:39:10.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - null null
+2025-04-18 18:39:10.488 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:39:10.494 +05:30 [INF] Route matched with {action = "GetScheduledBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:39:10.508 +05:30 [INF] Found bookings for students
+2025-04-18 18:39:10.512 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:39:10.517 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora) in 16.1029ms
+2025-04-18 18:39:10.524 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:39:10.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - 200 null application/json; charset=utf-8 47.5532ms
+2025-04-18 18:40:28.690 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 18:40:28.707 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 17.3159ms
+2025-04-18 18:40:28.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 18:40:28.741 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.9306ms
+2025-04-18 18:40:28.749 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 18:40:28.772 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.947ms
+2025-04-18 18:40:28.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 18:40:28.860 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.8417ms
+2025-04-18 18:40:33.328 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - null null
+2025-04-18 18:40:33.346 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:40:33.348 +05:30 [INF] Route matched with {action = "GetScheduledBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:40:33.361 +05:30 [INF] Found bookings for students
+2025-04-18 18:40:33.365 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:40:33.372 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora) in 16.9839ms
+2025-04-18 18:40:33.375 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:40:33.377 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - 200 null application/json; charset=utf-8 49.2385ms
+2025-04-18 18:42:07.205 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 18:42:07.411 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 18:42:07.413 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 18:42:07.527 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 18:42:07.528 +05:30 [INF] Hosting environment: Development
+2025-04-18 18:42:07.529 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 18:42:08.094 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 18:42:08.365 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 272.3974ms
+2025-04-18 18:42:08.454 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 18:42:08.454 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 18:42:08.462 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.0385ms
+2025-04-18 18:42:08.486 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7276ms
+2025-04-18 18:42:08.551 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 18:42:08.567 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.839ms
+2025-04-18 18:42:17.362 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - null null
+2025-04-18 18:42:17.641 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:42:17.714 +05:30 [INF] Route matched with {action = "GetScheduledBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 18:42:18.749 +05:30 [INF] Found bookings for students
+2025-04-18 18:42:18.773 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 18:42:18.834 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora) in 1108.5738ms
+2025-04-18 18:42:18.843 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora)'
+2025-04-18 18:42:18.852 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-ScheduledBookings - 200 null application/json; charset=utf-8 1489.7729ms
+2025-04-18 20:02:59.828 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:03:00.004 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:03:00.007 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:03:00.100 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:03:00.102 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:03:00.104 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:03:00.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:03:00.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 129.5802ms
+2025-04-18 20:03:00.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:03:00.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:03:00.349 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.8679ms
+2025-04-18 20:03:00.373 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.2008ms
+2025-04-18 20:03:00.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:03:00.424 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Booking/student-Get-ScheduledBookings" for actions - Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora),Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 20:03:00.430 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 13.7147ms
+2025-04-18 20:03:07.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:03:07.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 12.2205ms
+2025-04-18 20:03:07.450 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:03:07.455 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.6423ms
+2025-04-18 20:03:07.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:03:07.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.2238ms
+2025-04-18 20:03:07.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:03:07.525 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Booking/student-Get-ScheduledBookings" for actions - Nexora.Controllers.Booking.BookingController.GetScheduledBookings (Nexora),Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 20:03:07.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 5.9883ms
+2025-04-18 20:03:23.342 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:03:23.468 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:03:23.469 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:03:23.622 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:03:23.623 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:03:23.623 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:03:23.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:03:23.742 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 108.0249ms
+2025-04-18 20:03:23.762 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:03:23.764 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:03:23.769 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.4127ms
+2025-04-18 20:03:23.783 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.208ms
+2025-04-18 20:03:23.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:03:23.822 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.8111ms
+2025-04-18 20:03:37.385 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:03:37.484 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:03:37.485 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:03:37.545 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:03:37.547 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:03:37.548 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:03:37.885 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:03:37.985 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 100.9689ms
+2025-04-18 20:03:38.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:03:38.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:03:38.010 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.3411ms
+2025-04-18 20:03:38.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8055ms
+2025-04-18 20:03:38.080 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:03:38.092 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.2796ms
+2025-04-18 20:04:07.037 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/completed - null null
+2025-04-18 20:04:07.108 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:07 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 20:04:07.122 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:07 PM'.
+2025-04-18 20:04:07.125 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:04:07.148 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:04:07.502 +05:30 [INF] Booking status updated to completed for BookingId: "ffda3772-110b-4814-8112-1a694bca0912"
+2025-04-18 20:04:07.508 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:04:07.515 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 362.2866ms
+2025-04-18 20:04:07.517 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:04:07.518 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/completed - 200 null application/json; charset=utf-8 480.7137ms
+2025-04-18 20:04:17.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - null null
+2025-04-18 20:04:17.547 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:17 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 20:04:17.549 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:17 PM'.
+2025-04-18 20:04:17.550 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:04:17.555 +05:30 [INF] Route matched with {action = "GetCompletedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCompletedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:04:17.559 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora) in 2.7736ms
+2025-04-18 20:04:17.560 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:04:17.562 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.Booking.BookingController.GetCompletedBookings() in C:\Nexora\Nexora\Controllers\Booking\BookingController.cs:line 78
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 20:04:17.585 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - 500 null text/plain; charset=utf-8 43.1834ms
+2025-04-18 20:04:44.570 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-18 20:04:44.576 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:44 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 20:04:44.579 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 2:08:09 PM', Current time (UTC): '18-Apr-25 2:34:44 PM'.
+2025-04-18 20:04:44.580 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 20:04:44.584 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-18 20:04:44.600 +05:30 [INF] Login endpoint called
+2025-04-18 20:04:44.853 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:04:44.859 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 274.6575ms
+2025-04-18 20:04:44.860 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 20:04:44.861 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 290.9905ms
+2025-04-18 20:04:53.686 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - null null
+2025-04-18 20:04:53.703 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:04:53.705 +05:30 [INF] Route matched with {action = "GetCompletedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCompletedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:04:53.716 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:04:53.722 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora) in 15.7199ms
+2025-04-18 20:04:53.723 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:04:53.724 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - 404 null application/json; charset=utf-8 38.2238ms
+2025-04-18 20:05:21.342 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:05:21.439 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:05:21.442 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:05:21.501 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:05:21.502 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:05:21.503 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:05:21.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:05:21.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 103.4566ms
+2025-04-18 20:05:21.874 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:05:21.874 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:05:21.881 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.1179ms
+2025-04-18 20:05:21.901 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.0638ms
+2025-04-18 20:05:21.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:05:21.960 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.6616ms
+2025-04-18 20:05:25.977 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - null null
+2025-04-18 20:05:26.029 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:05:26.044 +05:30 [INF] Route matched with {action = "GetCompletedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCompletedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:05:26.280 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:05:26.293 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora) in 244.0252ms
+2025-04-18 20:05:26.294 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:05:26.295 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - 404 null application/json; charset=utf-8 318.5637ms
+2025-04-18 20:06:18.285 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/Accepcted - null null
+2025-04-18 20:06:18.291 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:06:18.297 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:06:18.307 +05:30 [WRN] Invalid status update attempted: Accepcted
+2025-04-18 20:06:18.308 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:06:18.310 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 11.1875ms
+2025-04-18 20:06:18.311 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:06:18.312 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/Accepcted - 400 null application/json; charset=utf-8 26.4614ms
+2025-04-18 20:06:57.057 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/accepted - null null
+2025-04-18 20:06:57.062 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:06:57.065 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:06:57.079 +05:30 [INF] Booking status updated to accepted for BookingId: "ffda3772-110b-4814-8112-1a694bca0912"
+2025-04-18 20:06:57.081 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:06:57.082 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 15.5744ms
+2025-04-18 20:06:57.083 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:06:57.083 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/accepted - 200 null application/json; charset=utf-8 26.2054ms
+2025-04-18 20:07:29.174 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/completed - null null
+2025-04-18 20:07:29.184 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:07:29.187 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:07:29.203 +05:30 [INF] Booking status updated to completed for BookingId: "70ac4343-c157-4996-9faf-d94a81a00240"
+2025-04-18 20:07:29.204 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:07:29.205 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 16.1558ms
+2025-04-18 20:07:29.206 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:07:29.206 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/completed - 200 null application/json; charset=utf-8 32.5008ms
+2025-04-18 20:07:37.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - null null
+2025-04-18 20:07:37.009 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:07:37.010 +05:30 [INF] Route matched with {action = "GetCompletedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCompletedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:07:37.029 +05:30 [INF] Found bookings for students
+2025-04-18 20:07:37.031 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:07:37.035 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora) in 23.3411ms
+2025-04-18 20:07:37.036 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-18 20:07:37.036 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - 200 null application/json; charset=utf-8 31.0951ms
+2025-04-18 20:15:22.376 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:15:22.476 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:15:22.478 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:15:22.537 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:15:22.539 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:15:22.539 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:15:23.104 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:15:23.219 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 115.9885ms
+2025-04-18 20:15:23.236 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:15:23.236 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:15:23.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.4904ms
+2025-04-18 20:15:23.263 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.4914ms
+2025-04-18 20:15:23.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:15:23.312 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Booking/student-Get-completed-Bookings" for actions - Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora),Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 20:15:23.319 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 13.4207ms
+2025-04-18 20:15:55.042 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 20:15:55.143 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 20:15:55.145 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 20:15:55.206 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 20:15:55.208 +05:30 [INF] Hosting environment: Development
+2025-04-18 20:15:55.208 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 20:15:55.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 20:15:55.571 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 101.2563ms
+2025-04-18 20:15:55.596 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 20:15:55.596 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 20:15:55.601 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.6687ms
+2025-04-18 20:15:55.616 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.1326ms
+2025-04-18 20:15:55.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 20:15:55.662 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.9719ms
+2025-04-18 20:16:42.868 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/cancelled - null null
+2025-04-18 20:16:42.934 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:16:42.952 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:16:43.197 +05:30 [INF] Booking status updated to cancelled for BookingId: "ffda3772-110b-4814-8112-1a694bca0912"
+2025-04-18 20:16:43.203 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:16:43.210 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 253.0454ms
+2025-04-18 20:16:43.212 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-18 20:16:43.214 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/ffda3772-110b-4814-8112-1a694bca0912/status/cancelled - 200 null application/json; charset=utf-8 345.8085ms
+2025-04-18 20:16:53.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - null null
+2025-04-18 20:16:53.474 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-18 20:16:53.479 +05:30 [INF] Route matched with {action = "GetCancelledandDeclainedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledandDeclainedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-18 20:16:53.515 +05:30 [INF] Found bookings for students
+2025-04-18 20:16:53.517 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 20:16:53.525 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora) in 44.3669ms
+2025-04-18 20:16:53.527 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-18 20:16:53.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - 200 null application/json; charset=utf-8 67.1539ms
+2025-04-18 21:11:10.827 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 21:11:10.959 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 21:11:10.961 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 21:11:11.039 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 21:11:11.040 +05:30 [INF] Hosting environment: Development
+2025-04-18 21:11:11.041 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 21:11:11.444 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 21:11:11.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 103.3943ms
+2025-04-18 21:11:11.567 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 21:11:11.574 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 21:11:11.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.3787ms
+2025-04-18 21:11:11.595 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.9157ms
+2025-04-18 21:11:11.633 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 21:11:11.643 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.8603ms
+2025-04-18 21:17:21.641 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-18 21:17:21.741 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-18 21:17:21.743 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-18 21:17:21.800 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 21:17:21.802 +05:30 [INF] Hosting environment: Development
+2025-04-18 21:17:21.803 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-18 21:17:21.993 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-18 21:17:22.101 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 108.45ms
+2025-04-18 21:17:22.110 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-18 21:17:22.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.5239ms
+2025-04-18 21:17:22.120 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-18 21:17:22.141 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.029ms
+2025-04-18 21:17:22.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-18 21:17:22.209 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.8975ms
+2025-04-18 21:18:26.117 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Review/Add-Review?councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020&booking_id=70ac4343-c157-4996-9faf-d94a81a00240 - application/json 184
+2025-04-18 21:18:26.188 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 3:34:44 PM', Current time (UTC): '18-Apr-25 3:48:26 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 21:18:26.220 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 3:34:44 PM', Current time (UTC): '18-Apr-25 3:48:26 PM'.
+2025-04-18 21:18:26.224 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora)'
+2025-04-18 21:18:26.255 +05:30 [INF] Route matched with {action = "AddReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddReview(Application.DTO.ReviewAddDTO, System.Guid, System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-18 21:18:26.433 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora) in 172.5011ms
+2025-04-18 21:18:26.436 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora)'
+2025-04-18 21:18:26.437 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.ReviewController.ReviewController.AddReview(ReviewAddDTO reviewAddDTO, Guid councelor_id, Guid booking_id) in C:\Nexora\Nexora\Controllers\ReviewController\ReviewController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-18 21:18:26.467 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Review/Add-Review?councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020&booking_id=70ac4343-c157-4996-9faf-d94a81a00240 - 500 null text/plain; charset=utf-8 349.9282ms
+2025-04-18 21:18:43.909 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-18 21:18:43.914 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 3:34:44 PM', Current time (UTC): '18-Apr-25 3:48:43 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-18 21:18:43.917 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 3:34:44 PM', Current time (UTC): '18-Apr-25 3:48:43 PM'.
+2025-04-18 21:18:43.919 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 21:18:43.924 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-18 21:18:43.929 +05:30 [INF] Login endpoint called
+2025-04-18 21:18:44.771 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 21:18:44.780 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 854.2952ms
+2025-04-18 21:18:44.782 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-18 21:18:44.783 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 874.2939ms
+2025-04-18 21:18:50.691 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Review/Add-Review?councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020&booking_id=70ac4343-c157-4996-9faf-d94a81a00240 - application/json 184
+2025-04-18 21:18:50.702 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora)'
+2025-04-18 21:18:50.705 +05:30 [INF] Route matched with {action = "AddReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddReview(Application.DTO.ReviewAddDTO, System.Guid, System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-18 21:18:50.713 +05:30 [INF] Attempting to add review for Booking ID: "70ac4343-c157-4996-9faf-d94a81a00240" by Student ID: "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 21:18:50.728 +05:30 [INF] Successfully added review for Booking ID: "70ac4343-c157-4996-9faf-d94a81a00240" by Student ID: "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-18 21:18:50.730 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-18 21:18:50.732 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora) in 26.094ms
+2025-04-18 21:18:50.733 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.AddReview (Nexora)'
+2025-04-18 21:18:50.734 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Review/Add-Review?councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020&booking_id=70ac4343-c157-4996-9faf-d94a81a00240 - 200 null application/json; charset=utf-8 43.3576ms
