@@ -11,6 +11,9 @@ namespace Application.Interface.Repository
     public interface IReviewRepository
     {
         Task<int> AddReview(Review review);
-       
+        Task<List<ReviewGetDTOStudent>> GetReviewsByCouncelorId(Guid Councelor_id);
+        Task<AvrageRatingDTO> GetReviewCountAndAverageRating(Guid counselorId);
+
+
     }
 }

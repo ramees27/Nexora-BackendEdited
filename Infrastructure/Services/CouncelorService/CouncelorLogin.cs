@@ -33,15 +33,15 @@ namespace Infrastructure.Services.CouncelorService
         {
             try
             {
-                //var existing = await _counselorRepository.GetByUserId(dto.UserId); // You should create this method if needed
-                //if (existing != null)
-                //{
-                //    return new ApiResponse<object>
-                //    {
-                //        StatusCode = 400,
-                //        Message = "You have already applied as a counselor"
-                //    };
-                //}
+                var existing = await _councelorRepo.IsActiveCounselor (userId); // You should create this method if needed
+                if (existing != null)
+                {
+                    return new ApiResponse<object>
+                    {
+                        StatusCode = 400,
+                        Message = "You have already applied as a counselor"
+                    };
+                }
                 var imageurl = await _cloudinaryService.UploadImageAsync(dto.ProfileImage);
                 if (string.IsNullOrEmpty(imageurl))
                 {

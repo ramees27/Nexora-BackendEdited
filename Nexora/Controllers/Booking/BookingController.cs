@@ -50,7 +50,7 @@ namespace Nexora.Controllers.Booking
             }
             return StatusCode(result.StatusCode, result);
         }
-        [HttpPost("student/Accepctandpaid")]
+        [HttpPost("confirm-payment")]
         public async Task<IActionResult> UpdatePaymentAndAccepct(Guid bookingId)
         {
            

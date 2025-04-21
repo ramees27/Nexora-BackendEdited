@@ -1,0 +1,1150 @@
+2025-04-19 10:27:53.321 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:27:53.566 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:27:53.568 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:27:53.817 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:27:53.819 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:27:53.821 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:27:54.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:27:54.412 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 225.2481ms
+2025-04-19 10:27:54.432 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:27:54.432 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:27:54.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.0003ms
+2025-04-19 10:27:54.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8531ms
+2025-04-19 10:27:54.531 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:27:54.545 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.2874ms
+2025-04-19 10:35:00.520 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:35:00.774 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:05:00 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:35:00.838 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:05:00 AM'.
+2025-04-19 10:35:00.853 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:35:00.940 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:35:02.043 +05:30 [ERR] Error occurred while getting all reviews
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalarAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at Infrastructure.Repository.CouncelorRepository.Councelor.IsValidCounselor(Guid counselorId) in C:\Nexora\Infrastructure\Repository\CouncelorRepository\CouncelorRepo.cs:line 73
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewsByCouncelorIdForStudents(Guid Councelor_id) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 79
+2025-04-19 10:35:02.138 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:35:02.188 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 1230.4286ms
+2025-04-19 10:35:02.199 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:35:02.207 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 1686.262ms
+2025-04-19 10:37:27.928 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:37:28.094 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:37:28.098 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:37:28.233 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:37:28.237 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:37:28.239 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:37:28.436 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:37:28.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 233.0069ms
+2025-04-19 10:37:28.700 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:37:28.708 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:37:28.715 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 14.3381ms
+2025-04-19 10:37:28.744 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.7225ms
+2025-04-19 10:37:28.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:37:28.817 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3416ms
+2025-04-19 10:37:40.383 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:37:40.452 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:07:40 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:37:40.468 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:07:40 AM'.
+2025-04-19 10:37:40.474 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:37:40.500 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:37:40.850 +05:30 [ERR] Error occurred while getting all reviews
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'counselor_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalarAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at Infrastructure.Repository.CouncelorRepository.Councelor.IsValidCounselor(Guid counselorId) in C:\Nexora\Infrastructure\Repository\CouncelorRepository\CouncelorRepo.cs:line 73
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewsByCouncelorIdForStudents(Guid Councelor_id) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 79
+2025-04-19 10:37:40.924 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:37:40.961 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 448.8143ms
+2025-04-19 10:37:40.970 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:37:40.976 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 593.5624ms
+2025-04-19 10:38:28.690 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:38:28.915 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:38:28.919 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:38:29.083 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:38:29.087 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:38:29.090 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:38:29.765 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:38:30.001 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 239.2026ms
+2025-04-19 10:38:30.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:38:30.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 15.1499ms
+2025-04-19 10:38:30.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:38:30.104 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.0859ms
+2025-04-19 10:38:30.172 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:38:30.195 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.8631ms
+2025-04-19 10:38:38.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:38:38.612 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:08:38 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:38:38.653 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:08:38 AM'.
+2025-04-19 10:38:38.667 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:38:38.755 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:38:40.016 +05:30 [ERR] Error occurred while getting all reviews
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'is_blocked' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalarAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at Infrastructure.Repository.CouncelorRepository.Councelor.IsValidCounselor(Guid counselorId) in C:\Nexora\Infrastructure\Repository\CouncelorRepository\CouncelorRepo.cs:line 73
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewsByCouncelorIdForStudents(Guid Councelor_id) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 79
+2025-04-19 10:38:40.128 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:38:40.181 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 1407.9266ms
+2025-04-19 10:38:40.187 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:38:40.192 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 1849.6567ms
+2025-04-19 10:40:28.274 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:40:28.506 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:40:28.510 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:40:28.654 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:40:28.658 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:40:28.662 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:40:29.233 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:40:29.548 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 317.5154ms
+2025-04-19 10:40:29.585 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:40:29.585 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:40:29.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.7965ms
+2025-04-19 10:40:29.627 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.1669ms
+2025-04-19 10:40:29.689 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:40:29.706 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.5909ms
+2025-04-19 10:41:23.104 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:41:23.248 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:11:23 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:41:23.281 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:11:23 AM'.
+2025-04-19 10:41:23.295 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:41:23.349 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:41:23.882 +05:30 [ERR] Error occurred while getting all reviews
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'u.id' in 'on clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewsByCouncelorId(Guid Councelor_id) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 38
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewsByCouncelorIdForStudents(Guid Councelor_id) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 89
+2025-04-19 10:41:23.965 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:41:24.001 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 634.5538ms
+2025-04-19 10:41:24.011 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:41:24.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 913.6522ms
+2025-04-19 10:44:25.045 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:44:25.276 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:44:25.281 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:44:25.410 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:44:25.412 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:44:25.414 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:44:25.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:44:25.769 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 233.2995ms
+2025-04-19 10:44:25.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:44:25.806 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:44:25.807 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 11.847ms
+2025-04-19 10:44:25.849 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.447ms
+2025-04-19 10:44:25.932 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:44:25.957 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.0049ms
+2025-04-19 10:44:36.606 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:44:36.747 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:14:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:44:36.780 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:14:36 AM'.
+2025-04-19 10:44:36.787 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:44:36.852 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:44:37.520 +05:30 [ERR] Error occurred while getting all reviews
+System.Data.DataException: Error parsing column 0 (rating_id=<null>)
+ ---> System.FormatException: Unrecognized Guid format.
+   at System.Guid.GuidResult.SetFailure(ParseFailure failureKind)
+   at System.Guid.TryParseGuid(ReadOnlySpan`1 guidString, GuidResult& result)
+   at System.Guid..ctor(String g)
+   at MySql.Data.Types.MySqlGuid.MySql.Data.Types.IMySqlValue.ReadValueAsync(MySqlPacket packet, Int64 length, Boolean nullVal, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadColumnValueAsync(Int32 index, MySqlField field, IMySqlValue valObject, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.ReadColumnValueAsync(Int32 index, MySqlField field, IMySqlValue value, Boolean execAsync)
+   at MySql.Data.MySqlClient.ResultSet.get_Item(Int32 index)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue(Int32 index, Boolean checkNull)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at Deserializeca5f1bea-701d-427b-8b57-685237d81129(DbDataReader)
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3966
+   at Deserializeca5f1bea-701d-427b-8b57-685237d81129(DbDataReader)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewsByCouncelorId(Guid Councelor_id)
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewsByCouncelorIdForStudents(Guid Councelor_id)
+2025-04-19 10:44:37.573 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:44:37.600 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 736.9654ms
+2025-04-19 10:44:37.610 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:44:37.618 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 1012.3424ms
+2025-04-19 10:47:40.840 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 10:47:41.034 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 10:47:41.038 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 10:47:41.147 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 10:47:41.149 +05:30 [INF] Hosting environment: Development
+2025-04-19 10:47:41.151 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 10:47:41.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 10:47:42.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 232.9178ms
+2025-04-19 10:47:42.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 10:47:42.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 10:47:42.145 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 14.9487ms
+2025-04-19 10:47:42.202 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.4023ms
+2025-04-19 10:47:42.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 10:47:42.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.1334ms
+2025-04-19 10:47:56.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 10:47:56.122 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:17:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 10:47:56.151 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:17:56 AM'.
+2025-04-19 10:47:56.164 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:47:56.210 +05:30 [INF] Route matched with {action = "GetReviewByCouncelorId", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviewByCouncelorId(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 10:47:56.794 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ReviewGetDTOStudent, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 10:47:56.817 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora) in 594.4965ms
+2025-04-19 10:47:56.822 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetReviewByCouncelorId (Nexora)'
+2025-04-19 10:47:56.825 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Review-Councelorid?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 819.8886ms
+2025-04-19 11:09:59.742 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:09:59.955 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:09:59.958 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:10:00.181 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:10:00.184 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:10:00.185 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:10:22.439 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:10:22.685 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:10:22.688 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:10:22.807 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:10:22.808 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:10:22.809 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:10:23.147 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:10:23.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 224.9059ms
+2025-04-19 11:10:23.397 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:10:23.397 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:10:23.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.1198ms
+2025-04-19 11:10:23.429 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.8875ms
+2025-04-19 11:10:23.509 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:10:23.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.6324ms
+2025-04-19 11:10:44.946 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 11:10:45.032 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:40:45 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 11:10:45.055 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:40:45 AM'.
+2025-04-19 11:10:45.063 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:10:45.112 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 11:10:45.806 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 11:10:45.858 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 11:10:45.882 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 757.0325ms
+2025-04-19 11:10:45.886 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:10:45.891 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 945.3456ms
+2025-04-19 11:15:07.647 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:15:07.879 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:15:07.885 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:15:08.004 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:15:08.009 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:15:08.013 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:15:08.345 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:15:08.546 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 202.2596ms
+2025-04-19 11:15:08.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:15:08.668 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:15:08.677 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 13.9424ms
+2025-04-19 11:15:08.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.5012ms
+2025-04-19 11:15:09.044 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:15:09.080 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.5666ms
+2025-04-19 11:15:37.107 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 11:15:37.208 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:45:37 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 11:15:37.225 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 5:45:37 AM'.
+2025-04-19 11:15:37.233 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:15:37.258 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 11:15:37.682 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 11:15:37.730 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 11:15:37.747 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 478.7237ms
+2025-04-19 11:15:37.757 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:15:37.765 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 658.077ms
+2025-04-19 11:43:23.226 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:43:23.860 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:43:23.862 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:43:24.338 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:43:24.343 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:43:24.346 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:43:25.943 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:43:26.334 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 398.3289ms
+2025-04-19 11:43:26.351 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:43:26.375 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:43:26.386 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 34.9823ms
+2025-04-19 11:43:26.444 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.5825ms
+2025-04-19 11:43:26.500 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:43:26.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.8714ms
+2025-04-19 11:43:35.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 11:43:35.507 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:13:35 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 11:43:35.639 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:13:35 AM'.
+2025-04-19 11:43:35.656 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:43:35.774 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 11:43:37.770 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 11:43:37.818 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 11:43:37.854 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 2059.3282ms
+2025-04-19 11:43:37.863 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:43:37.871 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 2822.0949ms
+2025-04-19 11:49:44.810 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:49:45.001 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:49:45.005 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:49:45.098 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:49:45.100 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:49:45.103 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:49:46.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:49:46.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 152.3981ms
+2025-04-19 11:49:46.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:49:46.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:49:46.571 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.7248ms
+2025-04-19 11:49:46.598 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.2388ms
+2025-04-19 11:49:46.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:49:46.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.8461ms
+2025-04-19 11:49:56.198 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 11:49:56.327 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:19:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 11:49:56.353 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:19:56 AM'.
+2025-04-19 11:49:56.360 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:49:56.401 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 11:49:57.178 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 11:49:57.231 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 11:49:57.254 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 840.8706ms
+2025-04-19 11:49:57.268 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:49:57.273 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 1074.9966ms
+2025-04-19 11:56:07.097 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:56:07.371 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:56:07.375 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:56:07.542 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:56:07.544 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:56:07.546 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:56:07.751 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:56:07.987 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 237.2512ms
+2025-04-19 11:56:08.080 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:56:08.089 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:56:08.089 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.0692ms
+2025-04-19 11:56:08.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.8985ms
+2025-04-19 11:56:08.405 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:56:08.424 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.9649ms
+2025-04-19 11:56:20.907 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 11:56:21.077 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 11:56:21.079 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 11:56:21.171 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 11:56:21.175 +05:30 [INF] Hosting environment: Development
+2025-04-19 11:56:21.178 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 11:56:21.326 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 11:56:21.509 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 185.6491ms
+2025-04-19 11:56:21.526 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 11:56:21.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.1187ms
+2025-04-19 11:56:21.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 11:56:21.570 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.4303ms
+2025-04-19 11:56:21.652 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 11:56:21.681 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.718ms
+2025-04-19 11:56:35.530 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 11:56:35.606 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:26:35 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 11:56:35.623 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:26:35 AM'.
+2025-04-19 11:56:35.629 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:56:35.654 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 11:56:36.149 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 11:56:36.191 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AvrageRatingDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-19 11:56:36.225 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 559.8539ms
+2025-04-19 11:56:36.233 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 11:56:36.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 708.9549ms
+2025-04-19 12:02:00.294 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 12:02:00.531 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 12:02:00.534 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 12:02:00.754 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 12:02:00.756 +05:30 [INF] Hosting environment: Development
+2025-04-19 12:02:00.757 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 12:02:01.229 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 12:02:01.567 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 344.5899ms
+2025-04-19 12:02:01.603 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 12:02:01.603 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 12:02:01.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.5731ms
+2025-04-19 12:02:01.646 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.1525ms
+2025-04-19 12:02:01.691 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 12:02:01.706 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.5273ms
+2025-04-19 12:02:13.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 12:02:13.780 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:32:13 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 12:02:13.809 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:32:13 AM'.
+2025-04-19 12:02:13.822 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 12:02:13.871 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 12:02:14.392 +05:30 [ERR] Error occurred while Geting Average Review and ratings
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Application.DTO.AvrageRatingDTO'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Infrastructure.Repository.ReviewRepository.ReviewRepository.GetReviewCountAndAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Repository\ReviewRepository\ReviewRepository.cs:line 52
+   at Infrastructure.Services.ReviewService.ReviewService.GetReviewAverageRating(Guid counselorId) in C:\Nexora\Infrastructure\Services\ReviewService\ReviewService.cs:line 126
+2025-04-19 12:02:14.446 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AvrageRatingDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-19 12:02:14.474 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 589.3534ms
+2025-04-19 12:02:14.481 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 12:02:14.486 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 778.2012ms
+2025-04-19 12:05:25.442 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 12:05:25.676 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 12:05:25.682 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 12:05:25.771 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 12:05:25.774 +05:30 [INF] Hosting environment: Development
+2025-04-19 12:05:25.777 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 12:05:26.353 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 12:05:26.649 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 298.0272ms
+2025-04-19 12:05:26.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 12:05:26.672 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 12:05:26.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.7822ms
+2025-04-19 12:05:26.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.6011ms
+2025-04-19 12:05:26.776 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 12:05:26.793 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3943ms
+2025-04-19 12:05:39.858 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 12:05:39.935 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:35:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 12:05:39.957 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:35:39 AM'.
+2025-04-19 12:05:39.969 +05:30 [INF] Executing endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 12:05:40.010 +05:30 [INF] Route matched with {action = "GetAverageReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAverageReview(System.Guid) on controller Nexora.Controllers.ReviewController.ReviewController (Nexora).
+2025-04-19 12:05:40.443 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AvrageRatingDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-19 12:05:40.471 +05:30 [INF] Executed action Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora) in 450.8123ms
+2025-04-19 12:05:40.474 +05:30 [INF] Executed endpoint 'Nexora.Controllers.ReviewController.ReviewController.GetAverageReview (Nexora)'
+2025-04-19 12:05:40.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Review/Get-Average-Rating?Councelor_id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 620.1491ms
+2025-04-19 12:16:46.069 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 12:16:46.345 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 12:16:46.348 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 12:16:46.521 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 12:16:46.524 +05:30 [INF] Hosting environment: Development
+2025-04-19 12:16:46.527 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 12:16:46.550 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 12:16:46.714 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 166.7441ms
+2025-04-19 12:16:46.778 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 12:16:46.785 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 12:16:46.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.7959ms
+2025-04-19 12:16:46.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.4194ms
+2025-04-19 12:16:47.108 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 12:16:47.142 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.8964ms
+2025-04-19 12:17:04.556 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-19 12:17:04.799 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:47:04 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 12:17:04.844 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:47:04 AM'.
+2025-04-19 12:17:04.859 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-19 12:17:04.921 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 12:17:05.154 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 213.927ms
+2025-04-19 12:17:05.163 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-19 12:17:05.172 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings() in C:\Nexora\Nexora\Controllers\Booking\BookingController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-19 12:17:05.255 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 500 null text/plain; charset=utf-8 698.0586ms
+2025-04-19 12:17:25.479 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-19 12:17:25.497 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:47:25 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 12:17:25.503 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-Apr-25 4:48:44 PM', Current time (UTC): '19-Apr-25 6:47:25 AM'.
+2025-04-19 12:17:25.507 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-19 12:17:25.532 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-19 12:17:25.627 +05:30 [INF] Login endpoint called
+2025-04-19 12:17:27.552 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 12:17:27.581 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 2035.6789ms
+2025-04-19 12:17:27.589 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-19 12:17:27.597 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 2118.0236ms
+2025-04-19 12:17:32.562 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student/pending - null null
+2025-04-19 12:17:32.611 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-19 12:17:32.617 +05:30 [INF] Route matched with {action = "GetPendingRequestPaymentBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPendingRequestPaymentBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 12:17:32.631 +05:30 [INF] Fetching pending or request payment bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+2025-04-19 12:17:32.665 +05:30 [WRN] No bookings found for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020" with pending or request payment status
+2025-04-19 12:17:32.672 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 12:17:32.707 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora) in 80.9871ms
+2025-04-19 12:17:32.716 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetPendingRequestPaymentBookings (Nexora)'
+2025-04-19 12:17:32.724 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student/pending - 404 null application/json; charset=utf-8 161.813ms
+2025-04-19 12:17:45.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - null null
+2025-04-19 12:17:45.048 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-19 12:17:45.060 +05:30 [INF] Route matched with {action = "GetCompletedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCompletedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 12:17:45.097 +05:30 [INF] Found bookings for students
+2025-04-19 12:17:45.102 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 12:17:45.128 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora) in 61.2161ms
+2025-04-19 12:17:45.134 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCompletedBookings (Nexora)'
+2025-04-19 12:17:45.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-completed-Bookings - 200 null application/json; charset=utf-8 102.4991ms
+2025-04-19 12:18:19.938 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - null null
+2025-04-19 12:18:19.948 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-19 12:18:19.960 +05:30 [INF] Route matched with {action = "GetCancelledandDeclainedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledandDeclainedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 12:18:19.986 +05:30 [INF] Found bookings for students
+2025-04-19 12:18:19.991 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 12:18:20.001 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora) in 28.1162ms
+2025-04-19 12:18:20.008 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-19 12:18:20.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - 200 null application/json; charset=utf-8 77.5661ms
+2025-04-19 13:44:20.341 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 13:44:20.495 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 13:44:20.498 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 13:44:20.608 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 13:44:20.612 +05:30 [INF] Hosting environment: Development
+2025-04-19 13:44:20.612 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 13:44:21.293 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 13:44:21.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 172.7364ms
+2025-04-19 13:44:21.478 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 13:44:21.488 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.0885ms
+2025-04-19 13:44:21.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 13:44:21.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1908ms
+2025-04-19 13:44:21.573 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 13:44:21.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.7431ms
+2025-04-19 13:44:58.718 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/pending - null null
+2025-04-19 13:44:58.938 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:14:58 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 13:44:58.981 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:14:58 AM'.
+2025-04-19 13:44:58.995 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 13:44:59.089 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 13:45:00.192 +05:30 [INF] Booking status updated to pending for BookingId: "70ac4343-c157-4996-9faf-d94a81a00240"
+2025-04-19 13:45:00.213 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 13:45:00.245 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 1137.3439ms
+2025-04-19 13:45:00.250 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 13:45:00.259 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/pending - 200 null application/json; charset=utf-8 1541.8331ms
+2025-04-19 13:45:26.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 13:45:26.822 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:15:26 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 13:45:26.828 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:15:26 AM'.
+2025-04-19 13:45:26.830 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 13:45:26.842 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 13:45:26.870 +05:30 [ERR] Error while Getting Requests
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Infrastructure.Services.BookinService.BookingServiceByCouncelor.GetPendingRequestByCounselorId(Guid counselorId) in C:\Nexora\Infrastructure\Services\BookinService\BookingServiceByCouncelor.cs:line 32
+2025-04-19 13:45:26.903 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 13:45:26.938 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 91.1652ms
+2025-04-19 13:45:26.945 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 13:45:26.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 500 null application/json; charset=utf-8 142.9132ms
+2025-04-19 14:27:10.834 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 14:27:11.066 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 14:27:11.071 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 14:27:11.193 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 14:27:11.196 +05:30 [INF] Hosting environment: Development
+2025-04-19 14:27:11.197 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 14:27:11.880 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 14:27:12.164 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 288.1671ms
+2025-04-19 14:27:12.202 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 14:27:12.210 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.8456ms
+2025-04-19 14:27:12.221 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 14:27:12.253 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.1765ms
+2025-04-19 14:27:12.311 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 14:27:12.340 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.5694ms
+2025-04-19 14:29:01.864 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 14:29:02.014 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:59:02 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:29:02.031 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:59:02 AM'.
+2025-04-19 14:29:02.039 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:29:02.081 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:29:02.482 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:29:02.513 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 422.9899ms
+2025-04-19 14:29:02.517 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:29:02.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 404 null application/json; charset=utf-8 657.2638ms
+2025-04-19 14:29:24.952 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=70ac4343-c157-4996-9faf-d94a81a00240 - null null
+2025-04-19 14:29:24.967 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:59:24 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:29:24.976 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 8:59:24 AM'.
+2025-04-19 14:29:24.981 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:29:24.981 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:29:25.083 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:29:25.091 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 108.7928ms
+2025-04-19 14:29:25.097 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:29:25.104 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=70ac4343-c157-4996-9faf-d94a81a00240 - 200 null application/json; charset=utf-8 152.543ms
+2025-04-19 14:31:48.413 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 14:31:48.427 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:01:48 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:31:48.433 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:01:48 AM'.
+2025-04-19 14:31:48.437 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:31:48.441 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:31:48.447 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:31:48.450 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 6.4616ms
+2025-04-19 14:31:48.452 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:31:48.453 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 404 null application/json; charset=utf-8 40.1365ms
+2025-04-19 14:36:38.268 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 14:36:38.562 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 14:36:38.564 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 14:36:38.679 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 14:36:38.684 +05:30 [INF] Hosting environment: Development
+2025-04-19 14:36:38.687 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 14:36:39.217 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 14:36:39.443 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 229.659ms
+2025-04-19 14:36:39.465 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 14:36:39.465 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 14:36:39.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.3138ms
+2025-04-19 14:36:39.496 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.5854ms
+2025-04-19 14:36:39.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 14:36:39.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.5077ms
+2025-04-19 14:36:55.086 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 14:36:55.180 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:06:55 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:36:55.206 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:06:55 AM'.
+2025-04-19 14:36:55.218 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:36:55.271 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:36:55.720 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:36:55.774 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 491.382ms
+2025-04-19 14:36:55.783 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:36:55.790 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 704.0386ms
+2025-04-19 14:39:49.053 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 14:39:49.396 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 14:39:49.399 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 14:39:49.516 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 14:39:49.518 +05:30 [INF] Hosting environment: Development
+2025-04-19 14:39:49.519 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 14:39:50.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 14:39:50.255 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 242.4826ms
+2025-04-19 14:39:50.281 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 14:39:50.281 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 14:39:50.290 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.6213ms
+2025-04-19 14:39:50.312 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.2593ms
+2025-04-19 14:39:50.366 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 14:39:50.381 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.9335ms
+2025-04-19 14:39:58.927 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 14:39:59.080 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:09:59 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:39:59.115 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:09:59 AM'.
+2025-04-19 14:39:59.126 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:39:59.185 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:39:59.908 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:39:59.980 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 768.1543ms
+2025-04-19 14:39:59.991 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:39:59.995 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1067.713ms
+2025-04-19 14:41:48.046 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 14:41:48.057 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:11:48 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:41:48.064 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:11:48 AM'.
+2025-04-19 14:41:48.065 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:41:48.066 +05:30 [INF] Route matched with {action = "GetRequestForBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRequestForBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:41:48.073 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:41:48.076 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora) in 8.9112ms
+2025-04-19 14:41:48.077 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetRequestForBooking (Nexora)'
+2025-04-19 14:41:48.079 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 32.6006ms
+2025-04-19 14:58:44.812 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 14:58:44.956 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 14:58:44.960 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 14:58:45.074 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 14:58:45.077 +05:30 [INF] Hosting environment: Development
+2025-04-19 14:58:45.079 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 14:58:45.266 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 14:58:45.485 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 221.1182ms
+2025-04-19 14:58:45.590 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 14:58:45.613 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 14:58:45.621 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 31.1223ms
+2025-04-19 14:58:45.662 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6005ms
+2025-04-19 14:58:45.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 14:58:45.984 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.4479ms
+2025-04-19 14:59:53.278 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7118/api/BookingByCouncelor/councelor-bookings-reshedule - application/json 137
+2025-04-19 14:59:53.482 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:29:53 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 14:59:53.524 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:29:53 AM'.
+2025-04-19 14:59:53.540 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.UpdateBookingDateandtime (Nexora)'
+2025-04-19 14:59:53.615 +05:30 [INF] Route matched with {action = "UpdateBookingDateandtime", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingDateandtime(Application.DTO.BookingRescheduleDTO) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 14:59:54.698 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 14:59:54.726 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.UpdateBookingDateandtime (Nexora) in 1090.6279ms
+2025-04-19 14:59:54.734 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.UpdateBookingDateandtime (Nexora)'
+2025-04-19 14:59:54.742 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7118/api/BookingByCouncelor/councelor-bookings-reshedule - 200 null application/json; charset=utf-8 1463.7682ms
+2025-04-19 15:27:29.280 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:27:29.490 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:27:29.494 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:27:29.593 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:27:29.595 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:27:29.596 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:27:30.112 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:27:30.262 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 151.3812ms
+2025-04-19 15:27:30.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:27:30.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:27:30.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.8604ms
+2025-04-19 15:27:30.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.2081ms
+2025-04-19 15:27:30.403 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:27:30.419 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.7934ms
+2025-04-19 15:27:59.304 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:27:59.451 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:57:59 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:27:59.483 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:57:59 AM'.
+2025-04-19 15:27:59.494 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:27:59.550 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:28:00.261 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:28:00.310 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 745.3932ms
+2025-04-19 15:28:00.318 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:28:00.323 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1018.9186ms
+2025-04-19 15:28:49.939 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:28:49.955 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:58:49 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:28:49.961 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:58:49 AM'.
+2025-04-19 15:28:49.965 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:28:49.968 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:28:49.984 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:28:49.989 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 16.6869ms
+2025-04-19 15:28:49.994 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:28:49.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 57.9562ms
+2025-04-19 15:29:39.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:29:39.663 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:59:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:29:39.674 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 9:59:39 AM'.
+2025-04-19 15:29:39.680 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:29:39.686 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:29:39.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:29:39.710 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 15.5276ms
+2025-04-19 15:29:39.714 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:29:39.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 69.1394ms
+2025-04-19 15:31:06.657 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:31:06.803 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:31:06.806 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:31:07.091 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:31:07.092 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:31:07.093 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:31:07.215 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:31:07.417 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 202.9257ms
+2025-04-19 15:31:07.435 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:31:07.443 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:31:07.447 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.2708ms
+2025-04-19 15:31:07.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.1754ms
+2025-04-19 15:31:07.557 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:31:07.573 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.6401ms
+2025-04-19 15:31:27.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:31:27.626 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:01:27 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:31:27.660 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:01:27 AM'.
+2025-04-19 15:31:27.671 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:31:27.729 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:31:28.448 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:31:28.493 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 747.9835ms
+2025-04-19 15:31:28.500 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:31:28.505 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1016.5696ms
+2025-04-19 15:32:11.879 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:32:11.892 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:02:11 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:32:11.896 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:02:11 AM'.
+2025-04-19 15:32:11.898 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:32:11.899 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:32:11.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:32:11.915 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 12.9403ms
+2025-04-19 15:32:11.918 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:32:11.920 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 40.2057ms
+2025-04-19 15:32:18.159 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:32:18.349 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:32:18.352 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:32:18.442 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:32:18.444 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:32:18.445 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:32:19.058 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:32:19.229 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 172.3959ms
+2025-04-19 15:32:19.240 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:32:19.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.0476ms
+2025-04-19 15:32:19.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:32:19.284 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.2272ms
+2025-04-19 15:32:19.335 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:32:19.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0955ms
+2025-04-19 15:33:00.493 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:33:00.628 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:03:00 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:33:00.660 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:03:00 AM'.
+2025-04-19 15:33:00.672 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:33:00.726 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:33:01.434 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:33:01.484 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 740.6144ms
+2025-04-19 15:33:01.493 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:33:01.501 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1007.2251ms
+2025-04-19 15:33:37.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:33:37.294 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:03:37 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:33:37.300 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:03:37 AM'.
+2025-04-19 15:33:37.303 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:33:37.306 +05:30 [INF] Route matched with {action = "GetCancelledBooking", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledBooking(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:33:37.320 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:33:37.324 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora) in 13.7128ms
+2025-04-19 15:33:37.328 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetCancelledBooking (Nexora)'
+2025-04-19 15:33:37.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Cancelled-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 50.295ms
+2025-04-19 15:42:28.417 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:42:28.623 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:42:28.627 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:42:28.721 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:42:28.724 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:42:28.725 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:42:29.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:42:29.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 161.4502ms
+2025-04-19 15:42:29.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:42:29.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:42:29.466 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.0475ms
+2025-04-19 15:42:29.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.147ms
+2025-04-19 15:42:29.656 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:42:29.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.9534ms
+2025-04-19 15:43:11.033 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:43:11.172 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:13:11 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:43:11.202 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:13:11 AM'.
+2025-04-19 15:43:11.214 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:43:11.268 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:43:11.969 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:43:12.006 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 727.0272ms
+2025-04-19 15:43:12.013 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:43:12.019 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 986.3604ms
+2025-04-19 15:43:51.677 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/accepted - null null
+2025-04-19 15:43:51.692 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:13:51 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:43:51.696 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:13:51 AM'.
+2025-04-19 15:43:51.700 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 15:43:51.711 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 15:43:51.743 +05:30 [INF] Booking status updated to accepted for BookingId: "70ac4343-c157-4996-9faf-d94a81a00240"
+2025-04-19 15:43:51.748 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:43:51.754 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 40.4622ms
+2025-04-19 15:43:51.757 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 15:43:51.759 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/accepted - 200 null application/json; charset=utf-8 82.0277ms
+2025-04-19 15:44:00.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:44:00.674 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:00 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:44:00.679 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:00 AM'.
+2025-04-19 15:44:00.685 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:00.688 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:44:00.696 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:44:00.698 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 8.161ms
+2025-04-19 15:44:00.700 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:00.701 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 37.6592ms
+2025-04-19 15:44:13.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:44:13.261 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:13 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:44:13.266 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:13 AM'.
+2025-04-19 15:44:13.268 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:13.271 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:44:13.286 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:44:13.291 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 14.4807ms
+2025-04-19 15:44:13.293 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:13.295 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 37.0105ms
+2025-04-19 15:44:52.783 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:44:52.790 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:52 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:44:52.795 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:14:52 AM'.
+2025-04-19 15:44:52.798 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:52.801 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:44:52.815 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:44:52.823 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 14.9601ms
+2025-04-19 15:44:52.828 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:44:52.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 50.0062ms
+2025-04-19 15:45:06.871 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:45:07.052 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:45:07.055 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:45:07.149 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:45:07.152 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:45:07.153 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:45:07.458 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:45:07.620 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 162.7576ms
+2025-04-19 15:45:07.632 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:45:07.632 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:45:07.640 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.5027ms
+2025-04-19 15:45:07.664 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.9011ms
+2025-04-19 15:45:07.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:45:07.819 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7616ms
+2025-04-19 15:45:28.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:45:28.820 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:15:28 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:45:28.840 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:15:28 AM'.
+2025-04-19 15:45:28.850 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:45:28.894 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:45:29.430 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:45:29.456 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 551.1273ms
+2025-04-19 15:45:29.462 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:45:29.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 736.9644ms
+2025-04-19 15:45:37.035 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:45:37.047 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:15:37 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:45:37.057 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:15:37 AM'.
+2025-04-19 15:45:37.064 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:45:37.070 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:45:37.103 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:45:37.124 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 42.8206ms
+2025-04-19 15:45:37.131 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:45:37.137 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 101.8216ms
+2025-04-19 15:46:59.512 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:46:59.705 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:46:59.710 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:46:59.833 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:46:59.837 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:46:59.839 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:47:00.149 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:47:00.311 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 162.9139ms
+2025-04-19 15:47:00.325 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:47:00.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.5984ms
+2025-04-19 15:47:00.334 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:47:00.365 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.6211ms
+2025-04-19 15:47:00.434 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:47:00.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.7843ms
+2025-04-19 15:47:13.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:47:13.469 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:17:13 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:47:13.502 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:17:13 AM'.
+2025-04-19 15:47:13.515 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:47:13.572 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:47:14.290 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:47:14.328 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 741.6431ms
+2025-04-19 15:47:14.335 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:47:14.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1000.0948ms
+2025-04-19 15:47:27.262 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:47:27.277 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:17:27 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:47:27.281 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:17:27 AM'.
+2025-04-19 15:47:27.284 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:47:27.287 +05:30 [INF] Route matched with {action = "GetConfirmedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConfirmedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:47:27.314 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:47:27.332 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora) in 38.1327ms
+2025-04-19 15:47:27.336 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetConfirmedBookings (Nexora)'
+2025-04-19 15:47:27.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Confirmed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 79.8958ms
+2025-04-19 15:58:14.144 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 15:58:14.276 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 15:58:14.278 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 15:58:14.429 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 15:58:14.432 +05:30 [INF] Hosting environment: Development
+2025-04-19 15:58:14.433 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 15:58:14.673 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 15:58:14.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 122.9172ms
+2025-04-19 15:58:14.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 15:58:14.832 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 15:58:14.835 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.9554ms
+2025-04-19 15:58:14.855 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.6714ms
+2025-04-19 15:58:15.000 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 15:58:15.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.8735ms
+2025-04-19 15:59:04.570 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/completed - null null
+2025-04-19 15:59:04.675 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:04 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:59:04.697 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:04 AM'.
+2025-04-19 15:59:04.701 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 15:59:04.732 +05:30 [INF] Route matched with {action = "UpdateBookingStatus", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookingStatus(System.Guid, System.String) on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-19 15:59:05.203 +05:30 [INF] Booking status updated to completed for BookingId: "70ac4343-c157-4996-9faf-d94a81a00240"
+2025-04-19 15:59:05.212 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:59:05.227 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora) in 484.7397ms
+2025-04-19 15:59:05.230 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.UpdateBookingStatus (Nexora)'
+2025-04-19 15:59:05.233 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/Booking/70ac4343-c157-4996-9faf-d94a81a00240/status/completed - 200 null application/json; charset=utf-8 662.2917ms
+2025-04-19 15:59:21.179 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:59:21.192 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:21 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:59:21.197 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:21 AM'.
+2025-04-19 15:59:21.199 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:21.203 +05:30 [INF] Route matched with {action = "GetcompletedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetcompletedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:59:21.253 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:59:21.286 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora) in 80.9811ms
+2025-04-19 15:59:21.291 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:21.292 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 113.5644ms
+2025-04-19 15:59:33.107 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:59:33.123 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:33 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:59:33.127 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:33 AM'.
+2025-04-19 15:59:33.128 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:33.128 +05:30 [INF] Route matched with {action = "GetcompletedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetcompletedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:59:33.135 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:59:33.137 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora) in 7.7697ms
+2025-04-19 15:59:33.138 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:33.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=ebd6c9a8-1b80-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 31.2999ms
+2025-04-19 15:59:59.858 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-19 15:59:59.870 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:59 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 15:59:59.875 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:29:59 AM'.
+2025-04-19 15:59:59.877 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:59.880 +05:30 [INF] Route matched with {action = "GetcompletedBookings", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetcompletedBookings(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 15:59:59.888 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.BookingGetDTOByCouncelor, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-19 15:59:59.890 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora) in 8.5972ms
+2025-04-19 15:59:59.892 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookings (Nexora)'
+2025-04-19 15:59:59.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-completed-bookings?CouncelorId=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 35.7777ms
+2025-04-19 16:16:11.322 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-19 16:16:11.473 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-19 16:16:11.475 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-19 16:16:11.557 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-19 16:16:11.559 +05:30 [INF] Hosting environment: Development
+2025-04-19 16:16:11.561 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-19 16:16:11.797 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-19 16:16:11.928 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 132.0481ms
+2025-04-19 16:16:11.959 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-19 16:16:11.959 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-19 16:16:11.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.2884ms
+2025-04-19 16:16:11.988 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5346ms
+2025-04-19 16:16:12.109 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-19 16:16:12.124 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.8531ms
+2025-04-19 16:16:39.206 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Details-Completed-bookings?bookingId=70ac4343-c157-4996-9faf-d94a81a00240 - null null
+2025-04-19 16:16:39.271 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:46:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-19 16:16:39.294 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19-Apr-25 7:47:27 AM', Current time (UTC): '19-Apr-25 10:46:39 AM'.
+2025-04-19 16:16:39.303 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookingsDetails (Nexora)'
+2025-04-19 16:16:39.329 +05:30 [INF] Route matched with {action = "GetcompletedBookingsDetails", controller = "BookingByCouncelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetcompletedBookingsDetails(System.Guid) on controller Nexora.Controllers.Booking.BookingByCouncelorController (Nexora).
+2025-04-19 16:16:39.787 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.BookingSectionDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-19 16:16:39.827 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookingsDetails (Nexora) in 487.5767ms
+2025-04-19 16:16:39.832 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingByCouncelorController.GetcompletedBookingsDetails (Nexora)'
+2025-04-19 16:16:39.834 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/BookingByCouncelor/councelor-get-Details-Completed-bookings?bookingId=70ac4343-c157-4996-9faf-d94a81a00240 - 200 null application/json; charset=utf-8 627.5449ms

@@ -162,27 +162,28 @@ namespace Infrastructure.Services.BookinService
             {
                 var updated = await _bookingRepository.UpdateBookingPaymentAndStatusAsync(bookingId);
                 if (!updated)
+                {
                     return new ApiResponse<string>
                     {
                         StatusCode = 404,
                         Message = "Booking not found or update failed",
                         Data = null
                     };
-
+                }
                 return new ApiResponse<string>
                 {
                     StatusCode = 200,
-                    Message = "Payment status and booking status updated to accepted",
-                    Data = null,
+                    Message = "Booking status updated and payment recorded successfully.",
+                    Data = "Success",
                 };
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error while updating payment and booking status for BookingId: {BookingId}", bookingId);
+                _logger.LogError(ex, "Error occurred while processing booking payment and status update.", bookingId);
                 return new ApiResponse<string>
                 {
                     StatusCode = 599,
-                    Message = "Internal server error",
+                    Message = "An unexpected error occurred.",
                     Data = null,
                 };
             }

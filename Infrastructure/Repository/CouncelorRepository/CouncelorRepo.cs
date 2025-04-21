@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,31 @@ namespace Infrastructure.Repository.CouncelorRepository
             using var connection = _context.CreateConnection();
             var result=await connection.QueryAsync<CouncellorGetDTO>(sql, new { Keyword = $"%{keyword}%" });
             return result.ToList();
+        }
+        public async Task<bool> IsValidCounselor(Guid counselorId)
+        {
+            var sql = @"
+        SELECT COUNT(1)
+        FROM counselors
+        WHERE counselors_id = @CounselorId AND is_verified = TRUE AND is_deleted = FALSE"
+            ;
+
+            using var connection = _context.CreateConnection();
+            var count = await connection.ExecuteScalarAsync<int>(sql, new { CounselorId = counselorId });
+
+            return count > 0;
+        }
+        public async Task<bool> IsActiveCounselor(Guid UserId)
+        {
+            var sql = @"
+        SELECT COUNT(1)
+        FROM counselors
+        WHERE user_id = @user_id AND is_deleted = FALSE";
+
+            using var connection = _context.CreateConnection();
+            var count = await connection.ExecuteScalarAsync<int>(sql, new { user_id = UserId });
+
+            return count > 0;
         }
     }
 }

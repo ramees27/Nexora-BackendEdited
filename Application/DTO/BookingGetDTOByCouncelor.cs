@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace Application.DTO
 {
-    public class ActivityGetDTOForUser
+    public class BookingGetDTOByCouncelor
     {
         public Guid booking_id { get; set; }
-       
+
         public string preferd_time { get; set; }
         public DateTime PreferdDate { get; set; }
-        public string Status { get; set; }
+       
         public DateTime CreatedAt { get; set; }
         public Guid counselor_id { get; set; }
         public Guid student_id { get; set; }
-        public string full_name { get; set; }
-        public string specialization { get; set; }
-        public bool payment_status {  get; set; }
-      
-      
+        
+        
+        public bool payment_status { get; set; }
+
+
         public decimal fee { get; set; }
-       
-       
-        public string image_url { get; set; }
-       
+        public string UserName { get; set; }
+        public string UserEmail { get; set; }
+        public bool is_active {  get; set; }
+
+
+
     }
 }
-

@@ -29,6 +29,29 @@ namespace Infrastructure.Repository.ReviewRepository
 
 
         }
+        public async Task<List<ReviewGetDTOStudent>> GetReviewsByCouncelorId(Guid Councelor_id)
+        {
+            
+                var sql = @" SELECT *  FROM ratings r JOIN users u ON r.student_id = u.UserId
+            WHERE r.counselor_id = @Councelor_id ORDER BY r.created_at DESC; ";
+                using var connection=_Connection.CreateConnection();
+                var result= await connection.QueryAsync<ReviewGetDTOStudent>(sql, new { Councelor_id });
+                return result.ToList();
+
+            
+        }
+        public async Task<AvrageRatingDTO> GetReviewCountAndAverageRating(Guid counselorId)
+        {
+            var sql = @"
+                SELECT 
+                    COUNT(*) AS reviews,
+                    AVG(rating * 1.0) AS rating
+                FROM ratings
+                WHERE counselor_id = @CounselorId";
+            using var connection=_Connection.CreateConnection();
+            return await connection.QueryFirstOrDefaultAsync<AvrageRatingDTO>(sql, new { CounselorId = counselorId });
+        }
     }
 }
+ 
 

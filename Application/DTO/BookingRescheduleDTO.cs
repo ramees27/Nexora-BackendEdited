@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.DTO
 {
-    public class BookingRequestDto
+    public class BookingRescheduleDTO
     {
-        
-        
+        public Guid BookingId { get; set; }
         public string PreferdTime { get; set; }
         public DateTime PreferdDate { get; set; }
-        public decimal fee {  get; set; }
     }
 }

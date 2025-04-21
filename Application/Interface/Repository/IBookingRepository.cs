@@ -18,5 +18,6 @@ namespace Application.Interface.Repository
         Task<List<ActivityGetDTOForUser>> GetScheduledBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetCompletedBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetRejectedandCancelledBookings(Guid studentId);
+
     }
 }

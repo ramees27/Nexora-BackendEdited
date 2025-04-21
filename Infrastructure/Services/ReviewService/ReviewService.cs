@@ -9,6 +9,7 @@ using Application.Interface.Service;
 using AutoMapper;
 using Domain;
 using Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services.ReviewService
@@ -18,11 +19,13 @@ namespace Infrastructure.Services.ReviewService
         private readonly IMapper _mapper;
         private readonly ILogger<ReviewService> _logger;
         private readonly IReviewRepository _reviewRepository;
-        public ReviewService(IMapper mapper, ILogger<ReviewService> logger, IReviewRepository reviewRepository)
+        private readonly ICouncelorRepo _councelorRepo;
+        public ReviewService(IMapper mapper, ILogger<ReviewService> logger, IReviewRepository reviewRepository, ICouncelorRepo councelorRepo)
         {
             _mapper = mapper;
             _logger = logger;
             _reviewRepository = reviewRepository;
+            _councelorRepo = councelorRepo; 
         }
 
         public async Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId, Guid councelor_id,Guid booking_id)
@@ -68,6 +71,87 @@ namespace Infrastructure.Services.ReviewService
                 };
             }
         }
-       
+        public async Task<ApiResponse<List<ReviewGetDTOStudent>>> GetReviewsByCouncelorIdForStudents(Guid Councelor_id)
+        {
+
+            try
+            {
+                var isValid = await _councelorRepo.IsValidCounselor(Councelor_id);
+                if (!isValid)
+                {
+                    return new ApiResponse<List<ReviewGetDTOStudent>>
+                    {
+                        StatusCode = 400,
+                        Message = "Counselor is not verified or has been blocked."
+                    };
+                }
+
+                var result = await _reviewRepository.GetReviewsByCouncelorId(Councelor_id);
+                if (result == null)
+                {
+                    return new ApiResponse<List<ReviewGetDTOStudent>>
+                    {
+                        StatusCode = 200,
+                        Message = "No Reviews Found for this Councelor",
+                        Data = null
+                    };
+                }
+                return new ApiResponse<List<ReviewGetDTOStudent>>
+                {
+
+                    StatusCode = 200,
+                    Message = " Reviews Succusfully fetched",
+                    Data = result,
+                    Error = null
+
+                };
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while getting all reviews");
+                return new ApiResponse<List<ReviewGetDTOStudent>>
+                {
+                    StatusCode = 500,
+                    Message = "Error while fetching Reviews",
+                    Data = null
+                };
+            }
+
+        }
+        public async Task<ApiResponse<AvrageRatingDTO>> GetReviewAverageRating(Guid counselorId)
+        {
+            try
+            {
+                var result = await _reviewRepository.GetReviewCountAndAverageRating(counselorId);
+                if (result == null)
+                {
+                    return new ApiResponse<AvrageRatingDTO>
+                    {
+                        StatusCode = 404,
+                        Message = "No reviews found for this counselor."
+                    };
+                }
+              
+
+
+                return new ApiResponse<AvrageRatingDTO>
+                {
+                    StatusCode = 200,
+                    Message = "Review count and average rating fetched successfully",
+                    Data = result
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while Geting Average Review and ratings");
+                return new ApiResponse<AvrageRatingDTO>
+                {
+                    StatusCode = 500,
+                    Message = "An error occurred while processing the review"
+                };
+            }
+        }
+
     }
 }

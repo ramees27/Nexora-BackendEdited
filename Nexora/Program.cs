@@ -21,6 +21,8 @@ using Infrastructure.Repository.BookinRepository;
 using Infrastructure.Services.BookinService;
 using Infrastructure.Services.ReviewService;
 using Infrastructure.Repository.ReviewRepository;
+using Infrastructure.Repository.AdminRepository;
+using Infrastructure.Services.AdminService;
 
 namespace Nexora
 {
@@ -52,6 +54,12 @@ namespace Nexora
             builder.Services.AddScoped<IBookingService,BookingService>();
             builder.Services.AddScoped<IReviewService,ReviewService>();
             builder.Services.AddScoped<IReviewRepository,ReviewRepository>();
+            builder.Services.AddScoped<IBookinRepositiryByCouncelor,BookingByCouncelorRepo>();
+            builder.Services.AddScoped<IBookingServiceByCouncelor,BookingServiceByCouncelor>();
+            builder.Services.AddScoped<IPaymentRepository,PaymentRepository>();
+            builder.Services.AddScoped<IPaymentService,PaymentService>();
+            builder.Services.AddScoped<IAdminRepository,AdminDashBoardRepository>();
+            builder.Services.AddScoped<IAdminService, AdminDashBoardService>();
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserServices>();

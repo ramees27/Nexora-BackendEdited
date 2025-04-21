@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using Application.DTO;
 using Application.Interface.Repository;
 using Dapper;
@@ -23,9 +24,9 @@ namespace Infrastructure.Repository.BookinRepository
         public async Task<int> AddBookingAsync(Booking booking)
         {
             var sql = @"INSERT INTO bookings 
-               (booking_id, student_id, counselor_id, preferd_time, preferd_date) 
+               (booking_id, student_id, counselor_id, preferd_time, preferd_date,fee) 
                VALUES 
-               (@Id, @StudentId, @CounselorId, @PreferdTime, @PreferdDate);";
+               (@Id, @StudentId, @CounselorId, @PreferdTime, @PreferdDate,@fee);";
 
             using var connection = _context.CreateConnection();
             return await connection.ExecuteAsync(sql, booking);
@@ -51,13 +52,59 @@ namespace Infrastructure.Repository.BookinRepository
         }
         public async Task<bool> UpdateBookingPaymentAndStatusAsync(Guid bookingId)
         {
-            var sql = @"UPDATE bookings 
+            var sqlUpdateBooking = @"UPDATE bookings 
                 SET payment_status = TRUE, status = 'accepted' 
                 WHERE booking_id = @BookingId";
 
-            using var connection = _context.CreateConnection();
-            var result = await connection.ExecuteAsync(sql, new { BookingId = bookingId });
-            return result > 0;
+            var sqlInsertPayment = @"
+        INSERT INTO payments (
+            payment_id,
+            booking_id, UserId, counselors_id, 
+            total_amount, commission_amount, counselor_amount, 
+           
+        )
+        SELECT 
+            UUID(),
+            booking_id, student_id, counselor_id,
+            fee, 
+            fee * 0.10,      
+            fee * 0.90,         
+          
+            
+        FROM bookings
+        WHERE booking_id = @BookingId";
+
+            using var connection =   _context.CreateConnection();
+             connection.Open();
+
+            using var transaction = connection.BeginTransaction();
+            try
+            {
+                var updateResult = await connection.ExecuteAsync(sqlUpdateBooking, new { BookingId = bookingId }, transaction);
+
+                if (updateResult == 0)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+
+                var insertResult = await connection.ExecuteAsync(sqlInsertPayment, new { BookingId = bookingId }, transaction);
+
+                if (insertResult == 0)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+
+                transaction.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                // log the error
+                throw;
+            }
         }
         public async Task<List<ActivityGetDTOForUser>> GetScheduledBookings(Guid studentId)
         {

@@ -26,6 +26,27 @@ namespace Nexora.Controllers.ReviewController
             }
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("Get-Review-Councelorid")]
+        public async Task<IActionResult> GetReviewByCouncelorId(Guid Councelor_id)
+        {
+           
+            var result = await _reviewService.GetReviewsByCouncelorIdForStudents(Councelor_id);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpGet("Get-Average-Rating")]
+        public async Task<IActionResult> GetAverageReview(Guid Councelor_id)
+        {
 
+            var result = await _reviewService.GetReviewAverageRating (Councelor_id);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
     }
 }

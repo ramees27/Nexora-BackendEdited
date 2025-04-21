@@ -14,5 +14,10 @@ namespace Application.Interface.Repository
         Task<CouncellorGetDTO> GetCounselorByIdAsync(Guid counselorId);
         Task<List<CouncellorGetDTO>> GetAllCouncelorAsync( );
         Task<List<CouncellorGetDTO>> GetCounselorsByKeyword(string keyword);
+        Task<bool> IsValidCounselor(Guid counselorId);
+        Task<bool> IsActiveCounselor(Guid counselorId);
+        
+
+
     }
 }
