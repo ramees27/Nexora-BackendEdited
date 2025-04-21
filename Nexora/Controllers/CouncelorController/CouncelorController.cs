@@ -48,5 +48,11 @@ namespace Nexora.Controllers.CouncelorController
 
             return StatusCode(result.StatusCode, result);
         }
+        [HttpPost("add")]
+        public async Task<IActionResult> AddEducation([FromForm] EducationCreateDTO dto)
+        {
+            var response = await _councelorService.AddEducationAsync(dto);
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

@@ -73,6 +73,49 @@ namespace Nexora.Controllers.AdminController
             }
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("Get-nonverified-Count")]
+        public async Task<IActionResult> GetNonVerifiedCount()
+        {
+
+
+            var result = await _adminService.GetNonVerifiedCounselorCount();
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpGet("Get-nonverified-CouncelorsDetails")]
+        public async Task<IActionResult> GetNonVerifiedCouncelorsDetails()
+        {
+
+
+            var result = await _adminService.GetNewCounselorsForAdminAsync();
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        
+        [HttpPut("Concelor-Verification")]
+        public async Task<IActionResult> ConcelorVerification(Guid councelorId)
+        {
+
+
+            var result = await _adminService.VerifyCounselor(councelorId);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpDelete("counselor/application/{counselorId}")]
+        public async Task<IActionResult> DeleteCounselorApplication(Guid counselorId)
+        {
+            var response = await _adminService.DeleteCounselorApplicationAsync(counselorId);
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }
 

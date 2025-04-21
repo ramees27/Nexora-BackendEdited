@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application.DTO;
+using Domain.Entities;
 
 namespace Application.Interface.Repository
 {
@@ -14,5 +15,10 @@ namespace Application.Interface.Repository
         Task<int> GetStudentCount();
         Task<int> GetTotalBookinCount();
         Task<List<StatusCountDto>> GetBookingStatusCountsAsync();
+        Task<int> GetNonVerifiedCounselorCountAsync();
+        Task<List<CounselorDetailsDTO>> GetNewCounselorsForAdminAsync();
+        Task<bool> VerifyCounselorAsync(Guid counselorId);
+        Task<bool> DeleteCounselorApplicationAsync(Guid counselorId);
+      
     }
 }

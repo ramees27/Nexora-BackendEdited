@@ -14,5 +14,6 @@ namespace Application.Interface.Service
         Task<ApiResponse<CouncellorGetDTO>> GetCounselorById(Guid counselorId);
         Task<ApiResponse<List<CouncellorGetDTO>>> GetAllCounselorsAsync();
         Task<ApiResponse<List<CouncellorGetDTO>>> GetCounselorsByKeywords(string keyword);
+        Task<ApiResponse<object>> AddEducationAsync(EducationCreateDTO dto);
     }
 }

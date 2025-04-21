@@ -33,8 +33,8 @@ namespace Infrastructure.Services.CouncelorService
         {
             try
             {
-                var existing = await _councelorRepo.IsActiveCounselor (userId); // You should create this method if needed
-                if (existing != null)
+                var existing = await _councelorRepo.IsActiveCounselor(userId); // You should create this method if needed
+                if (existing)
                 {
                     return new ApiResponse<object>
                     {
@@ -200,6 +200,33 @@ namespace Infrastructure.Services.CouncelorService
 
             }
 
+        }
+        public async Task<ApiResponse<object>> AddEducationAsync(EducationCreateDTO dto)
+        {
+            try
+            {
+                var imageUrl = await _cloudinaryService.UploadImageAsync(dto.CertificateImage);
+
+                var education = new Education
+                {
+                    education_id = Guid.NewGuid(),
+                    counselor_id = dto.CounselorId,
+                    qualification = dto.Qualification,
+                    certificate_image_url = imageUrl
+                };
+
+                var success = await _councelorRepo.AddEducationAsync(education);
+
+                if (!success)
+                    return new ApiResponse<object> { StatusCode = 500, Message = "Failed to add education", Data = null };
+
+                return new ApiResponse<object> { StatusCode = 200, Message = "Education added successfully", Data = null };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error adding education");
+                return new ApiResponse<object> { StatusCode = 500, Message = "An error occurred", Data = null };
+            }
         }
     }
 }

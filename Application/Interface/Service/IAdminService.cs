@@ -15,5 +15,9 @@ namespace Application.Interface.Service
         Task<ApiResponse<int>> GetStudentCounts();
         Task<ApiResponse<int>> GetTotalBookinCount();
         Task <ApiResponse<List<StatusCountDto>>> GetBookingStatusCounts();
+        Task<ApiResponse<int>> GetNonVerifiedCounselorCount();
+        Task<ApiResponse<List<CounselorDetailsDTO>>> GetNewCounselorsForAdminAsync();
+        Task<ApiResponse<object>> VerifyCounselor(Guid counselorId);
+        Task<ApiResponse<object>> DeleteCounselorApplicationAsync(Guid counselorId);
     }
 }

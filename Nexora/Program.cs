@@ -60,6 +60,8 @@ namespace Nexora
             builder.Services.AddScoped<IPaymentService,PaymentService>();
             builder.Services.AddScoped<IAdminRepository,AdminDashBoardRepository>();
             builder.Services.AddScoped<IAdminService, AdminDashBoardService>();
+            builder.Services.AddScoped<IAdminUserRepository, AdminUserRepository>();
+            builder.Services.AddScoped<IAdminUserService,AdminUserService >();
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserServices>();

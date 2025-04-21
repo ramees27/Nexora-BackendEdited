@@ -1042,3 +1042,451 @@ Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime
 2025-04-21 16:07:46.715 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetStudentCount (Nexora) in 371.8278ms
 2025-04-21 16:07:46.721 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetStudentCount (Nexora)'
 2025-04-21 16:07:46.724 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Student-Count - 200 null application/json; charset=utf-8 538.2868ms
+2025-04-21 16:21:38.665 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 16:21:38.771 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 16:21:38.775 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 16:21:38.838 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 16:21:38.840 +05:30 [INF] Hosting environment: Development
+2025-04-21 16:21:38.841 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 16:21:39.166 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 16:21:39.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 115.8781ms
+2025-04-21 16:21:39.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 16:21:39.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 16:21:39.311 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.3084ms
+2025-04-21 16:21:39.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.7386ms
+2025-04-21 16:21:39.434 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 16:21:39.453 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.441ms
+2025-04-21 16:21:49.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Status-Count - null null
+2025-04-21 16:21:49.123 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 10:51:49 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 16:21:49.160 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 10:51:49 AM'.
+2025-04-21 16:21:49.170 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetStatusCountofBookings (Nexora)'
+2025-04-21 16:21:49.222 +05:30 [INF] Route matched with {action = "GetStatusCountofBookings", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusCountofBookings() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 16:21:49.583 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.StatusCountDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 16:21:49.605 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetStatusCountofBookings (Nexora) in 372.8805ms
+2025-04-21 16:21:49.607 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetStatusCountofBookings (Nexora)'
+2025-04-21 16:21:49.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Status-Count - 200 null application/json; charset=utf-8 607.0218ms
+2025-04-21 16:35:03.707 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 16:35:03.834 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 16:35:03.836 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 16:35:03.908 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 16:35:03.911 +05:30 [INF] Hosting environment: Development
+2025-04-21 16:35:03.912 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 16:35:04.238 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 16:35:04.363 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 125.3603ms
+2025-04-21 16:35:04.401 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 16:35:04.401 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 16:35:04.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.2396ms
+2025-04-21 16:35:04.425 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.9138ms
+2025-04-21 16:35:04.577 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 16:35:04.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.5252ms
+2025-04-21 16:35:15.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-Count - null null
+2025-04-21 16:35:15.747 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:05:15 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 16:35:15.773 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:05:15 AM'.
+2025-04-21 16:35:15.779 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCount (Nexora)'
+2025-04-21 16:35:15.805 +05:30 [INF] Route matched with {action = "GetNonVerifiedCount", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNonVerifiedCount() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 16:35:16.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 16:35:16.201 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCount (Nexora) in 386.5533ms
+2025-04-21 16:35:16.208 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCount (Nexora)'
+2025-04-21 16:35:16.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-Count - 200 null application/json; charset=utf-8 532.8486ms
+2025-04-21 17:05:20.401 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:05:20.512 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:05:20.516 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:05:20.582 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:05:20.586 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:05:20.588 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:05:20.893 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:05:21.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 119.6599ms
+2025-04-21 17:05:21.105 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:05:21.110 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:05:21.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.0376ms
+2025-04-21 17:05:21.133 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.2537ms
+2025-04-21 17:05:21.281 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:05:21.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.15ms
+2025-04-21 17:05:46.068 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - null null
+2025-04-21 17:05:46.192 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:35:46 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 17:05:46.220 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:35:46 AM'.
+2025-04-21 17:05:46.227 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:05:46.264 +05:30 [INF] Route matched with {action = "GetNonVerifiedCouncelorsDetails", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNonVerifiedCouncelorsDetails() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 17:05:46.717 +05:30 [INF] No new counselors found for the admin.
+2025-04-21 17:05:46.725 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:05:46.742 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora) in 469.8743ms
+2025-04-21 17:05:46.747 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:05:46.750 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - 404 null application/json; charset=utf-8 682.61ms
+2025-04-21 17:14:42.009 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/register - application/json 83
+2025-04-21 17:14:42.020 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:44:42 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 17:14:42.024 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:44:42 AM'.
+2025-04-21 17:14:42.024 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Register (Nexora)'
+2025-04-21 17:14:42.033 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Application.DTO.RegistrUserDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-21 17:14:42.076 +05:30 [INF] Register endpoint called
+2025-04-21 17:14:42.994 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:14:42.999 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Register (Nexora) in 963.1757ms
+2025-04-21 17:14:43.000 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Register (Nexora)'
+2025-04-21 17:14:43.001 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/register - 200 null application/json; charset=utf-8 992.0226ms
+2025-04-21 17:15:07.913 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-21 17:15:07.920 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:45:07 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 17:15:07.926 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 5:35:38 AM', Current time (UTC): '21-Apr-25 11:45:07 AM'.
+2025-04-21 17:15:07.929 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:15:07.933 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-21 17:15:07.939 +05:30 [INF] Login endpoint called
+2025-04-21 17:15:08.175 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:15:08.187 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 251.479ms
+2025-04-21 17:15:08.191 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:15:08.193 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 280.1139ms
+2025-04-21 17:19:38.087 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika%20Gopz&specialization=Career%20Guidance%2CSchool%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=5&hourly_rate=75&upi_id=gopz%40okicici - multipart/form-data; boundary=----WebKitFormBoundaryk2Nge9o2yRwObADV 265937
+2025-04-21 17:19:38.104 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:19:38.112 +05:30 [INF] Route matched with {action = "ApplyConucelor", controller = "CouncelorAuth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApplyConucelor(Application.DTO.CounselorAddDTO) on controller Nexora.Controllers.CouncelorController.CouncelorAuthController (Nexora).
+2025-04-21 17:19:38.714 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:19:38.719 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora) in 602.7155ms
+2025-04-21 17:19:38.722 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:19:38.725 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika%20Gopz&specialization=Career%20Guidance%2CSchool%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=5&hourly_rate=75&upi_id=gopz%40okicici - 400 null application/json; charset=utf-8 637.8273ms
+2025-04-21 17:19:58.241 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-21 17:19:58.254 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:19:58.258 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-21 17:19:58.265 +05:30 [INF] Login endpoint called
+2025-04-21 17:19:58.516 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:19:58.520 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 258.6744ms
+2025-04-21 17:19:58.523 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:19:58.523 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 282.1427ms
+2025-04-21 17:20:08.889 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika%20Gopz&specialization=Career%20Guidance%2CSchool%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=5&hourly_rate=75&upi_id=gopz%40okicici - multipart/form-data; boundary=----WebKitFormBoundaryUfyFcjb80QyWQjDl 265937
+2025-04-21 17:20:08.920 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:20:08.924 +05:30 [INF] Route matched with {action = "ApplyConucelor", controller = "CouncelorAuth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApplyConucelor(Application.DTO.CounselorAddDTO) on controller Nexora.Controllers.CouncelorController.CouncelorAuthController (Nexora).
+2025-04-21 17:20:08.932 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:20:08.933 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora) in 5.2825ms
+2025-04-21 17:20:08.935 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:20:08.936 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika%20Gopz&specialization=Career%20Guidance%2CSchool%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=5&hourly_rate=75&upi_id=gopz%40okicici - 400 null application/json; charset=utf-8 47.726ms
+2025-04-21 17:25:15.281 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:25:15.410 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:25:15.414 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:25:15.492 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:25:15.495 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:25:15.496 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:25:15.975 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:25:16.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 123.6569ms
+2025-04-21 17:25:16.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:25:16.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:25:16.135 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.9331ms
+2025-04-21 17:25:16.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.6761ms
+2025-04-21 17:25:16.206 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:25:16.227 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9554ms
+2025-04-21 17:25:34.776 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-21 17:25:34.941 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:25:34.981 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-21 17:25:35.027 +05:30 [INF] Login endpoint called
+2025-04-21 17:25:35.866 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:25:35.886 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 895.9039ms
+2025-04-21 17:25:35.892 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-21 17:25:35.893 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 1117.4959ms
+2025-04-21 17:26:35.971 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika&specialization=School%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=8&hourly_rate=75&upi_id=gopika%40okicici - multipart/form-data; boundary=----WebKitFormBoundaryXnL0SRucFGSkwUlc 265937
+2025-04-21 17:26:35.986 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:26:35.997 +05:30 [INF] Route matched with {action = "ApplyConucelor", controller = "CouncelorAuth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApplyConucelor(Application.DTO.CounselorAddDTO) on controller Nexora.Controllers.CouncelorController.CouncelorAuthController (Nexora).
+2025-04-21 17:26:41.599 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:26:41.604 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora) in 5600.3145ms
+2025-04-21 17:26:41.606 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorAuthController.ApplyConucelor (Nexora)'
+2025-04-21 17:26:41.608 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/CouncelorAuth/Apply-Councelor?full_name=Dr%20Gopika&specialization=School%20students%2C%20Career%20switching&short_bio=An%20experienced%20career%20counselor%20helping%20high%20school%20and%20college%20students%20find%20their%20path%20using%20a%20mix%20of%20assessments%20and%20one-on-one%20mentoring.%20Passionate%20about%20guiding%20youth%20to%20meaningful%20careers.&mobile_number=%2B91%2098765%2043210&experience=8&hourly_rate=75&upi_id=gopika%40okicici - 200 null application/json; charset=utf-8 5637.0163ms
+2025-04-21 17:27:14.346 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - null null
+2025-04-21 17:27:14.364 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:27:14.369 +05:30 [INF] Route matched with {action = "GetNonVerifiedCouncelorsDetails", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNonVerifiedCouncelorsDetails() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 17:27:14.388 +05:30 [ERR] An error occurred while fetching new counselors for admin.
+System.Data.DataException: Error parsing column 0 (counselors_id=b0600078-1ea7-11f0-8cb9-d41b814ee020 - Guid)
+ ---> System.InvalidCastException: Object must implement IConvertible.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Deserializeb67c63c6-0f2b-432f-ac23-46bbb59ee92f(DbDataReader)
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3966
+   at Deserializeb67c63c6-0f2b-432f-ac23-46bbb59ee92f(DbDataReader)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at Infrastructure.Repository.AdminRepository.AdminDashBoardRepository.GetNewCounselorsForAdminAsync()
+   at Infrastructure.Services.AdminService.AdminDashBoardService.GetNewCounselorsForAdminAsync()
+2025-04-21 17:27:14.452 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:27:14.459 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora) in 86.9944ms
+2025-04-21 17:27:14.461 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:27:14.462 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - 500 null application/json; charset=utf-8 116.1905ms
+2025-04-21 17:28:02.518 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:28:02.639 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:28:02.641 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:28:02.711 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:28:02.714 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:28:02.714 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:28:03.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:28:03.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 126.5883ms
+2025-04-21 17:28:03.273 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:28:03.274 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:28:03.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.6289ms
+2025-04-21 17:28:03.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.5121ms
+2025-04-21 17:28:03.370 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:28:03.387 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.9546ms
+2025-04-21 17:28:21.805 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - null null
+2025-04-21 17:28:21.876 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:28:21.901 +05:30 [INF] Route matched with {action = "GetNonVerifiedCouncelorsDetails", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNonVerifiedCouncelorsDetails() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 17:28:22.245 +05:30 [INF] Retrieved 1 new counselors for admin.
+2025-04-21 17:28:22.256 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:28:22.283 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora) in 373.6473ms
+2025-04-21 17:28:22.289 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-21 17:28:22.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - 200 null application/json; charset=utf-8 485.819ms
+2025-04-21 17:41:31.936 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:41:32.056 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:41:32.060 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:41:32.121 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:41:32.124 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:41:32.125 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:41:32.574 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:41:32.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 124.4503ms
+2025-04-21 17:41:32.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:41:32.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:41:32.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.7454ms
+2025-04-21 17:41:32.752 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.2233ms
+2025-04-21 17:41:32.866 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:41:32.882 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/DashBoard/Get-nonverified-CouncelorsDetails" for actions - Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora),Nexora.Controllers.AdminController.DashBoardController.NonVerifiedCouncelorsDetails (Nexora). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-21 17:41:32.891 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 25.5632ms
+2025-04-21 17:42:05.990 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:42:06.098 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:42:06.102 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:42:06.169 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:42:06.172 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:42:06.172 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:42:06.284 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:42:06.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 110.1946ms
+2025-04-21 17:42:06.414 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:42:06.414 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:42:06.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.3445ms
+2025-04-21 17:42:06.439 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.034ms
+2025-04-21 17:42:06.524 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:42:06.539 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1409ms
+2025-04-21 17:42:52.362 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7118/api/DashBoard/Concelor-Verification?councelorId=b0600078-1ea7-11f0-8cb9-d41b814ee020 - null 0
+2025-04-21 17:42:52.497 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.ConcelorVerification (Nexora)'
+2025-04-21 17:42:52.540 +05:30 [INF] Route matched with {action = "ConcelorVerification", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConcelorVerification(System.Guid) on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 17:42:52.952 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 17:42:52.970 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.ConcelorVerification (Nexora) in 416.0631ms
+2025-04-21 17:42:52.975 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.ConcelorVerification (Nexora)'
+2025-04-21 17:42:52.981 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7118/api/DashBoard/Concelor-Verification?councelorId=b0600078-1ea7-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 618.6794ms
+2025-04-21 17:59:51.616 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 17:59:51.739 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 17:59:51.743 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 17:59:51.812 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 17:59:51.815 +05:30 [INF] Hosting environment: Development
+2025-04-21 17:59:51.816 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 17:59:52.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 17:59:52.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 127.8725ms
+2025-04-21 17:59:52.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 17:59:52.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 17:59:52.450 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.5008ms
+2025-04-21 17:59:52.466 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.0784ms
+2025-04-21 17:59:52.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 17:59:52.559 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.7663ms
+2025-04-21 18:00:53.922 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7118/api/DashBoard/counselor/application/251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-21 18:00:54.055 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.DeleteCounselorApplication (Nexora)'
+2025-04-21 18:00:54.102 +05:30 [INF] Route matched with {action = "DeleteCounselorApplication", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCounselorApplication(System.Guid) on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 18:00:54.501 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 18:00:54.514 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.DeleteCounselorApplication (Nexora) in 403.8836ms
+2025-04-21 18:00:54.518 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.DeleteCounselorApplication (Nexora)'
+2025-04-21 18:00:54.520 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7118/api/DashBoard/counselor/application/251cf03e-1b90-11f0-8cb9-d41b814ee020 - 404 null application/json; charset=utf-8 598.284ms
+2025-04-21 18:30:28.850 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 18:30:28.981 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 18:30:28.983 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 18:30:29.153 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 18:30:29.154 +05:30 [INF] Hosting environment: Development
+2025-04-21 18:30:29.155 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 18:30:29.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 18:30:29.577 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 121.6789ms
+2025-04-21 18:30:29.643 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 18:30:29.644 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 18:30:29.651 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.8238ms
+2025-04-21 18:30:29.669 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.3077ms
+2025-04-21 18:30:29.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 18:30:29.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.829ms
+2025-04-21 18:34:05.230 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 18:34:05.336 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 18:34:05.340 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 18:34:05.401 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 18:34:05.404 +05:30 [INF] Hosting environment: Development
+2025-04-21 18:34:05.405 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 18:34:05.631 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 18:34:05.755 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 125.1869ms
+2025-04-21 18:34:05.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 18:34:05.780 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.0309ms
+2025-04-21 18:34:05.781 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 18:34:05.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.5699ms
+2025-04-21 18:34:05.857 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 18:34:05.870 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.4848ms
+2025-04-21 18:34:29.495 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminUser/admin/students - null null
+2025-04-21 18:34:29.620 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:04:29 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 18:34:29.647 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:04:29 PM'.
+2025-04-21 18:34:29.655 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-21 18:34:29.684 +05:30 [INF] Route matched with {action = "GetStudentsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 18:34:30.227 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Domain.Entities.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 18:34:30.262 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora) in 565.4362ms
+2025-04-21 18:34:30.270 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-21 18:34:30.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminUser/admin/students - 200 null application/json; charset=utf-8 778.9684ms
+2025-04-21 18:38:13.882 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 18:38:13.991 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 18:38:13.995 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 18:38:14.060 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 18:38:14.063 +05:30 [INF] Hosting environment: Development
+2025-04-21 18:38:14.063 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 18:38:14.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 18:38:14.679 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 136.8206ms
+2025-04-21 18:38:14.698 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 18:38:14.698 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 18:38:14.704 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.6335ms
+2025-04-21 18:38:14.727 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.4883ms
+2025-04-21 18:38:14.794 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 18:38:14.814 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.5826ms
+2025-04-21 18:38:21.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 18:38:21.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 11.4679ms
+2025-04-21 18:38:21.200 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 18:38:21.200 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 18:38:21.206 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.9889ms
+2025-04-21 18:38:21.207 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.2648ms
+2025-04-21 18:38:21.319 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 18:38:21.334 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.7396ms
+2025-04-21 18:38:29.641 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminUser/admin/students - null null
+2025-04-21 18:38:29.750 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:08:29 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 18:38:29.772 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:08:29 PM'.
+2025-04-21 18:38:29.784 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-21 18:38:29.828 +05:30 [INF] Route matched with {action = "GetStudentsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 18:38:30.390 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.UserDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 18:38:30.424 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora) in 585.1072ms
+2025-04-21 18:38:30.428 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-21 18:38:30.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminUser/admin/students - 200 null application/json; charset=utf-8 790.9827ms
+2025-04-21 18:57:03.577 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 18:57:03.784 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 18:57:03.787 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 18:57:03.955 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 18:57:03.957 +05:30 [INF] Hosting environment: Development
+2025-04-21 18:57:03.958 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 18:57:04.332 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 18:57:04.556 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 227.5103ms
+2025-04-21 18:57:04.611 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 18:57:04.614 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 18:57:04.618 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.1461ms
+2025-04-21 18:57:04.644 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.0351ms
+2025-04-21 18:57:04.947 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 18:57:04.968 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.2328ms
+2025-04-21 18:57:19.273 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - null null
+2025-04-21 18:57:19.528 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:27:19 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 18:57:19.577 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:27:19 PM'.
+2025-04-21 18:57:19.594 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-21 18:57:19.669 +05:30 [INF] Route matched with {action = "GetCouncelorsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCouncelorsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 18:57:20.637 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 18:57:20.693 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora) in 1008.2054ms
+2025-04-21 18:57:20.697 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-21 18:57:20.701 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - 200 null application/json; charset=utf-8 1428.1462ms
+2025-04-21 19:24:51.510 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 19:24:51.762 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 19:24:51.767 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 19:24:51.957 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 19:24:51.961 +05:30 [INF] Hosting environment: Development
+2025-04-21 19:24:51.962 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 19:24:52.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 19:24:52.310 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 179.4017ms
+2025-04-21 19:24:52.321 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 19:24:52.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.358ms
+2025-04-21 19:24:52.332 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 19:24:52.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.1586ms
+2025-04-21 19:24:52.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 19:24:52.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.5134ms
+2025-04-21 19:28:02.418 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Councelor/add - multipart/form-data; boundary=----WebKitFormBoundaryyAprYLNwgtsnkfAW 210390
+2025-04-21 19:28:02.656 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:58:02 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 19:28:02.724 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:58:02 PM'.
+2025-04-21 19:28:02.742 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.AddEducation (Nexora)'
+2025-04-21 19:28:02.845 +05:30 [INF] Route matched with {action = "AddEducation", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddEducation(Application.DTO.EducationCreateDTO) on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-04-21 19:28:06.716 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 19:28:06.751 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.AddEducation (Nexora) in 3886.3144ms
+2025-04-21 19:28:06.761 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.AddEducation (Nexora)'
+2025-04-21 19:28:06.772 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Councelor/add - 200 null application/json; charset=utf-8 4353.9648ms
+2025-04-21 19:28:23.247 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - null null
+2025-04-21 19:28:23.271 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:58:23 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 19:28:23.288 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 1:58:23 PM'.
+2025-04-21 19:28:23.297 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-21 19:28:23.316 +05:30 [INF] Route matched with {action = "GetCouncelorsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCouncelorsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 19:28:23.418 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 19:28:23.464 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora) in 133.3268ms
+2025-04-21 19:28:23.471 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-21 19:28:23.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - 200 null application/json; charset=utf-8 231.5849ms
+2025-04-21 19:45:41.875 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 19:45:42.154 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 19:45:42.156 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 19:45:42.283 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 19:45:42.286 +05:30 [INF] Hosting environment: Development
+2025-04-21 19:45:42.287 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 19:45:42.647 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 19:45:42.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 302.522ms
+2025-04-21 19:45:43.064 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 19:45:43.069 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 19:45:43.073 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.6403ms
+2025-04-21 19:45:43.108 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.2226ms
+2025-04-21 19:45:43.393 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 19:45:43.440 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.8302ms
+2025-04-21 19:46:24.503 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/AdminUser/admin/stdents-delete?id=d6d43d3d-1a9b-11f0-8cb9-d41b814ee020 - null null
+2025-04-21 19:46:24.726 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 2:16:24 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 19:46:24.770 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 2:16:24 PM'.
+2025-04-21 19:46:24.788 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.DeleteStudent (Nexora)'
+2025-04-21 19:46:24.868 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 19:46:25.685 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 19:46:25.719 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.DeleteStudent (Nexora) in 832.4482ms
+2025-04-21 19:46:25.728 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.DeleteStudent (Nexora)'
+2025-04-21 19:46:25.738 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/AdminUser/admin/stdents-delete?id=d6d43d3d-1a9b-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 1234.8296ms
+2025-04-21 19:47:44.196 +05:30 [INF] Request starting HTTP/2 PATCH https://localhost:7118/api/AdminUser/admin/concelors-delete?id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - null null
+2025-04-21 19:47:44.220 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 2:17:44 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 19:47:44.231 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 2:17:44 PM'.
+2025-04-21 19:47:44.235 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.Deleteconcelors (Nexora)'
+2025-04-21 19:47:44.250 +05:30 [INF] Route matched with {action = "Deleteconcelors", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Deleteconcelors(System.Guid) on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-21 19:47:44.299 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-21 19:47:44.309 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.Deleteconcelors (Nexora) in 44.8351ms
+2025-04-21 19:47:44.319 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.Deleteconcelors (Nexora)'
+2025-04-21 19:47:44.326 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/AdminUser/admin/concelors-delete?id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 130.1571ms

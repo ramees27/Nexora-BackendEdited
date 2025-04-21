@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.DTO;
 using Domain.Entities;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Application.Interface.Repository
 {
@@ -16,7 +17,8 @@ namespace Application.Interface.Repository
         Task<List<CouncellorGetDTO>> GetCounselorsByKeyword(string keyword);
         Task<bool> IsValidCounselor(Guid counselorId);
         Task<bool> IsActiveCounselor(Guid counselorId);
-        
+        Task<bool> AddEducationAsync(Education education);
+
 
 
     }

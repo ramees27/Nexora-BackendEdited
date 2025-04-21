@@ -86,5 +86,14 @@ namespace Infrastructure.Repository.CouncelorRepository
 
             return count > 0;
         }
+        public async Task<bool> AddEducationAsync(Education education)
+        {
+            var sql = @"INSERT INTO education (education_id, counselor_id, qualification, certificate_image_url)
+                    VALUES (@education_id, @counselor_id, @qualification, @certificate_image_url)";
+
+            using var connection = _context.CreateConnection();
+            var result = await connection.ExecuteAsync(sql, education);
+            return result > 0;
+        }
     }
 }
