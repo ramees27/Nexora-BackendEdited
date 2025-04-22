@@ -1490,3 +1490,43 @@ Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime
 2025-04-21 19:47:44.309 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.Deleteconcelors (Nexora) in 44.8351ms
 2025-04-21 19:47:44.319 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.Deleteconcelors (Nexora)'
 2025-04-21 19:47:44.326 +05:30 [INF] Request finished HTTP/2 PATCH https://localhost:7118/api/AdminUser/admin/concelors-delete?id=251cf03e-1b90-11f0-8cb9-d41b814ee020 - 200 null application/json; charset=utf-8 130.1571ms
+2025-04-21 20:59:53.007 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-21 20:59:53.116 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-21 20:59:53.118 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-21 20:59:53.183 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-21 20:59:53.184 +05:30 [INF] Hosting environment: Development
+2025-04-21 20:59:53.185 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-21 20:59:53.613 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-21 20:59:53.727 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 115.2354ms
+2025-04-21 20:59:53.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-21 20:59:53.765 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-21 20:59:53.766 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.822ms
+2025-04-21 20:59:53.792 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.2545ms
+2025-04-21 20:59:53.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-21 20:59:53.872 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.1446ms
+2025-04-21 21:00:04.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - null null
+2025-04-21 21:00:04.163 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 3:30:04 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 21:00:04.187 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 3:30:04 PM'.
+2025-04-21 21:00:04.191 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-21 21:00:04.222 +05:30 [INF] Route matched with {action = "GetPaymentSummary", controller = "AdminPayment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentSummary() on controller Nexora.Controllers.AdminController.AdminPaymentController (Nexora).
+2025-04-21 21:00:04.531 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.PaymentSummaryDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-21 21:00:04.547 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora) in 319.5308ms
+2025-04-21 21:00:04.549 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-21 21:00:04.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - 200 null application/json; charset=utf-8 468.2032ms
+2025-04-21 21:01:21.965 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-21 21:01:21.971 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 3:31:21 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-21 21:01:21.973 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-Apr-25 12:55:35 PM', Current time (UTC): '21-Apr-25 3:31:21 PM'.
+2025-04-21 21:01:21.974 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-21 21:01:21.978 +05:30 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-21 21:01:21.986 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-21 21:01:21.990 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 11.118ms
+2025-04-21 21:01:21.991 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-21 21:01:21.992 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 27.2241ms

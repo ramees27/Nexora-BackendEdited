@@ -62,6 +62,9 @@ namespace Nexora
             builder.Services.AddScoped<IAdminService, AdminDashBoardService>();
             builder.Services.AddScoped<IAdminUserRepository, AdminUserRepository>();
             builder.Services.AddScoped<IAdminUserService,AdminUserService >();
+            builder.Services.AddScoped<IAdminPaymentRepository, AdminPaymentRepository>();
+           builder.Services.AddScoped<IAdminPaymentService,AdminPaymentService>();
+
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserServices>();
@@ -76,9 +79,9 @@ namespace Nexora
 
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MobileMend API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nexora Api", Version = "v1" });
 
-                // This part allows Swagger to recognize JWT in cookies
+               
                 c.AddSecurityDefinition("cookieAuth", new OpenApiSecurityScheme
                 {
                     Name = "accessToken",
