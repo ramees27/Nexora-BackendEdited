@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application.DTO;
+using Domain;
 
 namespace Application.Interface.Repository
 {
@@ -16,6 +17,7 @@ namespace Application.Interface.Repository
         Task<List<BookingGetDTOByCouncelor>> GetUpcomingConfirmedBookings(Guid counselorId);
         Task<List<BookingGetDTOByCouncelor>> GetUpcompletedBookings(Guid counselorId);
         Task<BookingSectionDetailsDTO> GetBookingSectionDetailsById(Guid bookingId);
+        Task<bool> UpdateBookingStatusAsync(Guid bookingId, string status);
 
     }
 }

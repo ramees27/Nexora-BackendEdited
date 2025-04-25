@@ -13,7 +13,8 @@ namespace Application.Interface.Service
     {
         Task<ApiResponse<Guid>> BookingRequest(BookingRequestDto request, Guid userId, Guid Councelor_id);
         Task<ApiResponse<string>> UpdateStatusAsync(Guid bookingId, string status);
-      
+
+
         Task<ApiResponse<List<ActivityGetDTOForUser>>> GetPendingRequestPaymentBookings(Guid studentId);
         Task<ApiResponse<string>> UpdatePaymentAndStatusAsync(Guid bookingId);
         Task<ApiResponse<List<ActivityGetDTOForUser>>> GetBookingsByScheduled(Guid studentId);

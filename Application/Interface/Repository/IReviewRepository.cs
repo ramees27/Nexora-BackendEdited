@@ -13,6 +13,7 @@ namespace Application.Interface.Repository
         Task<int> AddReview(Review review);
         Task<List<ReviewGetDTOStudent>> GetReviewsByCouncelorId(Guid Councelor_id);
         Task<AvrageRatingDTO> GetReviewCountAndAverageRating(Guid counselorId);
+        Task<List<ReviewGetDTOStudent>> GetAllReviewsAsync();
 
 
     }

@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services.ReviewService
 {
-    public class ReviewService:IReviewService
+    public class ReviewService : IReviewService
     {
         private readonly IMapper _mapper;
         private readonly ILogger<ReviewService> _logger;
@@ -25,10 +25,10 @@ namespace Infrastructure.Services.ReviewService
             _mapper = mapper;
             _logger = logger;
             _reviewRepository = reviewRepository;
-            _councelorRepo = councelorRepo; 
+            _councelorRepo = councelorRepo;
         }
 
-        public async Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId, Guid councelor_id,Guid booking_id)
+        public async Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId, Guid councelor_id, Guid booking_id)
         {
             try
             {
@@ -132,7 +132,7 @@ namespace Infrastructure.Services.ReviewService
                         Message = "No reviews found for this counselor."
                     };
                 }
-              
+
 
 
                 return new ApiResponse<AvrageRatingDTO>
@@ -152,6 +152,30 @@ namespace Infrastructure.Services.ReviewService
                 };
             }
         }
+        public async Task<ApiResponse<List<ReviewGetDTOStudent>>> GetAllReviews()
+        {
+            try
+            {
+                var reviews = await _reviewRepository.GetAllReviewsAsync();
 
+                return new ApiResponse<List<ReviewGetDTOStudent>>
+                {
+                    StatusCode = 200,
+                    Message = "Reviews fetched successfully.",
+                    Data = reviews
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching reviews.");
+                return new ApiResponse<List<ReviewGetDTOStudent>>
+                {
+                    StatusCode = 500,
+                    Message = "An error occurred while fetching reviews.",
+                    Data = null
+                };
+            }
+
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Application.DTO;
 using Application.Interface.Service;
+using Domain.Entities;
+using Infrastructure.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nexora.Controllers.BaseControllerClass;
@@ -11,9 +13,13 @@ namespace Nexora.Controllers.ReviewController
     public class ReviewController : BaseController
     {
         private readonly IReviewService _reviewService;
-        public ReviewController(IReviewService reviewService)
+        private readonly INotificationRepository _notificationRepository;
+
+        public ReviewController(IReviewService reviewService,INotificationRepository notificationRepository)
         {
             _reviewService = reviewService;
+            _notificationRepository = notificationRepository;
+            
         }
         [HttpPost("Add-Review")]
         public async Task<IActionResult>AddReview(ReviewAddDTO reviewAddDTO,Guid councelor_id,Guid booking_id)
@@ -48,5 +54,18 @@ namespace Nexora.Controllers.ReviewController
             }
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("Get-all-review")]
+        public async Task<IActionResult> GetAllReview()
+        {
+
+            var result = await _reviewService.GetAllReviews();
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+      
+
     }
 }

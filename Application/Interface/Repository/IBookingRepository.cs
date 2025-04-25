@@ -10,7 +10,7 @@ namespace Application.Interface.Repository
 {
     public interface IBookingRepository
     {
-        Task<int> AddBookingAsync(Booking booking);
+        Task<int> AddBookingAsync(Booking booking, Guid counselor_id);
         Task<bool> UpdateBookingStatusAsync(Guid bookingId, string status);
      
         Task<List<ActivityGetDTOForUser>> GetPendingRequestPayemntBookings(Guid studentId);
@@ -18,6 +18,7 @@ namespace Application.Interface.Repository
         Task<List<ActivityGetDTOForUser>> GetScheduledBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetCompletedBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetRejectedandCancelledBookings(Guid studentId);
+      
 
     }
 }

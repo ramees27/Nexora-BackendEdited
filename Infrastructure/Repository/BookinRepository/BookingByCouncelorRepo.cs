@@ -91,5 +91,13 @@ namespace Infrastructure.Repository.BookinRepository
             using var connection = _dapperContext.CreateConnection();
             return await connection.QueryFirstOrDefaultAsync<BookingSectionDetailsDTO>(sql, new { BookingId = bookingId });
         }
+        public async Task<bool> UpdateBookingStatusAsync(Guid bookingId, string status)
+        {
+            var sql = "UPDATE bookings SET status = @Status WHERE booking_id = @BookingId";
+
+            using var connection =_dapperContext.CreateConnection();
+            var result = await connection.ExecuteAsync(sql, new { Status = status, BookingId = bookingId });
+            return result > 0;
+        }
     }
 }

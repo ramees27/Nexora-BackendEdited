@@ -21,12 +21,15 @@ namespace Infrastructure.Repository.BookinRepository
         {
             _context = context;
         }
-        public async Task<int> AddBookingAsync(Booking booking)
+       
+
+        public async Task<int> AddBookingAsync(Booking booking,Guid counselor_id)
         {
             var sql = @"INSERT INTO bookings 
                (booking_id, student_id, counselor_id, preferd_time, preferd_date,fee) 
                VALUES 
-               (@Id, @StudentId, @CounselorId, @PreferdTime, @PreferdDate,@fee);";
+              (@booking_id, @student_id, @counselor_id, @preferd_time, @preferd_date,
+                (SELECT hourly_rate * 1.10 FROM counselors WHERE counselors_id = @counselor_id LIMIT 1));"; 
 
             using var connection = _context.CreateConnection();
             return await connection.ExecuteAsync(sql, booking);
@@ -56,23 +59,9 @@ namespace Infrastructure.Repository.BookinRepository
                 SET payment_status = TRUE, status = 'accepted' 
                 WHERE booking_id = @BookingId";
 
-            var sqlInsertPayment = @"
-        INSERT INTO payments (
-            payment_id,
-            booking_id, UserId, counselors_id, 
-            total_amount, commission_amount, counselor_amount, 
-           
-        )
-        SELECT 
-            UUID(),
-            booking_id, student_id, counselor_id,
-            fee, 
-            fee * 0.10,      
-            fee * 0.90,         
-          
-            
-        FROM bookings
-        WHERE booking_id = @BookingId";
+            var sqlInsertPayment = @" INSERT INTO payments (payment_id, booking_id, UserId, counselors_id, 
+              total_amount, commission_amount, counselor_amount) SELECT UUID(), booking_id, student_id, counselor_id,
+            fee,fee * 0.10,fee * 0.90 FROM bookings WHERE booking_id = @BookingId";
 
             using var connection =   _context.CreateConnection();
              connection.Open();

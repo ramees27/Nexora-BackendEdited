@@ -9,6 +9,7 @@ using Application.Interface.Service;
 using AutoMapper;
 using Domain;
 using Domain.Entities;
+using Infrastructure.Repository;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services.BookinService
@@ -18,24 +19,44 @@ namespace Infrastructure.Services.BookinService
         private readonly IMapper _Mapper;
         private readonly IBookingRepository _bookingRepository;
         private readonly ILogger<BookingService> _logger;
-        public BookingService(IMapper mapper, IBookingRepository bookingRepository, ILogger<BookingService> logger)
+        private readonly INotificationRepository _notificationRepository;
+        public BookingService(IMapper mapper, IBookingRepository bookingRepository, ILogger<BookingService> logger,INotificationRepository notificationRepository)
         {
             _Mapper = mapper;
             _bookingRepository = bookingRepository;
             _logger = logger;
+            _notificationRepository = notificationRepository;
         }
         public async Task<ApiResponse<Guid>> BookingRequest(BookingRequestDto request, Guid userId, Guid Councelor_id)
         {
             try
             {
-                var booking = _Mapper.Map<Booking>(request);
-                booking.booking_id = Guid.NewGuid();
-                booking.student_id = userId;
-                booking.counselor_id = Councelor_id;
+                //var booking = _Mapper.Map<Booking>(request);
+                //booking.booking_id = Guid.NewGuid();
+                //booking.student_id = userId;
+                //booking.counselor_id = Councelor_id;
+                var booking = new Booking
+                {
+                    booking_id = Guid.NewGuid(),
+                    preferd_date = request.PreferdDate,
+                    preferd_time = request.PreferdTime,
+                    student_id = userId,
+                    counselor_id = Councelor_id,
 
-                var result = await _bookingRepository.AddBookingAsync(booking);
 
-                if (result > 0)
+                };
+
+                var result = await _bookingRepository.AddBookingAsync(booking,Councelor_id);
+                var notification = new Notification
+                {
+                    notification_id = Guid.NewGuid(),
+                    sender_id = userId,
+                    receiver_id = Councelor_id,
+                    message = "A new booking request is received, Request payment or reshedule the date and time"
+                };
+                var notificationresult=await _notificationRepository.CreateNotificationAsync(notification);
+
+                if (result > 0&& notificationresult>0)
                 {
                     _logger.LogInformation("Booking created: {BookingId}", booking.booking_id);
                     return new ApiResponse<Guid>
@@ -83,8 +104,19 @@ namespace Infrastructure.Services.BookinService
                 }
 
                 var result = await _bookingRepository.UpdateBookingStatusAsync(bookingId, status.ToLower());
+                var getId = await _notificationRepository .GetBookingParticipantsAsync(bookingId);
+                var notification = new Notification
+                {
+                    notification_id = Guid.NewGuid(),
+                    receiver_id = getId.counselor_id,
+                    sender_id = getId.student_id,
+                    message = $"Booking Status Updated bookingId:-{bookingId}"
+                };
+                var notificationresult= await _notificationRepository.CreateNotificationAsync(notification);
+                    
+                
 
-                if (result)
+                if (result && notificationresult > 0)
                 {
                     _logger.LogInformation("Booking status updated to {Status} for BookingId: {BookingId}", status, bookingId);
                     return new ApiResponse<string>
@@ -94,6 +126,7 @@ namespace Infrastructure.Services.BookinService
                         Data = status
                     };
                 }
+               
 
                 _logger.LogWarning("Booking status update failed or not found. BookingId: {BookingId}", bookingId);
                 return new ApiResponse<string>
@@ -161,7 +194,19 @@ namespace Infrastructure.Services.BookinService
             try
             {
                 var updated = await _bookingRepository.UpdateBookingPaymentAndStatusAsync(bookingId);
-                if (!updated)
+                var getId = await _notificationRepository.GetBookingParticipantsAsync(bookingId);
+             
+
+                var notification = new Notification
+                {
+                    notification_id = Guid.NewGuid(),
+                    receiver_id = getId.counselor_id,
+                    sender_id = getId.student_id,
+                    message = $"Payment Completed By student Booking id={bookingId}"
+                };
+                var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
+              
+                if (!updated || notificationresult<=0)
                 {
                     return new ApiResponse<string>
                     {
@@ -170,12 +215,15 @@ namespace Infrastructure.Services.BookinService
                         Data = null
                     };
                 }
-                return new ApiResponse<string>
-                {
-                    StatusCode = 200,
-                    Message = "Booking status updated and payment recorded successfully.",
-                    Data = "Success",
-                };
+                
+                    return new ApiResponse<string>
+                    {
+                        StatusCode = 200,
+                        Message = "Booking status updated and payment recorded successfully.",
+                        Data = "Success",
+                    };
+                
+
             }
             catch (Exception ex)
             {

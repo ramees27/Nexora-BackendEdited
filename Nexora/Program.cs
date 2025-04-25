@@ -24,6 +24,10 @@ using Infrastructure.Repository.ReviewRepository;
 using Infrastructure.Repository.AdminRepository;
 using Infrastructure.Services.AdminService;
 
+using Common.NHub;
+using Infrastructure.Repository;
+using Infrastructure.Repository.NotificationRepository;
+
 namespace Nexora
 {
     public class Program
@@ -64,6 +68,8 @@ namespace Nexora
             builder.Services.AddScoped<IAdminUserService,AdminUserService >();
             builder.Services.AddScoped<IAdminPaymentRepository, AdminPaymentRepository>();
            builder.Services.AddScoped<IAdminPaymentService,AdminPaymentService>();
+            builder.Services.AddScoped<INotificationRepository,NotificationRepository>();
+            builder.Services.AddSignalR();
 
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -151,9 +157,11 @@ namespace Nexora
 
 
 
+            
 
 
             var app = builder.Build();
+            app.MapHub<NotificationHub>("/notificationHub");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

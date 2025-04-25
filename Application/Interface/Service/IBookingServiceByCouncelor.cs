@@ -16,5 +16,6 @@ namespace Application.Interface.Service
         Task<ApiResponse<List<BookingGetDTOByCouncelor>>> GetConfirmedBookings(Guid counselorId);
         Task<ApiResponse<List<BookingGetDTOByCouncelor>>> GetcompletedBookings(Guid counselorId);
         Task<ApiResponse<BookingSectionDetailsDTO>> GetBookingSectionDetails(Guid bookingId);
+        Task<ApiResponse<string>> UpdateStatusByCouncelor(Guid bookingId, string status);
     }
 }

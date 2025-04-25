@@ -1,5 +1,6 @@
 ﻿using Application.DTO;
 using Application.Interface.Service;
+using Infrastructure.Services.BookinService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,6 +74,18 @@ namespace Nexora.Controllers.Booking
                 return Ok(result);
             }
             return StatusCode(result.StatusCode, result);
+        }
+        [HttpPatch("{bookingId}/:status/{status}")]
+        public async Task<IActionResult> UpdateBookingStatus(Guid bookingId, string status)
+        {
+
+            var result = await _bookingServiceByCouncelor.UpdateStatusByCouncelor(bookingId, status);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Application.Interface.Repository
         Task<List<AdminPaymentDetailsDTO>> GetPaymentDetailsAsync();
         Task<ReviewGetDTOStudent> GetReviewByBookingIdAsync(Guid bookingId);
         Task<bool> GetUpdatePaymentIntoCouncelor(Guid bookingId);
+       
     }
 }

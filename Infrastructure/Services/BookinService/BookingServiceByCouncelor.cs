@@ -8,6 +8,8 @@ using Application.Interface.Repository;
 using Application.Interface.Service;
 using AutoMapper;
 using Domain;
+using Domain.Entities;
+using Infrastructure.Repository;
 using Infrastructure.Repository.BookinRepository;
 using Microsoft.Extensions.Logging;
 using MySqlX.XDevAPI.Common;
@@ -20,13 +22,15 @@ namespace Infrastructure.Services.BookinService
         private readonly IBookinRepositiryByCouncelor _bookingRepositoryByCouncelor;
         private readonly ILogger<BookingServiceByCouncelor> _logger;
         private readonly ICouncelorRepo _councelorRepo;
-        public BookingServiceByCouncelor(IMapper mapper, IBookinRepositiryByCouncelor bookingRepository, ILogger<BookingServiceByCouncelor> logger, ICouncelorRepo councelorRep)
+        private readonly INotificationRepository _notificationRepository;
+        public BookingServiceByCouncelor(IMapper mapper, IBookinRepositiryByCouncelor bookingRepository, ILogger<BookingServiceByCouncelor> logger, ICouncelorRepo councelorRep,
+                                              INotificationRepository notificationRepository )
         {
             _Mapper = mapper;
             _bookingRepositoryByCouncelor = bookingRepository;
             _logger = logger;
             _councelorRepo = councelorRep;
-
+            _notificationRepository = notificationRepository;
         }
         public async Task<ApiResponse<List<BookingGetDTOByCouncelor>>> GetPendingRequestByCounselorId(Guid counselorId)
         {
@@ -282,6 +286,66 @@ namespace Infrastructure.Services.BookinService
                 };
             }
         }
+        public async Task<ApiResponse<string>> UpdateStatusByCouncelor(Guid bookingId, string status)
+        {
+            try
+            {
+                var validStatuses = new[] { "pending", "request_payment", "accepted", "declined", "cancelled", "completed" };
 
+                if (!validStatuses.Contains(status.ToLower()))
+                {
+                    _logger.LogWarning("Invalid status update attempted: {Status}", status);
+                    return new ApiResponse<string>
+                    {
+                        StatusCode = 400,
+                        Message = "Invalid status",
+                        Error = "Unsupported status value"
+                    };
+                }
+
+                var result = await _bookingRepositoryByCouncelor.UpdateBookingStatusAsync(bookingId, status.ToLower());
+                var getId = await _notificationRepository.GetBookingParticipantsAsync(bookingId);
+                var notification = new Notification
+                {
+                    notification_id = Guid.NewGuid(),
+                    receiver_id = getId.counselor_id,
+                    sender_id = getId.student_id,
+                    message = $"Booking Status Updated bookingId:-{bookingId}"
+                };
+                var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
+
+
+
+                if (result && notificationresult > 0)
+                {
+                    _logger.LogInformation("Booking status updated to {Status} for BookingId: {BookingId}", status, bookingId);
+                    return new ApiResponse<string>
+                    {
+                        StatusCode = 200,
+                        Message = "Status updated successfully",
+                        Data = status
+                    };
+                }
+
+
+                _logger.LogWarning("Booking status update failed or not found. BookingId: {BookingId}", bookingId);
+                return new ApiResponse<string>
+                {
+                    StatusCode = 404,
+                    Message = "Booking not found or status unchanged",
+                    Error = "No update occurred"
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while updating booking status for BookingId: {BookingId}", bookingId);
+                return new ApiResponse<string>
+                {
+                    StatusCode = 500,
+                    Message = "An error occurred while updating status",
+                    Error = ex.Message
+                };
+            }
+        }
     }
 }

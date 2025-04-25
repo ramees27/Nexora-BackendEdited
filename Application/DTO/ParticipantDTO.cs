@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.DTO
 {
-    public class BookingRequestDto
+    public class BookingParticipantsDto
     {
-        
-        
-        public string PreferdTime { get; set; }
-        public DateTime PreferdDate { get; set; }
-       
+        public Guid student_id { get; set; }
+        public Guid counselor_id { get; set; }
     }
+
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using Infrastructure.Data;
 
 namespace Infrastructure.Repository.ReviewRepository
 {
-    public class ReviewRepository:IReviewRepository
+    public class ReviewRepository : IReviewRepository
     {
         private readonly DapperContext _Connection;
         public ReviewRepository(DapperContext connection)
@@ -24,21 +25,21 @@ namespace Infrastructure.Repository.ReviewRepository
             var sql = @"
             INSERT INTO ratings (rating_id,student_id, counselor_id, booking_id, rating, review)
             VALUES (rating_id,@student_id, @counselor_id, @booking_id, @rating, @review);";
-            using var connection=_Connection.CreateConnection();
+            using var connection = _Connection.CreateConnection();
             return await connection.ExecuteAsync(sql, review);
 
 
         }
         public async Task<List<ReviewGetDTOStudent>> GetReviewsByCouncelorId(Guid Councelor_id)
         {
-            
-                var sql = @" SELECT *  FROM ratings r JOIN users u ON r.student_id = u.UserId
-            WHERE r.counselor_id = @Councelor_id ORDER BY r.created_at DESC; ";
-                using var connection=_Connection.CreateConnection();
-                var result= await connection.QueryAsync<ReviewGetDTOStudent>(sql, new { Councelor_id });
-                return result.ToList();
 
-            
+            var sql = @" SELECT *  FROM ratings r JOIN users u ON r.student_id = u.UserId
+            WHERE r.counselor_id = @Councelor_id ORDER BY r.created_at DESC; ";
+            using var connection = _Connection.CreateConnection();
+            var result = await connection.QueryAsync<ReviewGetDTOStudent>(sql, new { Councelor_id });
+            return result.ToList();
+
+
         }
         public async Task<AvrageRatingDTO> GetReviewCountAndAverageRating(Guid counselorId)
         {
@@ -48,10 +49,20 @@ namespace Infrastructure.Repository.ReviewRepository
                     AVG(rating * 1.0) AS rating
                 FROM ratings
                 WHERE counselor_id = @CounselorId";
-            using var connection=_Connection.CreateConnection();
+            using var connection = _Connection.CreateConnection();
             return await connection.QueryFirstOrDefaultAsync<AvrageRatingDTO>(sql, new { CounselorId = counselorId });
+        }
+        public async Task<List<ReviewGetDTOStudent>> GetAllReviewsAsync()
+        {
+            var sql = @"SELECT r.rating_id AS ReviewId, r.booking_id AS BookingId,  r.rating AS Rating,  r.review AS review,
+                        r.created_at AS CreatedAt, u.username AS Username FROM ratings r JOIN users u ON r.student_id = u.UserId;";
+
+            ;
+            using var connection = _Connection.CreateConnection();
+            var reviews = await connection.QueryAsync<ReviewGetDTOStudent>(sql);
+            return reviews.ToList();
         }
     }
 }
- 
+
 
