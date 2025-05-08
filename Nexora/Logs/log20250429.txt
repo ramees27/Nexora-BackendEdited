@@ -1,0 +1,36 @@
+2025-04-29 09:38:48.377 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-29 09:38:49.974 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-29 09:38:50.007 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-29 09:38:50.662 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 09:38:50.913 +05:30 [INF] Hosting environment: Development
+2025-04-29 09:38:50.986 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-04-29 09:38:51.423 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-29 09:38:52.265 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 896.3669ms
+2025-04-29 09:38:52.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 09:38:52.306 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-29 09:38:52.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 24.9336ms
+2025-04-29 09:38:52.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 216.4385ms
+2025-04-29 09:38:52.585 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-29 09:38:52.654 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.0709ms
+2025-04-29 09:42:09.482 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-29 09:42:09.802 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-29 09:42:09.807 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-29 09:42:09.901 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 09:42:09.904 +05:30 [INF] Hosting environment: Development
+2025-04-29 09:42:09.907 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-04-29 09:42:11.330 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-29 09:42:11.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 205.3196ms
+2025-04-29 09:42:11.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 09:42:11.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-29 09:42:11.578 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.8272ms
+2025-04-29 09:42:11.603 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2436ms
+2025-04-29 09:42:11.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-29 09:42:11.700 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9644ms
+2025-04-29 09:49:44.210 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-29 09:49:44.232 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 23.0308ms
+2025-04-29 09:49:44.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-29 09:49:44.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 09:49:44.306 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 14.5103ms
+2025-04-29 09:49:44.318 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.8786ms
+2025-04-29 09:49:44.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-29 09:49:44.440 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.6909ms

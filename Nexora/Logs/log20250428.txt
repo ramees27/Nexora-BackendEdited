@@ -1,0 +1,89 @@
+2025-04-28 10:41:50.892 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-28 10:41:51.311 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-28 10:41:51.314 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-28 10:41:51.447 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 10:41:51.450 +05:30 [INF] Hosting environment: Development
+2025-04-28 10:41:51.452 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-04-28 10:41:53.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-28 10:41:53.475 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 264.5709ms
+2025-04-28 10:41:53.506 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-28 10:41:53.506 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-28 10:41:53.515 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.6379ms
+2025-04-28 10:41:53.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.6614ms
+2025-04-28 10:41:53.639 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-28 10:41:53.663 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.125ms
+2025-04-28 10:42:05.768 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - null null
+2025-04-28 10:42:05.945 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-28 10:42:06.004 +05:30 [INF] Route matched with {action = "GetPaymentSummary", controller = "AdminPayment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentSummary() on controller Nexora.Controllers.AdminController.AdminPaymentController (Nexora).
+2025-04-28 10:42:14.498 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.PaymentSummaryDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-28 10:42:14.559 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora) in 8535.3077ms
+2025-04-28 10:42:14.568 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-28 10:42:14.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - 200 null application/json; charset=utf-8 8805.2119ms
+2025-04-28 10:44:17.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-Details - null null
+2025-04-28 10:44:17.604 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentDetails (Nexora)'
+2025-04-28 10:44:17.624 +05:30 [INF] Route matched with {action = "GetPaymentDetails", controller = "AdminPayment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetails() on controller Nexora.Controllers.AdminController.AdminPaymentController (Nexora).
+2025-04-28 10:44:18.881 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.AdminPaymentDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 10:44:18.930 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentDetails (Nexora) in 1297.9259ms
+2025-04-28 10:44:18.938 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentDetails (Nexora)'
+2025-04-28 10:44:18.941 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-Details - 200 null application/json; charset=utf-8 1366.6948ms
+2025-04-28 11:27:05.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - null null
+2025-04-28 11:27:05.436 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-28 11:27:05.443 +05:30 [INF] Route matched with {action = "GetPaymentSummary", controller = "AdminPayment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentSummary() on controller Nexora.Controllers.AdminController.AdminPaymentController (Nexora).
+2025-04-28 11:27:10.296 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.PaymentSummaryDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-28 11:27:10.307 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora) in 4856.3618ms
+2025-04-28 11:27:10.315 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminPaymentController.GetPaymentSummary (Nexora)'
+2025-04-28 11:27:10.323 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminPayment/payment-summary - 200 null application/json; charset=utf-8 4903.9635ms
+2025-04-28 11:27:17.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-04-28 11:27:17.818 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 8.9043ms
+2025-04-28 11:27:17.828 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7118/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-04-28 11:30:55.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - null null
+2025-04-28 11:30:55.493 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-28 11:30:55.507 +05:30 [INF] Route matched with {action = "GetCouncelorsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCouncelorsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-28 11:30:59.688 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 11:30:59.707 +05:30 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora) in 4193.5448ms
+2025-04-28 11:30:59.714 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetCouncelorsForUserManagement (Nexora)'
+2025-04-28 11:30:59.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/AdminUser/admin/Councelors - 200 null application/json; charset=utf-8 4243.2198ms
+2025-04-28 14:46:18.585 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-28 14:46:18.973 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-28 14:46:18.976 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-28 14:46:19.072 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 14:46:19.075 +05:30 [INF] Hosting environment: Development
+2025-04-28 14:46:19.076 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-04-28 14:46:21.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-28 14:46:22.260 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 356.8286ms
+2025-04-28 14:46:22.296 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-28 14:46:22.296 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-28 14:46:22.313 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 16.8686ms
+2025-04-28 14:46:22.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.14ms
+2025-04-28 14:46:22.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-28 14:46:22.498 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.435ms
+2025-04-28 14:46:49.685 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7118/api/User/Login - application/json 59
+2025-04-28 14:46:49.874 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-28 14:46:49.924 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTO.LoginDTO) on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-04-28 14:46:50.242 +05:30 [INF] Login endpoint called
+2025-04-28 14:46:55.970 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 14:46:55.991 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.Login (Nexora) in 6055.4371ms
+2025-04-28 14:46:55.994 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.Login (Nexora)'
+2025-04-28 14:46:55.996 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7118/api/User/Login - 200 null application/json; charset=utf-8 6310.585ms
+2025-04-28 14:47:48.952 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - null null
+2025-04-28 14:47:49.043 +05:30 [INF] Executing endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-28 14:47:49.055 +05:30 [INF] Route matched with {action = "GetCancelledandDeclainedBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCancelledandDeclainedBookings() on controller Nexora.Controllers.Booking.BookingController (Nexora).
+2025-04-28 14:53:00.025 +05:30 [ERR] An error occurred while fetching bookings for student "30fc8ba0-1a9c-11f0-8cb9-d41b814ee020"
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'nexoramysqldb.bookingss' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at Infrastructure.Repository.BookinRepository.BookinRepository.GetRejectedandCancelledBookings(Guid studentId) in C:\NexoraApp\Infrastructure\Repository\BookinRepository\BookinRepository.cs:line 127
+   at Infrastructure.Services.BookinService.BookingService.GetCancelledorRejectedBookings(Guid studentId) in C:\NexoraApp\Application\Services\BookinService\BookingService.cs:line 330
+2025-04-28 14:53:00.130 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.ActivityGetDTOForUser, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 14:53:00.165 +05:30 [INF] Executed action Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora) in 311104.898ms
+2025-04-28 14:53:00.169 +05:30 [INF] Executed endpoint 'Nexora.Controllers.Booking.BookingController.GetCancelledandDeclainedBookings (Nexora)'
+2025-04-28 14:53:00.172 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Booking/student-Get-Cancelled-Declained-Bookings - 500 null application/json; charset=utf-8 311221.0084ms

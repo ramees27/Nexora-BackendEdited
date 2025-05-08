@@ -1,0 +1,229 @@
+2025-04-26 04:40:42.946 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2025-04-26 04:40:43.017 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2025-04-26 04:40:43.031 +00:00 [INF] Creating key {809308ac-089b-4f56-a5d3-a0125455298e} with creation date 2025-04-26 04:40:43Z, activation date 2025-04-26 04:40:43Z, and expiration date 2025-07-25 04:40:43Z.
+2025-04-26 04:40:43.112 +00:00 [WRN] No XML encryptor configured. Key {809308ac-089b-4f56-a5d3-a0125455298e} may be persisted to storage in unencrypted form.
+2025-04-26 04:40:43.262 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 04:40:43.283 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 04:40:43.284 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 04:40:43.285 +00:00 [INF] Hosting environment: Development
+2025-04-26 04:40:43.287 +00:00 [INF] Content root path: /app
+2025-04-26 04:41:08.740 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2025-04-26 04:41:08.789 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2025-04-26 04:41:08.805 +00:00 [INF] Creating key {3a6580bc-8286-4ca2-a4d6-285649a9e97b} with creation date 2025-04-26 04:41:08Z, activation date 2025-04-26 04:41:08Z, and expiration date 2025-07-25 04:41:08Z.
+2025-04-26 04:41:08.828 +00:00 [WRN] No XML encryptor configured. Key {3a6580bc-8286-4ca2-a4d6-285649a9e97b} may be persisted to storage in unencrypted form.
+2025-04-26 04:41:08.978 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 04:41:08.995 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 04:41:08.996 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 04:41:08.997 +00:00 [INF] Hosting environment: Development
+2025-04-26 04:41:08.997 +00:00 [INF] Content root path: /app
+2025-04-26 05:02:17.045 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 05:02:17.103 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 05:02:17.119 +00:00 [INF] Creating key {d7fd6105-791e-4b29-b20c-5198a9bc09be} with creation date 2025-04-26 05:02:17Z, activation date 2025-04-26 05:02:17Z, and expiration date 2025-07-25 05:02:17Z.
+2025-04-26 05:02:17.164 +00:00 [WRN] No XML encryptor configured. Key {d7fd6105-791e-4b29-b20c-5198a9bc09be} may be persisted to storage in unencrypted form.
+2025-04-26 05:02:17.172 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-d7fd6105-791e-4b29-b20c-5198a9bc09be.xml'.
+2025-04-26 05:02:17.291 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 05:02:17.324 +00:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://[::]:8080: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-04-26 05:03:43.960 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 05:03:44.005 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 05:03:44.142 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 05:03:44.175 +00:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://[::]:8080: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-04-26 05:05:27.598 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 05:05:27.646 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 05:05:27.786 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 05:05:27.801 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 05:05:27.802 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 05:05:27.803 +00:00 [INF] Hosting environment: Development
+2025-04-26 05:05:27.803 +00:00 [INF] Content root path: /app
+2025-04-26 05:05:55.993 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 05:05:56.040 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 05:05:56.131 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 05:05:56.142 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 05:05:56.143 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 05:05:56.143 +00:00 [INF] Hosting environment: Development
+2025-04-26 05:05:56.144 +00:00 [INF] Content root path: /app
+2025-04-26 05:06:53.140 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 05:06:53.191 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 05:06:53.586 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 05:06:53.587 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-26 05:06:53.590 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 05:06:53.591 +00:00 [INF] Hosting environment: Development
+2025-04-26 05:06:53.591 +00:00 [INF] Content root path: /app
+2025-04-26 05:06:53.837 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger - null null
+2025-04-26 05:06:53.870 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger - 301 0 null 34.9799ms
+2025-04-26 05:06:53.883 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/index.html - null null
+2025-04-26 05:06:53.954 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/index.html - 200 null text/html;charset=utf-8 70.6451ms
+2025-04-26 05:06:53.975 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/swagger-ui-bundle.js - null null
+2025-04-26 05:06:53.975 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/swagger-ui.css - null null
+2025-04-26 05:06:53.975 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/swagger-ui-standalone-preset.js - null null
+2025-04-26 05:06:54.004 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-26 05:06:54.004 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/swagger-ui.css - 200 152034 text/css 29.4524ms
+2025-04-26 05:06:54.032 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-26 05:06:54.032 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 57.1974ms
+2025-04-26 05:06:54.094 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-26 05:06:54.095 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 119.5629ms
+2025-04-26 05:06:54.227 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/v1/swagger.json - null null
+2025-04-26 05:06:54.277 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32773/swagger/favicon-32x32.png - null null
+2025-04-26 05:06:54.280 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-26 05:06:54.281 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/favicon-32x32.png - 200 628 image/png 4.4975ms
+2025-04-26 05:06:54.333 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32773/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.639ms
+2025-04-26 07:36:52.351 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:36:52.402 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:36:52.423 +00:00 [INF] Creating key {87916b4f-9825-468d-a0dc-7b022cf0165e} with creation date 2025-04-26 07:36:52Z, activation date 2025-04-26 07:36:52Z, and expiration date 2025-07-25 07:36:52Z.
+2025-04-26 07:36:52.439 +00:00 [WRN] No XML encryptor configured. Key {87916b4f-9825-468d-a0dc-7b022cf0165e} may be persisted to storage in unencrypted form.
+2025-04-26 07:36:52.444 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-87916b4f-9825-468d-a0dc-7b022cf0165e.xml'.
+2025-04-26 07:36:52.557 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 07:36:52.580 +00:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://[::]:8080: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-04-26 07:37:14.024 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:37:14.081 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:37:14.241 +00:00 [WRN] Overriding address(es) 'http://*:8080, https://*:8081'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-04-26 07:37:14.278 +00:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://[::]:8080: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-04-26 07:38:20.133 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:38:20.182 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:38:20.451 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 07:38:20.453 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-26 07:38:20.455 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:38:20.459 +00:00 [INF] Hosting environment: Development
+2025-04-26 07:38:20.459 +00:00 [INF] Content root path: /app
+2025-04-26 07:38:36.601 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:38:36.658 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:38:37.000 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 07:38:37.002 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-26 07:38:37.008 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:38:37.009 +00:00 [INF] Hosting environment: Development
+2025-04-26 07:38:37.010 +00:00 [INF] Content root path: /app
+2025-04-26 07:41:19.541 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:41:19.594 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:41:19.842 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 07:41:19.843 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-26 07:41:19.846 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:41:19.850 +00:00 [INF] Hosting environment: Development
+2025-04-26 07:41:19.852 +00:00 [INF] Content root path: /app
+2025-04-26 07:47:00.870 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-04-26 07:47:00.932 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:47:01.194 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-26 07:47:01.195 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-26 07:47:01.200 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:47:01.201 +00:00 [INF] Hosting environment: Development
+2025-04-26 07:47:01.201 +00:00 [INF] Content root path: /app
+2025-04-26 13:17:19.674 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-26 13:17:19.901 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-26 13:17:19.904 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-26 13:17:19.976 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:17:19.977 +05:30 [INF] Hosting environment: Development
+2025-04-26 13:17:19.979 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-04-26 13:17:20.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-26 13:17:20.475 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 173.1846ms
+2025-04-26 13:17:20.496 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-26 13:17:20.496 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-26 13:17:20.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.9586ms
+2025-04-26 13:17:20.569 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.9747ms
+2025-04-26 13:17:20.693 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-26 13:17:20.705 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.8752ms
+2025-04-26 13:20:14.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-26 13:20:14.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 8.9701ms
+2025-04-26 13:20:14.291 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-26 13:20:14.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.5132ms
+2025-04-26 13:20:14.304 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-26 13:20:14.313 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.6368ms
+2025-04-26 13:20:14.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-26 13:20:14.519 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0057ms

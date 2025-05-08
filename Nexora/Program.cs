@@ -1,4 +1,4 @@
-
+﻿
 using System.Configuration;
 using System.Data;
 using System.Text;
@@ -40,12 +40,32 @@ namespace Nexora
             .CreateLogger();
 
            
-
+           
             var builder = WebApplication.CreateBuilder(args);
+
+
+            // ✅ Load .env file (optional)
+            DotNetEnv.Env.Load();
+
+            // ✅ Allow frontend requests (CORS)
+            var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL")
+                ?? builder.Configuration["AppSettings:FrontendUrl"];
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins(frontendUrl) // http://localhost:5173
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials(); // For sending cookies
+                });
+            });
+
+
             builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
-
-          
+           
 
             builder.Services.AddSingleton<DapperContext>();
 
@@ -161,6 +181,7 @@ namespace Nexora
 
 
             var app = builder.Build();
+            app.UseCors("AllowFrontend");
             app.MapHub<NotificationHub>("/notificationHub");
 
             // Configure the HTTP request pipeline.

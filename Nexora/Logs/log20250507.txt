@@ -1,0 +1,112 @@
+2025-05-07 09:46:29.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:46:29.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:46:29.802 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:29.802 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:29.807 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:29.808 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:29.851 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:29.851 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:29.897 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+2025-05-07 09:46:29.906 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+2025-05-07 09:46:29.914 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:29.925 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:46:29.932 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-07 09:46:29.938 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:46:29.949 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 17.0516ms
+2025-05-07 09:46:29.953 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:46:29.953 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:29.960 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:29.963 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 317.8021ms
+2025-05-07 09:46:29.966 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:29.972 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-07 09:46:29.979 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:29.980 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 401 0 null 334.8184ms
+2025-05-07 09:46:29.986 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:46:29.993 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:29 AM'.
+2025-05-07 09:46:30.006 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:30.009 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:30.011 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:30.014 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:46:30.019 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:30 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:30.025 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:46:30.037 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:30 AM'.
+2025-05-07 09:46:30.040 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 14.8356ms
+2025-05-07 09:46:30.044 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-07 09:46:30.046 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:30.052 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-07 09:46:30.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 100.812ms
+2025-05-07 09:46:30.057 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 401 0 null 70.1664ms
+2025-05-07 09:46:36.778 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:46:36.781 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:46:36.784 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:36.789 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:36.793 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:36.795 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:36.800 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:36.802 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:36.818 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+2025-05-07 09:46:36.828 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+2025-05-07 09:46:36.832 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-07 09:46:36.835 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:36.842 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-07 09:46:36.844 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:46:36.847 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 401 0 null 68.9571ms
+2025-05-07 09:46:36.849 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:46:36.852 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:46:36.863 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:36.866 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 14.1237ms
+2025-05-07 09:46:36.867 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:46:36.867 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:36.872 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:36.876 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:46:36.879 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:36.880 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 99.8441ms
+2025-05-07 09:46:36.882 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:46:36.892 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+2025-05-07 09:46:36.901 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:46:36.908 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-07 09:46:36.916 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:16:36 AM'.
+2025-05-07 09:46:36.920 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-07 09:46:36.923 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:36.926 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 401 0 null 76.6696ms
+2025-05-07 09:46:36.929 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:46:36.940 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:46:36.942 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 2.2487ms
+2025-05-07 09:46:36.944 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:46:36.946 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 79.0844ms

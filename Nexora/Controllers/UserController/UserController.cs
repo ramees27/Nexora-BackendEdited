@@ -2,13 +2,14 @@
 using Application.Interface.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Nexora.Controllers.BaseControllerClass;
 using Serilog;
 
 namespace Nexora.Controllers.UserController
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController : ControllerBase
+    public class UserController : BaseController
     {
         private readonly IUserService _userService;
         private readonly ILogger<UserController> _logger;
@@ -57,5 +58,30 @@ namespace Nexora.Controllers.UserController
 
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("get-id")]
+        public async Task<IActionResult> GetIdInCookies()
+        {
+            var userId =  GetLoggedInUserId();
+            
+
+            if (!userId.HasValue)
+                return Unauthorized("User is not logged in");
+
+            return Ok(userId.Value);
+        }
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Append("accessToken", "", new CookieOptions
+            {
+                Expires = DateTimeOffset.UtcNow.AddDays(-1),
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+            });
+
+            return Ok(new { message = "Logged out successfully" });
+        }
+
     }
 }

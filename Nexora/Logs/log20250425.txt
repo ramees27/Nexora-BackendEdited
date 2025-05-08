@@ -1,0 +1,282 @@
+2025-04-25 15:50:18.235 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 15:50:18.505 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-25 15:50:18.507 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-25 15:50:18.581 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 15:50:18.582 +05:30 [INF] Hosting environment: Development
+2025-04-25 15:50:18.583 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-25 15:50:19.324 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-25 15:50:19.489 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 166.3927ms
+2025-04-25 15:50:19.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 15:50:19.546 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-25 15:50:19.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 9.253ms
+2025-04-25 15:50:19.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1843ms
+2025-04-25 15:50:19.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-25 15:50:19.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.371ms
+2025-04-25 15:50:33.361 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 15:50:33.559 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:20:33 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 15:50:33.585 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:20:33 AM'.
+2025-04-25 15:50:33.589 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 15:50:33.611 +05:30 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 15:50:36.001 +05:30 [ERR] Error While getting Payment Summer
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'nexoramysql.mysql.database.azure.com' for user 'nexora_admin@nexoramysql' using method 'caching_sha2_password' failed with message: Access denied for user 'nexora_admin@nexoramysql'@'103.139.64.208' (using password: YES)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user 'nexora_admin@nexoramysql'@'103.139.64.208' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 488
+   at Infrastructure.Repository.AdminRepository.AdminDashBoardRepository.GetPaymentDetailsForAdmin() in C:\Nexora\Infrastructure\Repository\AdminRepository\AdminDashBoardRepository.cs:line 28
+   at Infrastructure.Services.AdminService.AdminDashBoardService.GetPaymentSummeryForAdmin() in C:\Nexora\Application\Services\AdminService\AdminDashBoard.cs:line 27
+2025-04-25 15:50:36.041 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 15:50:36.051 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 2434.7829ms
+2025-04-25 15:50:36.052 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 15:50:36.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 2691.7309ms
+2025-04-25 16:14:03.145 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 16:14:03.243 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-25 16:14:03.245 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-25 16:14:03.307 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:14:03.309 +05:30 [INF] Hosting environment: Development
+2025-04-25 16:14:03.310 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-25 16:14:03.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-25 16:14:03.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 114.4529ms
+2025-04-25 16:14:03.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 16:14:03.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-25 16:14:03.925 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.4043ms
+2025-04-25 16:14:03.948 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.5249ms
+2025-04-25 16:14:03.999 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-25 16:14:04.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.1898ms
+2025-04-25 16:14:18.149 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 16:14:18.201 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:44:18 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:14:18.213 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:44:18 AM'.
+2025-04-25 16:14:18.216 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 16:14:18.228 +05:30 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:14:20.240 +05:30 [ERR] Error While getting Payment Summer
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'nexoramysql.mysql.database.azure.com' for user 'nexora_admin@nexoramysql' using method 'caching_sha2_password' failed with message: Access denied for user 'nexora_admin@nexoramysql'@'103.139.64.208' (using password: YES)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user 'nexora_admin@nexoramysql'@'103.139.64.208' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 488
+   at Infrastructure.Repository.AdminRepository.AdminDashBoardRepository.GetPaymentDetailsForAdmin() in C:\Nexora\Infrastructure\Repository\AdminRepository\AdminDashBoardRepository.cs:line 28
+   at Infrastructure.Services.AdminService.AdminDashBoardService.GetPaymentSummeryForAdmin() in C:\Nexora\Application\Services\AdminService\AdminDashBoard.cs:line 27
+2025-04-25 16:14:20.260 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 16:14:20.271 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 2038.4333ms
+2025-04-25 16:14:20.273 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 16:14:20.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 2125.4921ms
+2025-04-25 16:19:19.763 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 16:19:19.860 +05:30 [INF] Now listening on: https://localhost:7118
+2025-04-25 16:19:19.863 +05:30 [INF] Now listening on: http://localhost:5268
+2025-04-25 16:19:19.923 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:19:19.925 +05:30 [INF] Hosting environment: Development
+2025-04-25 16:19:19.926 +05:30 [INF] Content root path: C:\Nexora\Nexora
+2025-04-25 16:19:20.287 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-04-25 16:19:20.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 118.3144ms
+2025-04-25 16:19:20.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 16:19:20.420 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-04-25 16:19:20.423 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.2178ms
+2025-04-25 16:19:20.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.1582ms
+2025-04-25 16:19:20.495 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-04-25 16:19:20.510 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.8463ms
+2025-04-25 16:19:26.710 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 16:19:26.762 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:26 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:19:26.775 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:26 AM'.
+2025-04-25 16:19:26.778 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 16:19:26.792 +05:30 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:19:30.047 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 16:19:30.062 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 3265.8543ms
+2025-04-25 16:19:30.064 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 16:19:30.066 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 3355.7674ms
+2025-04-25 16:19:41.333 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Councelor-Count - null null
+2025-04-25 16:19:41.347 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:41 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:19:41.352 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:41 AM'.
+2025-04-25 16:19:41.353 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetCouncelorCount (Nexora)'
+2025-04-25 16:19:41.356 +05:30 [INF] Route matched with {action = "GetCouncelorCount", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCouncelorCount() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:19:42.013 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 16:19:42.017 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetCouncelorCount (Nexora) in 659.8618ms
+2025-04-25 16:19:42.019 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetCouncelorCount (Nexora)'
+2025-04-25 16:19:42.019 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Councelor-Count - 200 null application/json; charset=utf-8 686.5385ms
+2025-04-25 16:19:48.262 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Student-Count - null null
+2025-04-25 16:19:48.267 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:48 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:19:48.268 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:48 AM'.
+2025-04-25 16:19:48.270 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetStudentCount (Nexora)'
+2025-04-25 16:19:48.273 +05:30 [INF] Route matched with {action = "GetStudentCount", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentCount() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:19:48.926 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 16:19:48.927 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetStudentCount (Nexora) in 653.1758ms
+2025-04-25 16:19:48.928 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetStudentCount (Nexora)'
+2025-04-25 16:19:48.929 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Student-Count - 200 null application/json; charset=utf-8 666.6441ms
+2025-04-25 16:19:53.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Booking-Count - null null
+2025-04-25 16:19:53.462 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:53 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:19:53.465 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:53 AM'.
+2025-04-25 16:19:53.465 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetTotalBooking (Nexora)'
+2025-04-25 16:19:53.468 +05:30 [INF] Route matched with {action = "GetTotalBooking", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTotalBooking() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:19:54.114 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 16:19:54.119 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetTotalBooking (Nexora) in 650.252ms
+2025-04-25 16:19:54.122 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetTotalBooking (Nexora)'
+2025-04-25 16:19:54.123 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-Booking-Count - 200 null application/json; charset=utf-8 664.1314ms
+2025-04-25 16:19:59.708 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - null null
+2025-04-25 16:19:59.713 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:59 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 16:19:59.715 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23-Apr-25 12:19:10 PM', Current time (UTC): '25-Apr-25 10:49:59 AM'.
+2025-04-25 16:19:59.716 +05:30 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-25 16:19:59.719 +05:30 [INF] Route matched with {action = "GetNonVerifiedCouncelorsDetails", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNonVerifiedCouncelorsDetails() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 16:20:00.373 +05:30 [INF] No new counselors found for the admin.
+2025-04-25 16:20:00.376 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CounselorDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 16:20:00.381 +05:30 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora) in 660.9299ms
+2025-04-25 16:20:00.382 +05:30 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetNonVerifiedCouncelorsDetails (Nexora)'
+2025-04-25 16:20:00.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/DashBoard/Get-nonverified-CouncelorsDetails - 404 null application/json; charset=utf-8 674.0926ms
+2025-04-25 13:30:51.140 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2025-04-25 13:30:51.205 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2025-04-25 13:30:51.227 +00:00 [INF] Creating key {35fa806d-019d-4cd5-b2f0-6a4cafbdda4c} with creation date 2025-04-25 13:30:51Z, activation date 2025-04-25 13:30:51Z, and expiration date 2025-07-24 13:30:51Z.
+2025-04-25 13:30:51.255 +00:00 [WRN] No XML encryptor configured. Key {35fa806d-019d-4cd5-b2f0-6a4cafbdda4c} may be persisted to storage in unencrypted form.
+2025-04-25 13:30:51.794 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-25 13:30:51.796 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-25 13:30:51.803 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 13:30:51.806 +00:00 [INF] Hosting environment: Development
+2025-04-25 13:30:51.807 +00:00 [INF] Content root path: /app
+2025-04-25 13:30:53.808 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger - null null
+2025-04-25 13:30:53.924 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger - 301 0 null 107.587ms
+2025-04-25 13:30:53.983 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/index.html - null null
+2025-04-25 13:30:54.237 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/index.html - 200 null text/html;charset=utf-8 254.3208ms
+2025-04-25 13:30:54.507 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/swagger-ui.css - null null
+2025-04-25 13:30:54.508 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/swagger-ui-bundle.js - null null
+2025-04-25 13:30:54.508 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/swagger-ui-standalone-preset.js - null null
+2025-04-25 13:30:54.665 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-25 13:30:54.666 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/swagger-ui.css - 200 152034 text/css 161.4484ms
+2025-04-25 13:30:54.673 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-25 13:30:54.675 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 168.5142ms
+2025-04-25 13:30:54.897 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-25 13:30:54.898 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 392.5227ms
+2025-04-25 13:30:55.235 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/v1/swagger.json - null null
+2025-04-25 13:30:55.279 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/favicon-32x32.png - null null
+2025-04-25 13:30:55.281 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-25 13:30:55.282 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/favicon-32x32.png - 200 628 image/png 3.4094ms
+2025-04-25 13:30:55.435 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 200.1987ms
+2025-04-25 14:39:47.954 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2025-04-25 14:39:47.999 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2025-04-25 14:39:48.012 +00:00 [INF] Creating key {3b4b163b-99fd-40cd-b5d0-5be2c12e2934} with creation date 2025-04-25 14:39:48Z, activation date 2025-04-25 14:39:48Z, and expiration date 2025-07-24 14:39:48Z.
+2025-04-25 14:39:48.044 +00:00 [WRN] No XML encryptor configured. Key {3b4b163b-99fd-40cd-b5d0-5be2c12e2934} may be persisted to storage in unencrypted form.
+2025-04-25 14:39:48.347 +00:00 [INF] Now listening on: http://[::]:8080
+2025-04-25 14:39:48.348 +00:00 [INF] Now listening on: https://[::]:8081
+2025-04-25 14:39:48.351 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:39:48.352 +00:00 [INF] Hosting environment: Development
+2025-04-25 14:39:48.353 +00:00 [INF] Content root path: /app
+2025-04-25 14:39:49.127 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/index.html - null null
+2025-04-25 14:39:49.225 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/index.html - 200 null text/html;charset=utf-8 98.6803ms
+2025-04-25 14:39:49.424 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/swagger/v1/swagger.json - null null
+2025-04-25 14:39:49.516 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.2813ms
+2025-04-25 14:39:57.565 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/api/AdminUser/admin/students - null null
+2025-04-25 14:39:57.692 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:39:57'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 14:39:57.719 +00:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:39:57'.
+2025-04-25 14:39:57.722 +00:00 [INF] Executing endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-25 14:39:57.737 +00:00 [INF] Route matched with {action = "GetStudentsForUserManagement", controller = "AdminUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsForUserManagement() on controller Nexora.Controllers.AdminController.AdminUserController (Nexora).
+2025-04-25 14:40:01.313 +00:00 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.UserDetailsDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 14:40:01.346 +00:00 [INF] Executed action Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora) in 3605.9111ms
+2025-04-25 14:40:01.347 +00:00 [INF] Executed endpoint 'Nexora.Controllers.AdminController.AdminUserController.GetStudentsForUserManagement (Nexora)'
+2025-04-25 14:40:01.348 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/api/AdminUser/admin/students - 200 null application/json; charset=utf-8 3782.2404ms
+2025-04-25 14:46:30.084 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-04-25 14:46:30.088 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:46:30'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 14:46:30.090 +00:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:46:30'.
+2025-04-25 14:46:30.091 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 7.4149ms
+2025-04-25 14:46:30.093 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-04-25 14:47:04.320 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 14:47:04.326 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:47:04'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 14:47:04.327 +00:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:47:04'.
+2025-04-25 14:47:04.327 +00:00 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:47:04.331 +00:00 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 14:47:07.614 +00:00 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:47:07.622 +00:00 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 3290.2782ms
+2025-04-25 14:47:07.622 +00:00 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:47:07.623 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 3303.5519ms
+2025-04-25 14:47:54.911 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-04-25 14:47:54.913 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:47:54'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-04-25 14:47:54.914 +00:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04/23/2025 12:19:10', Current time (UTC): '04/25/2025 14:47:54'.
+2025-04-25 14:47:54.916 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 4.1616ms
+2025-04-25 14:47:54.917 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:32769/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-04-25 14:48:05.420 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 14:48:05.422 +00:00 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:48:05.423 +00:00 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 14:48:06.102 +00:00 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:48:06.103 +00:00 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 679.323ms
+2025-04-25 14:48:06.103 +00:00 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:48:06.104 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 684.1456ms
+2025-04-25 14:48:07.133 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - null null
+2025-04-25 14:48:07.133 +00:00 [INF] Executing endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:48:07.134 +00:00 [INF] Route matched with {action = "GetPaymentDetailsforAdmin", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentDetailsforAdmin() on controller Nexora.Controllers.AdminController.DashBoardController (Nexora).
+2025-04-25 14:48:07.826 +00:00 [INF] Executing ObjectResult, writing value of type 'Domain.ApiResponse`1[[Application.DTO.AdminPaymentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:48:07.827 +00:00 [INF] Executed action Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora) in 692.2745ms
+2025-04-25 14:48:07.828 +00:00 [INF] Executed endpoint 'Nexora.Controllers.AdminController.DashBoardController.GetPaymentDetailsforAdmin (Nexora)'
+2025-04-25 14:48:07.829 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32769/api/DashBoard/Get-Payemnt-Summery - 500 null application/json; charset=utf-8 695.83ms

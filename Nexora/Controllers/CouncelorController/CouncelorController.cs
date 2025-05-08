@@ -28,7 +28,7 @@ namespace Nexora.Controllers.CouncelorController
 
             return StatusCode(result.StatusCode, result);
         }
-        [Authorize]
+        
         [HttpGet("all-Councelor")]
         public async Task<IActionResult> GetAllCouncelor()
         {
