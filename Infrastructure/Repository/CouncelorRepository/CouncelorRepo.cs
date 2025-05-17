@@ -56,8 +56,14 @@ namespace Infrastructure.Repository.CouncelorRepository
         }
         public async Task<List<CouncellorGetDTO>> GetCounselorsByKeyword(string keyword)
         {
-            var sql = @"SELECT c.*,  u.UserName,u.UserEmail FROM counselors c JOIN users u ON c.user_id = u.UserId  WHERE c.is_deleted = FALSE AND c.is_verified = TRUE  
-               AND (c.specialization LIKE @Keyword OR c.short_bio LIKE @Keyword) ORDER BY c.avg_rating DESC";
+            var sql = @"SELECT c.*, u.UserName, u.UserEmail 
+FROM counselors c 
+JOIN users u ON c.user_id = u.UserId  
+WHERE c.is_deleted = FALSE 
+  AND c.is_verified = TRUE  
+  AND (c.specialization LIKE @Keyword ) 
+ORDER BY c.avg_rating DESC
+";
             using var connection = _context.CreateConnection();
             var result=await connection.QueryAsync<CouncellorGetDTO>(sql, new { Keyword = $"%{keyword}%" });
             return result.ToList();

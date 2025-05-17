@@ -116,8 +116,17 @@ namespace Infrastructure.Services.AdminService
             try
             {
                 var result = await _repository.GetUpdatePaymentIntoCouncelor(bookingId);
-                
 
+                if (result == false)
+                {
+                    return new ApiResponse<bool>
+                    {
+                        StatusCode = 500,
+                        Message = "Error",
+                        Data = false
+
+                    };
+                }
                 return new ApiResponse<bool>
                 {
                     StatusCode = 200,
