@@ -51,7 +51,7 @@ namespace Nexora.Controllers.Booking
             }
             return StatusCode(result.StatusCode, result);
         }
-        [HttpPost("confirm-payment")]
+        [HttpPatch("confirm-payment")]
         public async Task<IActionResult> UpdatePaymentAndAccepct(Guid bookingId)
         {
            
@@ -89,6 +89,17 @@ namespace Nexora.Controllers.Booking
         {
             var studentId = GetLoggedInUserId().Value;
             var result = await _bookingService.GetCancelledorRejectedBookings (studentId);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpPatch("student-Cancelle-Bookings")]
+        public async Task<IActionResult> CancelAfterPayment(Guid bookingId)
+        {
+           
+            var result = await _bookingService.CancelBookingByUserAfterPayment(bookingId);
             if (result.StatusCode == 200)
             {
                 return Ok(result);

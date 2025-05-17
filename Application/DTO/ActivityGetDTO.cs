@@ -11,7 +11,7 @@ namespace Application.DTO
         public Guid booking_id { get; set; }
        
         public string preferd_time { get; set; }
-        public DateTime PreferdDate { get; set; }
+        public DateTime preferd_date { get; set; }
         public string Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public Guid counselor_id { get; set; }

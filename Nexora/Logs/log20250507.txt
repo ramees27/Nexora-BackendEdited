@@ -110,3 +110,727 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2025-05-07 09:46:36.942 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 2.2487ms
 2025-05-07 09:46:36.944 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
 2025-05-07 09:46:36.946 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 79.0844ms
+2025-05-07 09:48:56.955 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 09:48:57.316 +05:30 [INF] Now listening on: https://localhost:7118
+2025-05-07 09:48:57.319 +05:30 [INF] Now listening on: http://localhost:5268
+2025-05-07 09:48:57.433 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 09:48:57.436 +05:30 [INF] Hosting environment: Development
+2025-05-07 09:48:57.438 +05:30 [INF] Content root path: C:\NexoraApp\Nexora
+2025-05-07 09:48:59.084 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - null null
+2025-05-07 09:48:59.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - 200 null text/html;charset=utf-8 267.3978ms
+2025-05-07 09:48:59.405 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-07 09:48:59.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/_vs/browserLink - null null
+2025-05-07 09:48:59.418 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.2609ms
+2025-05-07 09:48:59.454 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.2846ms
+2025-05-07 09:48:59.638 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - null null
+2025-05-07 09:48:59.679 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.8581ms
+2025-05-07 09:49:06.128 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:49:06.128 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:06.142 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:06.142 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:06.144 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:06.145 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:06.311 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:06.311 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:06.367 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+2025-05-07 09:49:06.374 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+2025-05-07 09:49:06.384 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:06.385 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:06.425 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:06.425 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:49:06.456 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:49:06.465 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:49:06.468 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 20.1239ms
+2025-05-07 09:49:06.472 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:06.473 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:06.476 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:06.482 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 354.3295ms
+2025-05-07 09:49:06.492 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:06.506 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:06 AM'.
+2025-05-07 09:49:06.509 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:06.514 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:49:06.523 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:49:06.528 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 7.1131ms
+2025-05-07 09:49:06.530 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:06.533 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 67.6775ms
+2025-05-07 09:49:06.594 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:07.218 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:07.224 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:07.247 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 814.6557ms
+2025-05-07 09:49:07.251 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:07.251 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:07.257 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:07.259 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 1131.4976ms
+2025-05-07 09:49:07.259 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:07.267 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:07 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:07.277 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:07 AM'.
+2025-05-07 09:49:07.280 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:07.282 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:07.287 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:07.299 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:07.301 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:07.307 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 20.8417ms
+2025-05-07 09:49:07.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:07.310 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:07.313 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:07.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 64.3115ms
+2025-05-07 09:49:07.316 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:07.325 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:07 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:07.332 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:07 AM'.
+2025-05-07 09:49:07.337 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:07.340 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:07.346 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:07.350 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:07.352 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:07.357 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 13.972ms
+2025-05-07 09:49:07.363 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:07.368 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 59.7264ms
+2025-05-07 09:49:09.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:49:09.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:09.356 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:09.361 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:09.365 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:09.367 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:09.370 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:09.373 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:09.386 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+2025-05-07 09:49:09.396 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+2025-05-07 09:49:09.399 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:09.403 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.405 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:49:09.408 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:09.421 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:09.422 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:49:09.426 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:09.427 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 12.3244ms
+2025-05-07 09:49:09.430 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:09.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:49:09.433 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:09.436 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 15.5025ms
+2025-05-07 09:49:09.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:09.443 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:09.445 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 93.1881ms
+2025-05-07 09:49:09.449 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.456 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:09.458 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:09.466 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 114.5864ms
+2025-05-07 09:49:09.468 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:09.474 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:09.484 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:09.495 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+2025-05-07 09:49:09.508 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+2025-05-07 09:49:09.511 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:09.514 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.519 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:49:09.522 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:09.528 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:49:09.537 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:09.540 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 11.4948ms
+2025-05-07 09:49:09.545 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:49:09.550 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 119.4405ms
+2025-05-07 09:49:09.546 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:09.556 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:09.559 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 22.2128ms
+2025-05-07 09:49:09.561 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:49:09.569 +05:30 [INF] CORS policy execution failed.
+2025-05-07 09:49:09.565 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.570 +05:30 [INF] Request origin http://localhost:5174 does not have permission to access the resource.
+2025-05-07 09:49:09.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 134.6708ms
+2025-05-07 09:49:09.575 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:49:09.592 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:19:09 AM'.
+2025-05-07 09:49:09.596 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.599 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:49:09.602 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:49:09.606 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:49:09.610 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:49:09.614 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 12.0393ms
+2025-05-07 09:49:09.618 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:49:09.620 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 59.1412ms
+2025-05-07 09:50:21.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:50:21.672 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:50:21.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:50:21.677 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:50:21.685 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:50:21.698 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+2025-05-07 09:50:21.702 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:50:21.704 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:50:21.715 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+2025-05-07 09:50:21.718 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:50:21.725 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:50:21.736 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:50:21.742 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:50:21.752 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:50:21.754 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:50:21.759 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:50:21.764 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 9.778ms
+2025-05-07 09:50:21.766 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:50:21.769 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 32.5412ms
+2025-05-07 09:50:21.772 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:50:21.776 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:50:21.781 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:50:21.785 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:50:21.791 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:50:21.792 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 128.6002ms
+2025-05-07 09:50:21.795 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:50:21.797 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 134.9058ms
+2025-05-07 09:50:21.799 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:50:21.813 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+2025-05-07 09:50:21.829 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:20:21 AM'.
+2025-05-07 09:50:21.832 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:50:21.840 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:50:21.843 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:50:21.846 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:50:21.854 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:50:21.860 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:50:21.862 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 7.6803ms
+2025-05-07 09:50:21.870 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:50:21.872 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:50:21.872 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 105.5071ms
+2025-05-07 09:50:21.877 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:50:21.889 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 29.5044ms
+2025-05-07 09:50:21.892 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:50:21.896 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 124.2071ms
+2025-05-07 09:54:55.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:54:55.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:54:55.991 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:54:55.993 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:54:56.001 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:54:56.003 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:54:56.010 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+2025-05-07 09:54:56.021 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+2025-05-07 09:54:56.023 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:54:56.025 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:54:56.027 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:54:56.030 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:54:56.035 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:54:56.039 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:54:56.041 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 5.8154ms
+2025-05-07 09:54:56.043 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 09:54:56.046 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:54:56.050 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:54:56.051 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 73.3163ms
+2025-05-07 09:54:56.053 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:54:56.064 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+2025-05-07 09:54:56.065 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:54:56.066 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:54:56.069 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:54:56.070 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 09:54:56.073 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 33.7175ms
+2025-05-07 09:54:56.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:54:56.078 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 09:54:56.080 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:54:56.083 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:54:56.085 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 7.1107ms
+2025-05-07 09:54:56.086 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 108.0474ms
+2025-05-07 09:54:56.088 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:54:56.091 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 09:54:56.101 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:24:56 AM'.
+2025-05-07 09:54:56.103 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 60.1709ms
+2025-05-07 09:54:56.109 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:54:56.114 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:54:56.117 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:54:56.122 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:54:56.123 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:54:56.126 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 9.1114ms
+2025-05-07 09:54:56.129 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:54:56.130 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 54.2461ms
+2025-05-07 09:55:02.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:55:02.714 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:55:02.719 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:25:02 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:55:02.733 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:25:02 AM'.
+2025-05-07 09:55:02.736 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:55:02.738 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:55:02.744 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:55:02.752 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:55:02.756 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:55:02.761 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 16.7704ms
+2025-05-07 09:55:02.763 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 09:55:02.766 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:55:02.772 +05:30 [INF] CORS policy execution successful.
+2025-05-07 09:55:02.773 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 65.648ms
+2025-05-07 09:55:02.776 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:25:02 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 09:55:02.795 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 4:25:02 AM'.
+2025-05-07 09:55:02.798 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:55:02.800 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 09:55:02.804 +05:30 [INF] Start: Getting all counselors
+2025-05-07 09:55:02.809 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 09:55:02.811 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 09:55:02.815 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 11.8191ms
+2025-05-07 09:55:02.818 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 09:55:02.820 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 56.9946ms
+2025-05-07 10:35:14.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 10:35:14.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 10:35:14.779 +05:30 [INF] CORS policy execution successful.
+2025-05-07 10:35:14.779 +05:30 [INF] CORS policy execution successful.
+2025-05-07 10:35:14.798 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 10:35:14.798 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 10:35:14.813 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+2025-05-07 10:35:14.820 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+2025-05-07 10:35:14.823 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 10:35:14.826 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 10:35:14.830 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 10:35:14.830 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 10:35:14.837 +05:30 [INF] Start: Getting all counselors
+2025-05-07 10:35:14.838 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 10:35:14.840 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 3.4699ms
+2025-05-07 10:35:14.841 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 10:35:14.843 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 87.8176ms
+2025-05-07 10:35:14.844 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 10:35:14.851 +05:30 [INF] CORS policy execution successful.
+2025-05-07 10:35:14.853 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 10:35:14.859 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:14 AM'.
+2025-05-07 10:35:14.862 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 10:35:14.864 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 10:35:14.868 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 10:35:14.869 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 1.4951ms
+2025-05-07 10:35:14.871 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 10:35:14.873 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 29.5245ms
+2025-05-07 10:35:15.027 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 10:35:15.031 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 10:35:15.037 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 204.0933ms
+2025-05-07 10:35:15.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 10:35:15.041 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 10:35:15.050 +05:30 [INF] CORS policy execution successful.
+2025-05-07 10:35:15.052 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 297.1881ms
+2025-05-07 10:35:15.056 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:15 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 10:35:15.073 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:05:15 AM'.
+2025-05-07 10:35:15.076 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 10:35:15.079 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 10:35:15.083 +05:30 [INF] Start: Getting all counselors
+2025-05-07 10:35:15.087 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 10:35:15.089 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 10:35:15.091 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 8.4796ms
+2025-05-07 10:35:15.094 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 10:35:15.096 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 55.7556ms
+2025-05-07 11:13:55.902 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 11:13:55.902 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 11:13:55.912 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:13:55.912 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:13:55.919 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:13:55.919 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:13:55.927 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+2025-05-07 11:13:55.932 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+2025-05-07 11:13:55.934 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:13:55.937 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:13:55.941 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 11:13:55.941 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 11:13:55.949 +05:30 [INF] Start: Getting all counselors
+2025-05-07 11:13:55.949 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 11:13:55.954 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 9.4302ms
+2025-05-07 11:13:55.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 11:13:55.956 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:13:55.960 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:13:55.962 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 60.8325ms
+2025-05-07 11:13:55.965 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:13:55.979 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:55 AM'.
+2025-05-07 11:13:55.982 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:13:55.985 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 11:13:55.989 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 11:13:55.990 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 1.5192ms
+2025-05-07 11:13:55.995 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:13:55.999 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 42.6197ms
+2025-05-07 11:13:56.052 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 11:13:56.054 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 11:13:56.059 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 111.7063ms
+2025-05-07 11:13:56.070 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:13:56.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 11:13:56.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 546.8406ms
+2025-05-07 11:13:56.453 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:13:56.463 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:56 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:13:56.470 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 5:43:56 AM'.
+2025-05-07 11:13:56.475 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:13:56.476 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 11:13:56.480 +05:30 [INF] Start: Getting all counselors
+2025-05-07 11:13:56.484 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 11:13:56.486 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 11:13:56.493 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 12.4407ms
+2025-05-07 11:13:56.495 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:13:56.499 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 425.1363ms
+2025-05-07 11:33:19.494 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 11:33:19.498 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 11:33:19.514 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:33:19.517 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:33:19.531 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:33:19.532 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:33:19.545 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+2025-05-07 11:33:19.554 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+2025-05-07 11:33:19.557 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:33:19.558 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:33:19.560 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 11:33:19.562 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 11:33:19.569 +05:30 [INF] Start: Getting all counselors
+2025-05-07 11:33:19.609 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 11:33:19.614 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 5.7849ms
+2025-05-07 11:33:19.626 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 11:33:19.648 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:33:19.644 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:33:19.652 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:33:19.654 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 155.814ms
+2025-05-07 11:33:19.664 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+2025-05-07 11:33:19.674 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:33:19.676 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 11:33:19.677 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 11:33:19.679 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 11:33:19.680 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 11:33:19.681 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 2.8652ms
+2025-05-07 11:33:19.684 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 115.5408ms
+2025-05-07 11:33:19.687 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 11:33:19.693 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 11:33:19.696 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:33:19.698 +05:30 [INF] CORS policy execution successful.
+2025-05-07 11:33:19.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 72.822ms
+2025-05-07 11:33:19.701 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 207.1094ms
+2025-05-07 11:33:19.703 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 11:33:19.730 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 6:03:19 AM'.
+2025-05-07 11:33:19.732 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:33:19.733 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 11:33:19.740 +05:30 [INF] Start: Getting all counselors
+2025-05-07 11:33:19.743 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 11:33:19.747 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 11:33:19.750 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 10.0108ms
+2025-05-07 11:33:19.753 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 11:33:19.755 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 68.2533ms
+2025-05-07 13:24:11.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:24:11.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 13:24:11.904 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:24:11.904 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:24:11.922 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:24:11.922 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:24:11.938 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+2025-05-07 13:24:11.941 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+2025-05-07 13:24:11.949 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 13:24:11.951 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:24:11.958 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 13:24:11.958 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:24:11.970 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 13:24:11.972 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:24:11.975 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 10.5954ms
+2025-05-07 13:24:11.977 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 13:24:11.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 13:24:11.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 94.3869ms
+2025-05-07 13:24:11.982 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:24:11.992 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:24:11.999 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:11 AM'.
+2025-05-07 13:24:12.000 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 13:24:12.004 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 13:24:12.008 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 13:24:12.009 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 1.9727ms
+2025-05-07 13:24:12.011 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 13:24:12.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 34.4831ms
+2025-05-07 13:24:12.134 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:24:12.155 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:24:12.164 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 195.4892ms
+2025-05-07 13:24:12.167 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:24:12.168 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:24:12.181 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:24:12.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 301.4074ms
+2025-05-07 13:24:12.191 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:12 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:24:12.208 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:54:12 AM'.
+2025-05-07 13:24:12.210 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:24:12.213 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:24:12.220 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:24:12.223 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:24:12.224 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:24:12.227 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 7.4192ms
+2025-05-07 13:24:12.229 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:24:12.231 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 64.1905ms
+2025-05-07 13:26:23.626 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:23.632 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:23.635 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:23 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:23.645 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:23 AM'.
+2025-05-07 13:26:23.648 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:23.656 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:23.662 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:23.668 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:23.671 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:23.675 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 13.8826ms
+2025-05-07 13:26:23.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:23.680 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:23.683 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:23.684 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 58.6548ms
+2025-05-07 13:26:23.687 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:23 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:23.701 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:23 AM'.
+2025-05-07 13:26:23.702 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:23.703 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:23.706 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:23.708 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:23.709 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:23.713 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 6.9508ms
+2025-05-07 13:26:23.715 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:23.716 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 39.1493ms
+2025-05-07 13:26:29.378 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:29.380 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:29.382 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:29 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:29.390 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:29 AM'.
+2025-05-07 13:26:29.393 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:29.394 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:29.398 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:29.405 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:29.406 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:29.410 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 12.3676ms
+2025-05-07 13:26:29.411 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:29.411 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:29.413 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:29.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 38.3062ms
+2025-05-07 13:26:29.418 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:29 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:29.427 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:29 AM'.
+2025-05-07 13:26:29.429 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:29.433 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:29.440 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:29.442 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:29.442 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:29.444 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 4.3653ms
+2025-05-07 13:26:29.445 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:29.447 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 35.989ms
+2025-05-07 13:26:53.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:53.155 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:53.157 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:53 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:53.166 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:53 AM'.
+2025-05-07 13:26:53.169 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:53.170 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:53.174 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:53.176 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:53.179 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:53.180 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 6.7307ms
+2025-05-07 13:26:53.182 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:53.182 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 13:26:53.183 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 33.1024ms
+2025-05-07 13:26:53.185 +05:30 [INF] CORS policy execution successful.
+2025-05-07 13:26:53.188 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:53 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 13:26:53.192 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 7:56:53 AM'.
+2025-05-07 13:26:53.196 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:53.198 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 13:26:53.200 +05:30 [INF] Start: Getting all counselors
+2025-05-07 13:26:53.203 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 13:26:53.203 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 13:26:53.205 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 4.6312ms
+2025-05-07 13:26:53.206 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 13:26:53.207 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 24.8419ms
+2025-05-07 14:08:19.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 14:08:19.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 14:08:19.436 +05:30 [INF] CORS policy execution successful.
+2025-05-07 14:08:19.439 +05:30 [INF] CORS policy execution successful.
+2025-05-07 14:08:19.447 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 14:08:19.447 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 14:08:19.455 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+2025-05-07 14:08:19.460 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+2025-05-07 14:08:19.464 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 14:08:19.466 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 14:08:19.468 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 14:08:19.469 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 14:08:19.472 +05:30 [INF] Start: Getting all counselors
+2025-05-07 14:08:19.475 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 14:08:19.479 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 4.9588ms
+2025-05-07 14:08:19.480 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 14:08:19.481 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/User/get-id - null null
+2025-05-07 14:08:19.482 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 55.626ms
+2025-05-07 14:08:19.485 +05:30 [INF] CORS policy execution successful.
+2025-05-07 14:08:19.492 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 14:08:19.499 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+2025-05-07 14:08:19.501 +05:30 [INF] Executing endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 14:08:19.502 +05:30 [INF] Route matched with {action = "GetIdInCookies", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIdInCookies() on controller Nexora.Controllers.UserController.UserController (Nexora).
+2025-05-07 14:08:19.505 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-07 14:08:19.510 +05:30 [INF] Executed action Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora) in 5.3523ms
+2025-05-07 14:08:19.512 +05:30 [INF] Executed endpoint 'Nexora.Controllers.UserController.UserController.GetIdInCookies (Nexora)'
+2025-05-07 14:08:19.515 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/User/get-id - 401 null text/plain; charset=utf-8 33.8514ms
+2025-05-07 14:08:19.593 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 14:08:19.594 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 14:08:19.596 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 125.4584ms
+2025-05-07 14:08:19.598 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 14:08:19.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - null null
+2025-05-07 14:08:19.599 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 172.5021ms
+2025-05-07 14:08:19.601 +05:30 [INF] CORS policy execution successful.
+2025-05-07 14:08:19.605 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-07 14:08:19.611 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06-May-25 5:28:28 PM', Current time (UTC): '07-May-25 8:38:19 AM'.
+2025-05-07 14:08:19.612 +05:30 [INF] Executing endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 14:08:19.615 +05:30 [INF] Route matched with {action = "GetAllCouncelor", controller = "Councelor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCouncelor() on controller Nexora.Controllers.CouncelorController.CouncelorController (Nexora).
+2025-05-07 14:08:19.617 +05:30 [INF] Start: Getting all counselors
+2025-05-07 14:08:19.621 +05:30 [INF] Success: Retrieved 2 counselors
+2025-05-07 14:08:19.623 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ApiResponse`1[[System.Collections.Generic.List`1[[Application.DTO.CouncellorGetDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-07 14:08:19.626 +05:30 [INF] Executed action Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora) in 8.4936ms
+2025-05-07 14:08:19.628 +05:30 [INF] Executed endpoint 'Nexora.Controllers.CouncelorController.CouncelorController.GetAllCouncelor (Nexora)'
+2025-05-07 14:08:19.631 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Councelor/all-Councelor - 200 null application/json; charset=utf-8 32.8699ms

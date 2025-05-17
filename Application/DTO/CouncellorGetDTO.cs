@@ -13,8 +13,8 @@ namespace Application.DTO
         public string full_name { get; set; }
         public string specialization { get; set; }
         public string short_bio { get; set; }
-        
-        
+        public int hourly_rate { get; set; }
+
         public int experience { get; set; }
         
        

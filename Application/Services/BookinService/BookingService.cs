@@ -20,7 +20,7 @@ namespace Infrastructure.Services.BookinService
         private readonly IBookingRepository _bookingRepository;
         private readonly ILogger<BookingService> _logger;
         private readonly INotificationRepository _notificationRepository;
-        public BookingService(IMapper mapper, IBookingRepository bookingRepository, ILogger<BookingService> logger,INotificationRepository notificationRepository)
+        public BookingService(IMapper mapper, IBookingRepository bookingRepository, ILogger<BookingService> logger, INotificationRepository notificationRepository)
         {
             _Mapper = mapper;
             _bookingRepository = bookingRepository;
@@ -46,7 +46,7 @@ namespace Infrastructure.Services.BookinService
 
                 };
 
-                var result = await _bookingRepository.AddBookingAsync(booking,Councelor_id);
+                var result = await _bookingRepository.AddBookingAsync(booking, Councelor_id);
                 var notification = new Notification
                 {
                     notification_id = Guid.NewGuid(),
@@ -54,9 +54,9 @@ namespace Infrastructure.Services.BookinService
                     receiver_id = Councelor_id,
                     message = "A new booking request is received, Request payment or reshedule the date and time"
                 };
-                var notificationresult=await _notificationRepository.CreateNotificationAsync(notification);
+                var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
 
-                if (result > 0&& notificationresult>0)
+                if (result > 0 && notificationresult > 0)
                 {
                     _logger.LogInformation("Booking created: {BookingId}", booking.booking_id);
                     return new ApiResponse<Guid>
@@ -104,7 +104,7 @@ namespace Infrastructure.Services.BookinService
                 }
 
                 var result = await _bookingRepository.UpdateBookingStatusAsync(bookingId, status.ToLower());
-                var getId = await _notificationRepository .GetBookingParticipantsAsync(bookingId);
+                var getId = await _notificationRepository.GetBookingParticipantsAsync(bookingId);
                 var notification = new Notification
                 {
                     notification_id = Guid.NewGuid(),
@@ -112,9 +112,9 @@ namespace Infrastructure.Services.BookinService
                     sender_id = getId.student_id,
                     message = $"Booking Status Updated bookingId:-{bookingId}"
                 };
-                var notificationresult= await _notificationRepository.CreateNotificationAsync(notification);
-                    
-                
+                var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
+
+
 
                 if (result && notificationresult > 0)
                 {
@@ -126,7 +126,7 @@ namespace Infrastructure.Services.BookinService
                         Data = status
                     };
                 }
-               
+
 
                 _logger.LogWarning("Booking status update failed or not found. BookingId: {BookingId}", bookingId);
                 return new ApiResponse<string>
@@ -161,7 +161,7 @@ namespace Infrastructure.Services.BookinService
                     _logger.LogWarning("No bookings found for student {StudentId} with pending or request payment status", studentId);
                     return new ApiResponse<List<ActivityGetDTOForUser>>
                     {
-                        StatusCode = 404,
+                        StatusCode = 200,
                         Message = "No bookings found",
                         Data = null
                     };
@@ -195,7 +195,7 @@ namespace Infrastructure.Services.BookinService
             {
                 var updated = await _bookingRepository.UpdateBookingPaymentAndStatusAsync(bookingId);
                 var getId = await _notificationRepository.GetBookingParticipantsAsync(bookingId);
-             
+
 
                 var notification = new Notification
                 {
@@ -205,8 +205,8 @@ namespace Infrastructure.Services.BookinService
                     message = $"Payment Completed By student Booking id={bookingId}"
                 };
                 var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
-              
-                if (!updated || notificationresult<=0)
+
+                if (!updated || notificationresult <= 0)
                 {
                     return new ApiResponse<string>
                     {
@@ -215,14 +215,14 @@ namespace Infrastructure.Services.BookinService
                         Data = null
                     };
                 }
-                
-                    return new ApiResponse<string>
-                    {
-                        StatusCode = 200,
-                        Message = "Booking status updated and payment recorded successfully.",
-                        Data = "Success",
-                    };
-                
+
+                return new ApiResponse<string>
+                {
+                    StatusCode = 200,
+                    Message = "Booking status updated and payment recorded successfully.",
+                    Data = "Success",
+                };
+
 
             }
             catch (Exception ex)
@@ -240,17 +240,17 @@ namespace Infrastructure.Services.BookinService
         {
             try
             {
-                
+
 
 
                 var bookings = await _bookingRepository.GetScheduledBookings(studentId);
 
                 if (bookings == null || !bookings.Any())
                 {
-                    
+
                     return new ApiResponse<List<ActivityGetDTOForUser>>
                     {
-                        StatusCode = 404,
+                        StatusCode = 200,
                         Message = "No bookings found",
                         Data = null
                     };
@@ -292,7 +292,7 @@ namespace Infrastructure.Services.BookinService
 
                     return new ApiResponse<List<ActivityGetDTOForUser>>
                     {
-                        StatusCode = 404,
+                        StatusCode = 200,
                         Message = "No bookings found",
                         Data = null
                     };
@@ -327,7 +327,7 @@ namespace Infrastructure.Services.BookinService
 
 
 
-                var bookings = await _bookingRepository.GetRejectedandCancelledBookings (studentId);
+                var bookings = await _bookingRepository.GetRejectedandCancelledBookings(studentId);
 
                 if (bookings == null || !bookings.Any())
                 {
@@ -360,6 +360,45 @@ namespace Infrastructure.Services.BookinService
                 };
             }
 
+        }
+        public async Task <ApiResponse<bool>>CancelBookingByUserAfterPayment(Guid bookingId)
+        {
+            try
+            {
+                var updated = await _bookingRepository.CancelBookingByUserAfterPayment(bookingId);
+                //var getId = await _notificationRepository.GetBookingParticipantsAsync(bookingId);
+
+
+                //var notification = new Notification
+                //{
+                //    notification_id = Guid.NewGuid(),
+                //    receiver_id = getId.counselor_id,
+                //    sender_id = getId.student_id,
+                //    message = $"Payment Completed By student Booking id={bookingId}"
+                //};
+                //var notificationresult = await _notificationRepository.CreateNotificationAsync(notification);
+
+               
+
+                return new ApiResponse<bool>
+                {
+                    StatusCode = 200,
+                    Message = "Booking Cancelled succusfully.",
+                    Data = updated,
+                };
+
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while processing booking payment and status update.", bookingId);
+                return new ApiResponse<bool>
+                {
+                    StatusCode = 599,
+                    Message = "An unexpected error occurred.",
+                   
+                };
+            }
         }
     }
 }

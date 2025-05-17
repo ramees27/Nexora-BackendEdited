@@ -9,6 +9,7 @@ using Application.Interface.Repository;
 using AutoMapper;
 using Dapper;
 using Domain.Entities;
+using Google.Protobuf.WellKnownTypes;
 using Infrastructure.Data;
 using Infrastructure.Services.CloudinaryService;
 using Microsoft.Extensions.Logging;
@@ -32,7 +33,7 @@ namespace Infrastructure.Repository.CouncelorRepository
             var sql = @"INSERT INTO counselors 
          ( counselors_id, user_id, full_name, specialization, short_bio, mobile_number, is_verified, experience,  hourly_rate, upi_id, avg_rating, image_url, is_deleted)
           VALUES 
-          (UUID(), @user_id, @full_name, @specialization, @short_bio, @mobile_number, @is_verified, @experience, @hourly_rate, @upi_id, @avg_rating, @image_url, @is_deleted)";
+          (@counselors_id, @user_id, @full_name, @specialization, @short_bio, @mobile_number, @is_verified, @experience, @hourly_rate, @upi_id, @avg_rating, @image_url, @is_deleted)";
            
             using  var connection=_context.CreateConnection();
             var result =await connection.ExecuteAsync(sql, counselor);
@@ -94,6 +95,54 @@ namespace Infrastructure.Repository.CouncelorRepository
             using var connection = _context.CreateConnection();
             var result = await connection.ExecuteAsync(sql, education);
             return result > 0;
+        }
+        //public async Task<bool> AddRatingAsync(Education education)
+        //{
+
+        //    var sql = @"INSERT INTO ratings (rating_id, counselor_id, user_id, rating_value, comment)
+        //        VALUES (@rating_id, @counselor_id, @user_id, @rating_value, @comment)";
+
+        //    using var connection = _context.CreateConnection();
+        //    var result = await connection.ExecuteAsync(sql, rating);
+        //    return result > 0;
+        //}
+        public async Task<List<EducationDTO>> GetEducationByCounselorIdAsync(Guid counselorId)
+        {
+            var sql = "SELECT * FROM education WHERE counselor_id = @CounselorId";
+            using var connection = _context.CreateConnection();
+            var result= await connection. QueryAsync<EducationDTO>(sql, new { CounselorId = counselorId });
+            return result.ToList();
+        }
+        public async Task<CounselorStatusDTO> CheckCounselorStatusAsync(Guid userId)
+        {
+            var query = @"SELECT is_verified, is_deleted FROM counselors WHERE user_id = @UserId LIMIT 1";
+            using var connection = _context.CreateConnection();
+            var result = await connection.QueryFirstOrDefaultAsync<dynamic>(query, new { UserId = userId });
+
+            if (result == null)
+            {
+                return new CounselorStatusDTO
+                {
+                    Exists = false,
+                    IsVerified = false,
+                    IsDeleted = false
+                };
+            }
+
+            return new CounselorStatusDTO
+            {
+                Exists = true,
+                IsVerified = result.is_verified,
+                IsDeleted = result.is_deleted
+            };
+        }
+        public async Task<Guid?> getCounseloridByUserId(Guid userId)
+        {
+            var query = @"SELECT counselors_id FROM counselors WHERE user_id = @UserId";
+            using var connection = _context.CreateConnection();
+            var result = await connection.QueryFirstOrDefaultAsync<Guid?>(query, new { UserId = userId });
+
+            return result;
         }
     }
 }

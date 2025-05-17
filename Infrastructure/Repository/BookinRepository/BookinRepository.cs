@@ -128,5 +128,47 @@ namespace Infrastructure.Repository.BookinRepository
             return result.ToList();
 
         }
+        public async Task<bool> CancelBookingByUserAfterPayment(Guid bookingId)
+        {
+            using var connection = _context.CreateConnection();
+            connection.Open();
+
+            using var transaction = connection.BeginTransaction();
+
+            try
+            {
+                // 1. Cancel the booking
+                var cancelSql = @"UPDATE bookings 
+                          SET status = 'declined', is_active = false 
+                          WHERE booking_id = @BookingId";
+
+                var cancelResult = await connection.ExecuteAsync(cancelSql, new { BookingId = bookingId }, transaction);
+
+                // 2. Update the payment table
+                var paymentSql = @"
+            UPDATE payments 
+            SET counselor_amount = (total_amount - commission_amount) * 0.25
+            WHERE booking_id = @BookingId";
+
+                var paymentResult = await connection.ExecuteAsync(paymentSql, new { BookingId = bookingId }, transaction);
+
+                // Commit if both updates are successful
+                if (cancelResult > 0 && paymentResult > 0)
+                {
+                     transaction.Commit();
+                    return true;
+                }
+
+                 transaction.Rollback();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                 transaction.Rollback();
+                // Log error using Serilog or other logging
+                throw;
+            }
+        }
+
     }
 }

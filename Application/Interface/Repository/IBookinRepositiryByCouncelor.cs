@@ -18,6 +18,7 @@ namespace Application.Interface.Repository
         Task<List<BookingGetDTOByCouncelor>> GetUpcompletedBookings(Guid counselorId);
         Task<BookingSectionDetailsDTO> GetBookingSectionDetailsById(Guid bookingId);
         Task<bool> UpdateBookingStatusAsync(Guid bookingId, string status);
+        Task<bool> UpdateBookingStatusAsync(Guid bookingId);
 
     }
 }

@@ -14,18 +14,20 @@ namespace Nexora.Controllers.ReviewController
     {
         private readonly IReviewService _reviewService;
         private readonly INotificationRepository _notificationRepository;
+        private readonly ICouncelorService _councelorService;
 
-        public ReviewController(IReviewService reviewService,INotificationRepository notificationRepository)
+        public ReviewController(IReviewService reviewService,INotificationRepository notificationRepository,ICouncelorService councelorService)
         {
             _reviewService = reviewService;
             _notificationRepository = notificationRepository;
+            _councelorService=councelorService;
             
         }
         [HttpPost("Add-Review")]
-        public async Task<IActionResult>AddReview(ReviewAddDTO reviewAddDTO,Guid councelor_id,Guid booking_id)
+        public async Task<IActionResult>AddReview(ReviewAddDTO reviewAddDTO)
         {
             var userId=GetLoggedInUserId().Value;
-            var result = await _reviewService.AddReviews(reviewAddDTO, userId, councelor_id, booking_id);
+            var result = await _reviewService.AddReviews(reviewAddDTO, userId);
             if (result.StatusCode == 200)
             {
                 return Ok(result);
@@ -43,17 +45,64 @@ namespace Nexora.Controllers.ReviewController
             }
             return StatusCode(result.StatusCode, result);
         }
-        [HttpGet("Get-Average-Rating")]
-        public async Task<IActionResult> GetAverageReview(Guid Councelor_id)
+        [HttpGet("Get/Review/by/ConcelorId")]
+        public async Task<IActionResult> GetReviewByCouncelorIdforCouncelors()
         {
+            var userIdNullable = GetLoggedInUserId();
+            if (userIdNullable == null)
+            {
+                return Ok(null);
+            }
 
-            var result = await _reviewService.GetReviewAverageRating (Councelor_id);
+            var userId = userIdNullable.Value;
+
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+
+            var result = await _reviewService.GetReviewsByCouncelorIdForStudents(counselorId.Value);
             if (result.StatusCode == 200)
             {
                 return Ok(result);
             }
             return StatusCode(result.StatusCode, result);
         }
+
+        [HttpGet("Get-Average-Rating")]
+        public async Task<IActionResult?> GetAverageReview()
+        {
+            var userIdNullable = GetLoggedInUserId();
+            if (userIdNullable == null)
+            {
+                return Ok(null);
+            }
+
+            var userId = userIdNullable.Value;
+           
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+            Console.WriteLine($"{counselorId}/n  /n /n /n /n");
+
+
+            var result = await _reviewService.GetReviewAverageRating(counselorId.Value);
+
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+
+            return StatusCode(result.StatusCode, result);
+        }
+
         [HttpGet("Get-all-review")]
         public async Task<IActionResult> GetAllReview()
         {
@@ -65,7 +114,28 @@ namespace Nexora.Controllers.ReviewController
             }
             return StatusCode(result.StatusCode, result);
         }
-      
+        [HttpGet("Check-Review-Exists/{bookingId}")]
+        public async Task<IActionResult> CheckReviewExists(Guid bookingId)
+        {
+
+            var result = await _reviewService.IsRatingExistsAsync(bookingId);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpGet("get/review/{bookingId}")]
+        public async Task<IActionResult> GetReviewByBookingId(Guid bookingId)
+        {
+
+            var result = await _reviewService.GetReviewByBookingId(bookingId);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
 
     }
 }

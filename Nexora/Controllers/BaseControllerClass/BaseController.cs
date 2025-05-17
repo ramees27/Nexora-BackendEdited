@@ -15,5 +15,10 @@ namespace Nexora.Controllers.BaseControllerClass
             }
             return null;
         }
+        protected string? GetLoggedInUserRole()
+        {
+            var roleClaim = User.FindFirst(ClaimTypes.Role) ?? User.FindFirst("role");
+            return roleClaim?.Value;
+        }
     }
 }

@@ -24,6 +24,8 @@ namespace Application.DTO
             public DateTime paidByStudent {  get; set; }
             public DateTime paid_on {  get; set; }
             public bool is_active {  get; set; }
+        public string status {  get; set; }
+        public bool payment_status {  get; set; }
 
     }
 }

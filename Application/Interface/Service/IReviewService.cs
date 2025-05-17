@@ -11,9 +11,11 @@ namespace Application.Interface.Service
 {
     public interface IReviewService
     {
-        Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId, Guid councelor_id, Guid booking_id);
+        Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId);
         Task<ApiResponse<List<ReviewGetDTOStudent>>> GetReviewsByCouncelorIdForStudents(Guid Councelor_id);
-        Task<ApiResponse<AvrageRatingDTO> >GetReviewAverageRating(Guid counselorId);
+        Task<ApiResponse<AvrageRatingDTO?> >GetReviewAverageRating(Guid counselorId);
         Task<ApiResponse<List<ReviewGetDTOStudent>>> GetAllReviews();
+        Task<ApiResponse<bool>> IsRatingExistsAsync(Guid bookingId);
+        Task<ApiResponse<Review>> GetReviewByBookingId(Guid bookingId);
     }
 }

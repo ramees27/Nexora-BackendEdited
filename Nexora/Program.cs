@@ -27,6 +27,7 @@ using Infrastructure.Services.AdminService;
 using Common.NHub;
 using Infrastructure.Repository;
 using Infrastructure.Repository.NotificationRepository;
+using Common.SignalRHub;
 
 namespace Nexora
 {
@@ -96,7 +97,7 @@ namespace Nexora
             builder.Services.AddScoped<IUserService, UserServices>();
             // Add services to the container.
             builder.Services.AddHttpContextAccessor();
-
+         
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -174,14 +175,15 @@ namespace Nexora
             });
 
 
+          
 
 
 
-            
 
 
             var app = builder.Build();
             app.UseCors("AllowFrontend");
+            app.MapHub<VideoHub>("/videoHub");
             app.MapHub<NotificationHub>("/notificationHub");
 
             // Configure the HTTP request pipeline.

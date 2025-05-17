@@ -7,6 +7,7 @@ using Application.DTO;
 using Application.Interface.Repository;
 using Application.Interface.Service;
 using Domain;
+using Domain.Entities;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services.AdminService
@@ -54,7 +55,7 @@ namespace Infrastructure.Services.AdminService
                 return new ApiResponse<int>
                 {
                     StatusCode = 200,
-                    Message = "Successfully fetched verified and active counselor count",
+                    Message = "Successfully fetched students",
                     Data = count
                 };
             }
@@ -74,12 +75,12 @@ namespace Infrastructure.Services.AdminService
         {
             try
             {
-                var count = await _adminRepository.GetActiveVerifiedCounselorCountAsync();
+                var count = await _adminRepository.GetStudentCount();
 
                 return new ApiResponse<int>
                 {
                     StatusCode = 200,
-                    Message = "Successfully fetched verified and active counselor count",
+                    Message = "Successfully fetched ",
                     Data = count
                 };
             }
@@ -215,7 +216,7 @@ namespace Infrastructure.Services.AdminService
                 {
                     return new ApiResponse<object>
                     {
-                        StatusCode = 404,
+                        StatusCode = 200,
                         Message = "Counselor not found or already verified/deleted",
                         Data = null
                     };
@@ -269,6 +270,59 @@ namespace Infrastructure.Services.AdminService
                 {
                     StatusCode = 500,
                     Message = "An error occurred while deleting the counselor application",
+                    Data = null
+                };
+            }
+        }
+         public async Task<ApiResponse<List<BookinGetAdminDTO>>> GetAllBookingDetails()
+        {
+            try
+            {
+                var result = await _adminRepository.GetAllBookingDetails();
+                if (result == null)
+                {
+                    return new ApiResponse<List<BookinGetAdminDTO>>
+                    {
+                        StatusCode = 200,
+                        Message = " No Bookings",
+                        Data = null
+                    };
+                }
+                return new ApiResponse<List<BookinGetAdminDTO>>
+                {
+                    StatusCode = 200,
+                    Message = " Bookings Found",
+                    Data = result
+                };
+            }
+            catch(Exception ex) 
+            {
+                return new ApiResponse<List<BookinGetAdminDTO>>()
+                {
+                    StatusCode=500,
+                    Message=ex.Message,
+                    Data = null
+                };
+            }
+        }
+        public async Task<ApiResponse<List<MonthlyIncomeExpenseDto>>> GetMonthlyIncomeExpenseAsync()
+        {
+            try
+            {
+                var result = await _adminRepository.GetMonthlyIncomeExpenseAsync();
+                return new ApiResponse<List<MonthlyIncomeExpenseDto>>
+                {
+                    StatusCode = 200,
+                    Message = "Mothly income",
+                    Data = result
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<List<MonthlyIncomeExpenseDto>>
+                {
+                    StatusCode = 500,
+                    Message = ex.Message,
                     Data = null
                 };
             }

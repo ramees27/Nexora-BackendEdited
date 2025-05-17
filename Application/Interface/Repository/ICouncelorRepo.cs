@@ -18,7 +18,9 @@ namespace Application.Interface.Repository
         Task<bool> IsValidCounselor(Guid counselorId);
         Task<bool> IsActiveCounselor(Guid counselorId);
         Task<bool> AddEducationAsync(Education education);
-
+        Task<List<EducationDTO>> GetEducationByCounselorIdAsync(Guid counselorId);
+        Task<CounselorStatusDTO> CheckCounselorStatusAsync(Guid userId);
+        Task<Guid?> getCounseloridByUserId(Guid userId);
 
 
     }

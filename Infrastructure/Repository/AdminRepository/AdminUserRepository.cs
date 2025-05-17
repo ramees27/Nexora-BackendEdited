@@ -21,9 +21,9 @@ namespace Infrastructure.Repository.AdminRepository
         }
         public async Task<List<UserDetailsDTO>> GetAllStudentsForUserManagementAsync()
         {
-            var sql = @"
-        SELECT *  FROM users u WHERE u.UserId NOT IN (SELECT c.user_id  FROM counselors c WHERE c.is_verified = TRUE
-        )"
+            var sql = @"SELECT *  FROM users u WHERE u.UserId NOT IN (SELECT c.user_id  FROM counselors c WHERE c.is_verified = TRUE) AND u.role != 'admin'
+"
+
             ;
 
             using var connection = _dappercontext.CreateConnection();
@@ -33,13 +33,17 @@ namespace Infrastructure.Repository.AdminRepository
         }
         public async Task<List<CounselorDetailsDTO>> GetverifiedCounselorsAsync()
         {
-            var sql = @"SELECT  c.*,  e.education_id, e.qualification,e.certificate_image_url, e.counselor_id FROM counselors c
-                   INNER JOIN education e ON c.counselors_id = e.counselor_id WHERE  c.is_verified = True ;";
-   
+            var sql = @"SELECT  c.*, u.userEmail AS email, e.education_id,  e.qualification,  e.certificate_image_url,  e.counselor_id
+FROM counselors c
+inner JOIN users u ON c.user_id = u.UserId
+left JOIN education e ON c.counselors_id = e.counselor_id
+"
+ ;
 
-            
-            
-                using var connection = _dappercontext.CreateConnection();
+
+
+
+            using var connection = _dappercontext.CreateConnection();
                 var result = await connection.QueryAsync<CounselorDetailsDTO>(sql);
                 return result.ToList();
             

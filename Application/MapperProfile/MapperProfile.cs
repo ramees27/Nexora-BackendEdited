@@ -15,6 +15,7 @@ namespace Common.MapperProfile
         {
 
             CreateMap<CounselorAddDTO, Counselor>()
+                .ForMember(dest => dest.counselors_id, opt => opt.Ignore())
             .ForMember(dest => dest.image_url, opt => opt.Ignore());
 
             //CreateMap<BookingRequestDto, Booking>()

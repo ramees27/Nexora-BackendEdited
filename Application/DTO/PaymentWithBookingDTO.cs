@@ -20,8 +20,10 @@ namespace Application.DTO
 
             public DateTime preferd_date { get; set; }
             public string preferd_time { get; set; }
-            public string username { get; set; }
-        
+            public string UserEmail { get; set; }
+        public string status { get; set; }
+        public bool payment_status {  get; set; }
+
 
     }
 }

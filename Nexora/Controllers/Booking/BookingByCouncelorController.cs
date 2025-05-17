@@ -1,31 +1,47 @@
 ﻿using Application.DTO;
 using Application.Interface.Service;
+using Domain.Entities;
 using Infrastructure.Services.BookinService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Nexora.Controllers.BaseControllerClass;
 
 namespace Nexora.Controllers.Booking
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BookingByCouncelorController : ControllerBase
+    public class BookingByCouncelorController : BaseController
     {
         private readonly IBookingServiceByCouncelor _bookingServiceByCouncelor;
-        public BookingByCouncelorController(IBookingServiceByCouncelor bookingServiceByCouncelor)
+        private readonly ICouncelorService _councelorService;
+        public BookingByCouncelorController(IBookingServiceByCouncelor bookingServiceByCouncelor,ICouncelorService councelorService)
         {
             _bookingServiceByCouncelor = bookingServiceByCouncelor;
+            _councelorService = councelorService;
         }
         [HttpGet("councelor-get-request")]
-        public async Task<IActionResult> GetRequestForBooking(Guid CouncelorId)
+        public async Task<IActionResult> GetRequestForBooking()
         {
-            var result =await _bookingServiceByCouncelor.GetPendingRequestByCounselorId(CouncelorId);
+            var userId = GetLoggedInUserId().Value;
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+
+            var result = await _bookingServiceByCouncelor.GetPendingRequestByCounselorId(counselorId.Value);
+
             if (result.StatusCode == 200)
             {
                 return Ok(result);
             }
-            return StatusCode(result.StatusCode,result);
+
+            return StatusCode(result.StatusCode, result);
         }
-        [HttpPut("councelor-bookings-reshedule")]
+        [HttpPatch("councelor-bookings-reshedule")]
         public async Task<IActionResult> UpdateBookingDateandtime(BookingRescheduleDTO bookingresheduleDto)
         {
             var result = await _bookingServiceByCouncelor.RescheduleBookingAsync (bookingresheduleDto);
@@ -36,9 +52,18 @@ namespace Nexora.Controllers.Booking
             return StatusCode(result.StatusCode, result);
         }
         [HttpGet("councelor-get-Cancelled-bookings")]
-        public async Task<IActionResult> GetCancelledBooking(Guid CouncelorId)
+        public async Task<IActionResult> GetCancelledBooking()
         {
-            var result = await _bookingServiceByCouncelor.GetCancelledByCounselorId (CouncelorId);
+            var userId = GetLoggedInUserId().Value;
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+
+            var result = await _bookingServiceByCouncelor.GetCancelledByCounselorId (counselorId.Value);
             if (result.StatusCode == 200)
             {
                 return Ok(result);
@@ -46,9 +71,17 @@ namespace Nexora.Controllers.Booking
             return StatusCode(result.StatusCode, result);
         }
         [HttpGet("councelor-get-Confirmed-bookings")]
-        public async Task<IActionResult> GetConfirmedBookings(Guid CouncelorId)
+        public async Task<IActionResult> GetConfirmedBookings()
         {
-            var result = await _bookingServiceByCouncelor.GetConfirmedBookings (CouncelorId);
+            var userId = GetLoggedInUserId().Value;
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+            var result = await _bookingServiceByCouncelor.GetConfirmedBookings (counselorId.Value);
             if (result.StatusCode == 200)
             {
                 return Ok(result);
@@ -56,9 +89,17 @@ namespace Nexora.Controllers.Booking
             return StatusCode(result.StatusCode, result);
         }
         [HttpGet("councelor-get-completed-bookings")]
-        public async Task<IActionResult> GetcompletedBookings(Guid CouncelorId)
+        public async Task<IActionResult> GetcompletedBookings()
         {
-            var result = await _bookingServiceByCouncelor.GetcompletedBookings (CouncelorId);
+            var userId = GetLoggedInUserId().Value;
+            var counselorIdResponse = await _councelorService.getCounseloridByUserId(userId);
+            var counselorId = counselorIdResponse.Data as Guid?;
+
+            if (counselorId == null)
+            {
+                return Ok(null);
+            }
+            var result = await _bookingServiceByCouncelor.GetcompletedBookings (counselorId.Value);
             if (result.StatusCode == 200)
             {
                 return Ok(result);
@@ -86,6 +127,17 @@ namespace Nexora.Controllers.Booking
             }
             return StatusCode(result.StatusCode, result);
 
+        }
+        [HttpGet("councelor-get-id")]
+        public async Task<IActionResult> GetCouncelorId()
+        {
+            var userId = GetLoggedInUserId().Value;
+            var result = await _councelorService.getCounseloridByUserId(userId);
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
         }
     }
 }

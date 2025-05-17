@@ -12,6 +12,7 @@ namespace Application.DTO
         
         public string PreferdTime { get; set; }
         public DateTime PreferdDate { get; set; }
+
        
     }
 }

@@ -42,7 +42,7 @@ namespace Infrastructure.Repository.AdminRepository
         public async Task<int> GetStudentCount()
         {
 
-            var sql = "SELECT COUNT(*) FROM students s WHERE s.is_deleted = FALSE AND s.student_id NOT IN( SELECT c.user_id FROM counselors c WHERE c.is_verified = TRUE)";
+            var sql = "SELECT COUNT(*) FROM users s WHERE s.is_deleted = FALSE AND s.UserId NOT IN( SELECT c.user_id FROM counselors c WHERE c.is_verified = TRUE)";
 
             using var connection = _dapperContext.CreateConnection();
             return await connection.QuerySingleAsync<int>(sql);
@@ -121,7 +121,39 @@ namespace Infrastructure.Repository.AdminRepository
                 return rows > 0;
            
         }
-       
+        public async Task<List<BookinGetAdminDTO>> GetAllBookingDetails()
+        {
+            var sql = @"SELECT 
+    b.*, 
+    u1.UserId AS StudentId, u1.UserEmail AS StudentEmail, 
+    u2.UserId AS CounselorUserId, c.full_name AS CounselorName, u2.UserEmail AS CounselorEmail
+FROM bookings b
+JOIN users u1 ON b.student_id = u1.UserId
+JOIN counselors c ON b.counselor_id = c.counselors_id
+JOIN users u2 ON c.user_id = u2.UserId";
+
+
+            using var connection = _dapperContext.CreateConnection();
+            var result = await connection.QueryAsync<BookinGetAdminDTO>(sql);
+            return result.ToList();
+
+        }
+        public async Task<List<MonthlyIncomeExpenseDto>> GetMonthlyIncomeExpenseAsync()
+        {
+            var query = @"
+            SELECT 
+                DATE_FORMAT(paidByStudent, '%Y-%m') AS Month,
+                SUM(counselor_amount) AS Expense,
+                SUM(counselor_amount + commission_amount) AS Revenue
+            FROM payments
+            GROUP BY DATE_FORMAT(paidByStudent, '%Y-%m')
+            ORDER BY DATE_FORMAT(paidByStudent, '%Y-%m') DESC;
+        ";
+            using var connection = _dapperContext.CreateConnection();
+
+            var result=await connection.QueryAsync<MonthlyIncomeExpenseDto>(query);
+            return result.ToList();
+        }
 
 
     }

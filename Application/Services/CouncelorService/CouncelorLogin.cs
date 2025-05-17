@@ -42,18 +42,25 @@ namespace Infrastructure.Services.CouncelorService
                         Message = "You have already applied as a counselor"
                     };
                 }
-                var imageurl = await _cloudinaryService.UploadImageAsync(dto.ProfileImage);
-                if (string.IsNullOrEmpty(imageurl))
+
+                string? imageUrl = null;
+                if (dto.ProfileImage != null)
                 {
-                    return new ApiResponse<object>
+                    imageUrl = await _cloudinaryService.UploadImageAsync(dto.ProfileImage);
+                    if (string.IsNullOrEmpty(imageUrl))
                     {
-                        StatusCode = 400,
-                        Message = "Image upload failed"
-                    };
+                        return new ApiResponse<object>
+                        {
+                            StatusCode = 400,
+                            Message = "Image upload failed"
+                        };
+                    }
                 }
                 var councelor = _mapper.Map<Counselor>(dto);
 
-                councelor.image_url = imageurl;
+                councelor.image_url = imageUrl;
+                councelor.counselors_id = Guid.NewGuid();
+                Console.WriteLine("/n /n /n " + councelor.counselors_id + "/n /n /n ");
 
 
                 var isSaved = await _councelorRepo.ApplyAsCounselor(councelor, userId);
@@ -68,7 +75,8 @@ namespace Infrastructure.Services.CouncelorService
                 return new ApiResponse<object>
                 {
                     StatusCode = 200,
-                    Message = "Counselor application submitted successfully"
+                    Message = "Counselor application submitted successfully",
+                    Data = councelor.counselors_id
                 };
 
             }
@@ -179,7 +187,7 @@ namespace Infrastructure.Services.CouncelorService
                 }
                 var sorted = counselors.OrderByDescending(c => c.avg_rating).ToList();
 
-                _logger.LogInformation(" Found {Count} counselors for keyword: {Keyword}", sorted.Count, keyword);
+                _logger.LogInformation("Found {Count} counselors for keyword: {Keyword}", sorted.Count, keyword);
 
                 return new ApiResponse<List<CouncellorGetDTO>>
                 {
@@ -225,8 +233,66 @@ namespace Infrastructure.Services.CouncelorService
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error adding education");
-                return new ApiResponse<object> { StatusCode = 500, Message = "An error occurred", Data = null };
+                return new ApiResponse<object> { StatusCode = 500, Message = "An error occurred", Data = null, Error = ex.Message };
             }
         }
+        public async Task<ApiResponse<List<EducationDTO>>> GetEducationByCounselorIdAsync(Guid counselorId)
+        {
+            try
+            {
+                var response = await _councelorRepo.GetEducationByCounselorIdAsync(counselorId);
+                return new ApiResponse<List<EducationDTO>>
+                {
+                    StatusCode = 200,
+                    Message = "Education fetched successfully",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error adding education");
+                return new ApiResponse<List<EducationDTO>> { StatusCode = 500, Message = "An error occurred", Data = null, Error = ex.Message };
+            }
+        }
+        public async Task<CounselorStatusDTO> GetCounselorStatusAsync(Guid userId)
+        {
+            return await _councelorRepo.CheckCounselorStatusAsync(userId);
+        }
+        public async Task<ApiResponse<object?>> getCounseloridByUserId(Guid userId)
+        {
+            try
+            {
+                var result = await _councelorRepo.getCounseloridByUserId(userId);
+
+                if (result == null)
+                {
+                    return new ApiResponse<object?>
+                    {
+                        StatusCode = 404,
+                        Message = "Counselor not found for the given user ID.",
+                        Data = null
+                    };
+                }
+
+                return new ApiResponse<object?>
+                {
+                    StatusCode = 200,
+                    Message = "Retrieved counselor ID",
+                    Data = result
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<object?>
+                {
+                    StatusCode = 500,
+                    Message = "An error occurred while retrieving the counselor ID.",
+                    Data = null,
+                    Error = ex.Message
+                };
+            }
+        }
+
+
     }
 }

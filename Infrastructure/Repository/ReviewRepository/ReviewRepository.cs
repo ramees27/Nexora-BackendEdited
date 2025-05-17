@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using Application.DTO;
 using Application.Interface.Repository;
 using Dapper;
@@ -21,15 +22,53 @@ namespace Infrastructure.Repository.ReviewRepository
         }
         public async Task<int> AddReview(Review review)
         {
-
-            var sql = @"
-            INSERT INTO ratings (rating_id,student_id, counselor_id, booking_id, rating, review)
-            VALUES (rating_id,@student_id, @counselor_id, @booking_id, @rating, @review);";
             using var connection = _Connection.CreateConnection();
-            return await connection.ExecuteAsync(sql, review);
+          
+            connection.Open();
+            using var transaction =  connection.BeginTransaction();
+            
+            try
+            {
+                var checkSql = "SELECT COUNT(1) FROM ratings WHERE booking_id = @booking_id;";
+                var exists = await connection.ExecuteScalarAsync<bool>(checkSql, new { review.booking_id }, transaction);
+                if(exists)
+                {
+                var updaterating = @"UPDATE ratings SET rating = @rating, review = @review  WHERE booking_id = @booking_id;";
+                
+               
+                    await connection.ExecuteAsync(updaterating, review, transaction);
+                }
+                else
+                {
+
+                    var insertSql = @"
+        INSERT INTO ratings (rating_id, student_id, counselor_id, booking_id, rating, review)
+        VALUES (UUID(), @student_id, @counselor_id, @booking_id, @rating, @review);";
+
+                await connection.ExecuteAsync(insertSql, review, transaction);
+                }
 
 
+                var avgSql = "SELECT AVG(rating) FROM ratings WHERE counselor_id = @counselor_id;";
+                var avgRating = await connection.ExecuteScalarAsync<decimal>(avgSql, new { review.counselor_id }, transaction);
+
+               
+                var updateSql = "UPDATE counselors SET avg_rating = @avgRating WHERE counselors_id = @counselor_id;";
+                await connection.ExecuteAsync(updateSql, new { avgRating, review.counselor_id }, transaction);
+
+             
+                 transaction.Commit(); 
+                return 1;
+            }
+            catch (Exception)
+            {
+                 transaction.Rollback(); 
+                throw;
+            }
         }
+
+
+
         public async Task<List<ReviewGetDTOStudent>> GetReviewsByCouncelorId(Guid Councelor_id)
         {
 
@@ -41,26 +80,36 @@ namespace Infrastructure.Repository.ReviewRepository
 
 
         }
-        public async Task<AvrageRatingDTO> GetReviewCountAndAverageRating(Guid counselorId)
+        public async Task<AvrageRatingDTO?> GetReviewCountAndAverageRating(Guid counselorId)
         {
-            var sql = @"
-                SELECT 
-                    COUNT(*) AS reviews,
-                    AVG(rating * 1.0) AS rating
-                FROM ratings
-                WHERE counselor_id = @CounselorId";
+            var sql = @" SELECT avg_rating AS rating,(SELECT COUNT(*) FROM ratings WHERE counselor_id = @CounselorId) As reviews
+              FROM counselors WHERE counselors_id = @CounselorId";
+
             using var connection = _Connection.CreateConnection();
             return await connection.QueryFirstOrDefaultAsync<AvrageRatingDTO>(sql, new { CounselorId = counselorId });
         }
         public async Task<List<ReviewGetDTOStudent>> GetAllReviewsAsync()
         {
-            var sql = @"SELECT r.rating_id AS ReviewId, r.booking_id AS BookingId,  r.rating AS Rating,  r.review AS review,
-                        r.created_at AS CreatedAt, u.username AS Username FROM ratings r JOIN users u ON r.student_id = u.UserId;";
+            var sql = @"SELECT r.*, u.username AS Username FROM ratings r JOIN users u ON r.student_id = u.UserId;";
 
             ;
             using var connection = _Connection.CreateConnection();
             var reviews = await connection.QueryAsync<ReviewGetDTOStudent>(sql);
             return reviews.ToList();
+        }
+        public async Task<bool> IsRatingExistsAsync(Guid bookingId)
+        {
+            var sql = "SELECT COUNT(*) FROM ratings WHERE booking_id = @bookingId;";
+            using var connection = _Connection.CreateConnection();
+            var count = await connection.ExecuteScalarAsync<int>(sql, new { bookingId });
+            return count > 0;
+        }
+        public async Task<Review> GetReviewByBookingId(Guid bookingId)
+        {
+            var sql = "SELECT * FROM ratings WHERE booking_id = @bookingId;";
+            using var connection = _Connection.CreateConnection();
+            var count = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { bookingId });
+            return count;
         }
     }
 }

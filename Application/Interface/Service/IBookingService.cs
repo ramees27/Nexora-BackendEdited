@@ -20,5 +20,6 @@ namespace Application.Interface.Service
         Task<ApiResponse<List<ActivityGetDTOForUser>>> GetBookingsByScheduled(Guid studentId);
         Task<ApiResponse<List<ActivityGetDTOForUser>>> GetCompletedBookings(Guid studentId);
         Task<ApiResponse<List<ActivityGetDTOForUser>>> GetCancelledorRejectedBookings(Guid studentId);
+        Task<ApiResponse<bool>> CancelBookingByUserAfterPayment(Guid bookingId);
     }
 }

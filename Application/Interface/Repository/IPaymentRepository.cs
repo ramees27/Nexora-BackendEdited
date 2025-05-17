@@ -12,6 +12,7 @@ namespace Application.Interface.Repository
     {
         Task<List<PaymentWithBookingDTO>> GetAllPaymentsWithBookingAsync(Guid councelorId);
         Task<PaymentSummaryDTO> GetEarningsBreakdownAsync(Guid counselorId);
-        
+     
+
     }
 }

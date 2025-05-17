@@ -9,9 +9,10 @@ namespace Application.DTO
     public class BookingGetDTOByCouncelor
     {
         public Guid booking_id { get; set; }
+        public string status {  get; set; }
 
         public string preferd_time { get; set; }
-        public DateTime PreferdDate { get; set; }
+        public DateTime Preferd_Date { get; set; }
        
         public DateTime CreatedAt { get; set; }
         public Guid counselor_id { get; set; }

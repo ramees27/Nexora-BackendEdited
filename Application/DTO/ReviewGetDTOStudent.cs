@@ -12,12 +12,12 @@ namespace Application.DTO
        
         
        
-        public int rating { get; set; } // 1 to 5
+        public Guid rating_id { get; set; } // 1 to 5
         public string review { get; set; }
         public DateTime created_at {  get; set; }
-       
+       public int rating {  get; set; }
         public Guid student_id { get; set; }
-        public string username { get; set; }
+        public string Username { get; set; }
 
 
     }

@@ -19,6 +19,8 @@ namespace Application.Interface.Repository
         Task<List<CounselorDetailsDTO>> GetNewCounselorsForAdminAsync();
         Task<bool> VerifyCounselorAsync(Guid counselorId);
         Task<bool> DeleteCounselorApplicationAsync(Guid counselorId);
-      
+        Task<List<BookinGetAdminDTO>> GetAllBookingDetails();
+        Task<List<MonthlyIncomeExpenseDto>> GetMonthlyIncomeExpenseAsync();
+
     }
 }

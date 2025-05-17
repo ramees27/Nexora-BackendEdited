@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.DTO;
 using Domain;
+using Domain.Entities;
 
 namespace Application.Interface.Service
 {
@@ -19,5 +20,7 @@ namespace Application.Interface.Service
         Task<ApiResponse<List<CounselorDetailsDTO>>> GetNewCounselorsForAdminAsync();
         Task<ApiResponse<object>> VerifyCounselor(Guid counselorId);
         Task<ApiResponse<object>> DeleteCounselorApplicationAsync(Guid counselorId);
+        Task<ApiResponse<List<BookinGetAdminDTO>>> GetAllBookingDetails();
+        Task<ApiResponse<List<MonthlyIncomeExpenseDto>>> GetMonthlyIncomeExpenseAsync();
     }
 }

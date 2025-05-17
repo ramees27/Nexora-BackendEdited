@@ -22,11 +22,28 @@ namespace Infrastructure.Repository.AdminRepository
 
 
             var sql = @"
-            SELECT 
-            SUM(CASE WHEN admin_payout_status = 'paid' THEN counselor_amount ELSE 0 END) AS PaidAmount,
-            SUM(CASE WHEN admin_payout_status = 'pending' THEN counselor_amount ELSE 0 END) AS PendingAmount,
-            SUM(counselor_amount) AS TotalAmount
-               FROM payments;";
+           SELECT 
+  SUM(CASE 
+        WHEN p.admin_payout_status = 'paid' 
+        THEN p.counselor_amount 
+        ELSE 0 
+      END) AS PaidAmount,
+
+  SUM(CASE 
+        WHEN p.admin_payout_status = 'pending' 
+             AND b.payment_status = true 
+             AND (b.status = 'cancelled' OR b.status = 'completed') 
+        THEN p.counselor_amount 
+        ELSE 0 
+      END) AS PendingAmount,
+
+  SUM(p.counselor_amount) AS TotalAmount,
+Sum(p.commission_amount) As CommisionAmout
+
+FROM payments p
+JOIN bookings b ON p.booking_id = b.booking_id;
+
+";
 
             using var connection = _dapperContext.CreateConnection();
             var result = await connection.QueryFirstOrDefaultAsync<PaymentSummaryDTO>(sql);
@@ -35,7 +52,7 @@ namespace Infrastructure.Repository.AdminRepository
         public async Task<List<AdminPaymentDetailsDTO>> GetPaymentDetailsAsync()
         {
             var Sql = @"SELECT  p.booking_id, u.username AS student_username,  c.full_name AS counselor_name,
-                                 c.upi_id, b.preferd_date, b.preferd_time, b.status AS booking_status, b.is_active,
+                                 c.upi_id, b.preferd_date, b.preferd_time,b.status,b.payment_status, b.status AS booking_status, b.is_active,
                                  p.admin_payout_status, p.counselor_amount,  p.total_amount,  p.commission_amount,
                                  p.paidByStudent,  p.paid_on FROM payments p
                                 JOIN bookings b ON p.booking_id = b.booking_id
@@ -59,7 +76,7 @@ namespace Infrastructure.Repository.AdminRepository
             var sql = @"UPDATE payments 
                 SET admin_payout_status = 'paid', 
                     paid_on = CURRENT_TIMESTAMP 
-                WHERE booking_id = '70ac4343-c157-4996-9faf-d94a81a00240';";
+                WHERE booking_id = '@BookingId';";
 
             using var connection = _dapperContext.CreateConnection();
             var result = await connection.ExecuteAsync(sql, new { BookingId = bookingId });

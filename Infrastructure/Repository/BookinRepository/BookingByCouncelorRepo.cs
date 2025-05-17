@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.DTO;
+﻿using Application.DTO;
 using Application.Interface.Repository;
 using Dapper;
-using Domain.Entities;
 using Infrastructure.Data;
 
 namespace Infrastructure.Repository.BookinRepository
 {
-    public  class BookingByCouncelorRepo:IBookinRepositiryByCouncelor
+    public class BookingByCouncelorRepo : IBookinRepositiryByCouncelor
     {
         private readonly DapperContext _dapperContext;
         public BookingByCouncelorRepo(DapperContext dapperContext)
@@ -22,11 +15,11 @@ namespace Infrastructure.Repository.BookinRepository
 
         public async Task<List<BookingGetDTOByCouncelor>> GetPendingAndRequestedPaymentBookingsByCounselorId(Guid counselorId)
         {
-            var sql= @"SELECT *  FROM bookings b INNER JOIN users u ON b.student_id = u.UserId
+            var sql = @"SELECT *  FROM bookings b INNER JOIN users u ON b.student_id = u.UserId
         WHERE b.counselor_id = @CounselorId
-        AND (b.status = 'pending' OR b.status = 'requested_payment')
+        AND (b.status = 'pending' OR b.status = 'request_payment')
         ORDER BY b.created_at DESC";
-       
+
             using var connection = _dapperContext.CreateConnection();
             var result = await connection.QueryAsync<BookingGetDTOByCouncelor>(sql, new { CounselorId = counselorId });
             return result.ToList();
@@ -35,7 +28,8 @@ namespace Infrastructure.Repository.BookinRepository
         {
             var sql = @"UPDATE bookings 
                 SET preferd_time = @PreferdTime, 
-                    preferd_date = @PreferdDate 
+                    preferd_date = @PreferdDate ,
+                    status = 'request_payment'
                 WHERE booking_id = @BookingId";
 
             using var connection = _dapperContext.CreateConnection();
@@ -56,9 +50,8 @@ namespace Infrastructure.Repository.BookinRepository
         public async Task<List<BookingGetDTOByCouncelor>> GetUpcomingConfirmedBookings(Guid counselorId)
         {
             var sql = @"SELECT *  FROM bookings b INNER JOIN users u ON b.student_id = u.UserId
-        WHERE b.counselor_id = @CounselorId
-        AND (b.status = 'accepted' )
-        ORDER BY b.created_at DESC";
+          WHERE b.counselor_id = @CounselorId AND (b.status = 'accepted'   OR (b.status = 'declined' AND b.is_active = false))
+          ORDER BY b.created_at DESC;";
 
             using var connection = _dapperContext.CreateConnection();
             var result = await connection.QueryAsync<BookingGetDTOByCouncelor>(sql, new { CounselorId = counselorId });
@@ -95,8 +88,16 @@ namespace Infrastructure.Repository.BookinRepository
         {
             var sql = "UPDATE bookings SET status = @Status WHERE booking_id = @BookingId";
 
-            using var connection =_dapperContext.CreateConnection();
+            using var connection = _dapperContext.CreateConnection();
             var result = await connection.ExecuteAsync(sql, new { Status = status, BookingId = bookingId });
+            return result > 0;
+        }
+        public async Task<bool> UpdateBookingStatusAsync(Guid bookingId)
+        {
+            var sql = "UPDATE bookings SET is_active = false WHERE booking_id = @BookingId";
+
+            using var connection = _dapperContext.CreateConnection();
+            var result = await connection.ExecuteAsync(sql, new { BookingId = bookingId });
             return result > 0;
         }
     }

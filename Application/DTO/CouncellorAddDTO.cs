@@ -39,7 +39,7 @@ namespace Application.DTO
         [StringLength(100, ErrorMessage = "UPI ID can't exceed 100 characters.")]
         public string upi_id { get; set; }
 
-        public IFormFile ProfileImage { get; set; }
+        public IFormFile? ProfileImage { get; set; }
 
     }
 }

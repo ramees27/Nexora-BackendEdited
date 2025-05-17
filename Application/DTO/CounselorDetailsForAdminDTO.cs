@@ -14,7 +14,7 @@ namespace Application.DTO
         public string specialization { get; set; }
         public string short_bio { get; set; }
         public string mobile_number { get; set; }
-        
+        public string email {  get; set; }
         public int experience { get; set; }
         public DateTime created_at { get; set; }
         public int hourly_rate { get; set; }
@@ -24,6 +24,9 @@ namespace Application.DTO
         
         public string qualification { get; set; }
         public string certificate_image_url { get; set; }
+        public bool is_verified {  get; set; }
+       public bool is_deleted {  get; set; }
+
     }
 
 }

@@ -28,7 +28,7 @@ namespace Infrastructure.Services.ReviewService
             _councelorRepo = councelorRepo;
         }
 
-        public async Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId, Guid councelor_id, Guid booking_id)
+        public async Task<ApiResponse<int>> AddReviews(ReviewAddDTO reviewAddDTO, Guid UserId)
         {
             try
             {
@@ -36,15 +36,15 @@ namespace Infrastructure.Services.ReviewService
 
                 // Manually set fields not present in the DTO
                 review.student_id = UserId;
-                review.counselor_id = councelor_id;
-                review.booking_id = booking_id;
-                _logger.LogInformation("Attempting to add review for Booking ID: {BookingId} by Student ID: {StudentId}", booking_id, UserId);
+                review.counselor_id = reviewAddDTO.counselor_id;
+                review.booking_id = reviewAddDTO.booking_id;
+                _logger.LogInformation("Attempting to add review for Booking ID: {BookingId} by Student ID: {StudentId}", reviewAddDTO.booking_id, UserId);
 
                 var result = await _reviewRepository.AddReview(review);
 
                 if (result > 0)
                 {
-                    _logger.LogInformation("Successfully added review for Booking ID: {BookingId} by Student ID: {StudentId}", booking_id, UserId);
+                    _logger.LogInformation("Successfully added review for Booking ID: {BookingId} by Student ID: {StudentId}", reviewAddDTO.booking_id, UserId);
                     return new ApiResponse<int>
                     {
                         StatusCode = 200,
@@ -63,7 +63,7 @@ namespace Infrastructure.Services.ReviewService
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while adding review for Booking ID: {BookingId} by Student ID: {StudentId}", booking_id, UserId);
+                _logger.LogError(ex, "Error occurred while adding review for Booking ID: {BookingId} by Student ID: {StudentId}", reviewAddDTO.booking_id, UserId);
                 return new ApiResponse<int>
                 {
                     StatusCode = 500,
@@ -119,23 +119,27 @@ namespace Infrastructure.Services.ReviewService
             }
 
         }
-        public async Task<ApiResponse<AvrageRatingDTO>> GetReviewAverageRating(Guid counselorId)
+        public async Task<ApiResponse<AvrageRatingDTO?>> GetReviewAverageRating(Guid counselorId)
         {
             try
+
             {
+
                 var result = await _reviewRepository.GetReviewCountAndAverageRating(counselorId);
                 if (result == null)
                 {
-                    return new ApiResponse<AvrageRatingDTO>
+                    return new ApiResponse<AvrageRatingDTO?>
                     {
-                        StatusCode = 404,
-                        Message = "No reviews found for this counselor."
+                        StatusCode = 200,
+                        Message = "No reviews found for this counselor.",
+
+                        Data= null
                     };
                 }
 
 
 
-                return new ApiResponse<AvrageRatingDTO>
+                return new ApiResponse<AvrageRatingDTO?>
                 {
                     StatusCode = 200,
                     Message = "Review count and average rating fetched successfully",
@@ -145,10 +149,11 @@ namespace Infrastructure.Services.ReviewService
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while Geting Average Review and ratings");
-                return new ApiResponse<AvrageRatingDTO>
+                return new ApiResponse<AvrageRatingDTO?>
                 {
                     StatusCode = 500,
-                    Message = "An error occurred while processing the review"
+                    Message = "An error occurred while processing the review",
+                    Data = null
                 };
             }
         }
@@ -173,6 +178,49 @@ namespace Infrastructure.Services.ReviewService
                     StatusCode = 500,
                     Message = "An error occurred while fetching reviews.",
                     Data = null
+                };
+            }
+
+        }
+        public async Task<ApiResponse<bool>> IsRatingExistsAsync(Guid bookingId)
+        {
+            var result= await _reviewRepository.IsRatingExistsAsync(bookingId);
+            return new ApiResponse<bool>
+            {
+                StatusCode = 200,
+                Message = "Review Checked",
+                Data = result
+            };
+        }
+        public async Task<ApiResponse<Review> >GetReviewByBookingId(Guid bookingId)
+        {
+            try
+            {
+                var result = await _reviewRepository.GetReviewByBookingId(bookingId);
+                if (result == null)
+                {
+                    return new ApiResponse<Review>
+                    {
+                        StatusCode = 200,
+                        Message = "No review for this booking",
+                        Data = null
+                    };
+                }
+                return new ApiResponse<Review>
+                {
+                    StatusCode = 200,
+                    Message = "Reviews",
+                    Data = result
+
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<Review>
+                {
+                    StatusCode = 500,
+                    Message = ex.Message,
+
                 };
             }
 

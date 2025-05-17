@@ -13,8 +13,9 @@ namespace Domain.Entities
         public Guid counselor_id { get; set; }
         public string preferd_time { get; set; }
         public DateTime preferd_date { get; set; }
-        public string status { get; set; } 
+        public string status { get; set; }
         public DateTime created_at { get; set; }
-    }
+        public decimal fee { get; set; }
 
+    }
 }

@@ -8,6 +8,7 @@ using Application.Interface.Repository;
 using Application.Interface.Service;
 using AutoMapper;
 using Domain;
+using Domain.Entities;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services.CouncelorService
@@ -41,13 +42,13 @@ namespace Infrastructure.Services.CouncelorService
                     };
                 }
                 var result = await _paymentRepository.GetAllPaymentsWithBookingAsync(Councelorid);
-                if (result == null)
+                if (!result.Any()|| result==null)
                 {
                     return new ApiResponse<List<PaymentWithBookingDTO>>
                     {
                         StatusCode = 200,
                         Message = "No Payments",
-                        Data = null
+                        Data = result
                     };
 
                 }
@@ -108,5 +109,6 @@ namespace Infrastructure.Services.CouncelorService
             }
            
         }
+        
     }
 }

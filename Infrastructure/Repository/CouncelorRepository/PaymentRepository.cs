@@ -31,7 +31,7 @@ namespace Infrastructure.Repository.CouncelorRepository
         }
         public async Task<PaymentSummaryDTO> GetEarningsBreakdownAsync(Guid counselorId)
         {
-            var sql = @"SELECT SUM(total_amount) AS TotalAmount,
+            var sql = @"SELECT SUM(total_amount) AS TotalAmount,SUM(counselor_amount) as CouncelorAmount,
                 SUM(CASE WHEN admin_payout_status = 'pending' THEN counselor_amount ELSE 0 END) AS PendingAmount,
                 SUM(CASE WHEN admin_payout_status = 'paid' THEN counselor_amount ELSE 0 END) AS ReceivedAmount
                 FROM payments

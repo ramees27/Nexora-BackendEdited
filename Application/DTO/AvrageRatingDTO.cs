@@ -9,6 +9,6 @@ namespace Application.DTO
     public class AvrageRatingDTO
     {
         public double? rating { get; set; } 
-        public int reviews { get; set; }
+        public int? reviews { get; set; }
     }
 }

@@ -45,6 +45,12 @@ namespace Nexora.Controllers.UserController
 
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("get/role/")]
+        public async Task<IActionResult> GetRole()
+        {
+            var result= GetLoggedInUserRole();
+            return Ok(result);
+        }
 
         [HttpPost("refresh-token")]
         public async Task<IActionResult> RefreshAccessToken(Guid userId)
@@ -62,12 +68,15 @@ namespace Nexora.Controllers.UserController
         public async Task<IActionResult> GetIdInCookies()
         {
             var userId =  GetLoggedInUserId();
+
+
+            if (userId.HasValue)
+            {
             
+                return Ok(userId.Value);
+            }
+            return Unauthorized(null);
 
-            if (!userId.HasValue)
-                return Unauthorized("User is not logged in");
-
-            return Ok(userId.Value);
         }
         [HttpPost("logout")]
         public IActionResult Logout()

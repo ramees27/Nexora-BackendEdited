@@ -98,7 +98,7 @@ namespace Nexora.Controllers.AdminController
             return StatusCode(result.StatusCode, result);
         }
         
-        [HttpPut("Concelor-Verification")]
+        [HttpPatch("Concelor-Verification")]
         public async Task<IActionResult> ConcelorVerification(Guid councelorId)
         {
 
@@ -115,6 +115,30 @@ namespace Nexora.Controllers.AdminController
         {
             var response = await _adminService.DeleteCounselorApplicationAsync(counselorId);
             return StatusCode(response.StatusCode, response);
+        }
+        [HttpGet("Get-all-bookings")]
+        public async Task<IActionResult> GetAllBookings()
+        {
+
+
+            var result = await _adminService.GetAllBookingDetails();
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpGet("Get-Monthly-income")]
+        public async Task<IActionResult> GetMonthlyIncome()
+        {
+
+
+            var result = await _adminService.GetMonthlyIncomeExpenseAsync();
+            if (result.StatusCode == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.StatusCode, result);
         }
     }
 }

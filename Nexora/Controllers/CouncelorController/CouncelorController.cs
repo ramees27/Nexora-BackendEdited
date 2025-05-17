@@ -18,7 +18,7 @@ namespace Nexora.Controllers.CouncelorController
         {
             _councelorService = councelorService;
         }
-        [Authorize]
+       
         [HttpGet("Councelor-By-Id")]
         public async Task<IActionResult> GetCouncelorById(Guid CouncellorId)
         {
@@ -53,6 +53,29 @@ namespace Nexora.Controllers.CouncelorController
         {
             var response = await _councelorService.AddEducationAsync(dto);
             return StatusCode(response.StatusCode, response);
+        }
+        [HttpGet("get/education/id")]
+        public async Task<IActionResult> GetEducation(Guid id)
+        {
+            var response = await _councelorService.GetEducationByCounselorIdAsync(id);
+            if (response.StatusCode == 200)
+                return Ok(response);
+
+            return StatusCode(response.StatusCode, response);
+        }
+        [HttpGet("CheckStatus")]
+        public async Task<IActionResult> CheckStatus()
+        {
+             var userId = GetLoggedInUserId().Value;
+             var result = await _councelorService.GetCounselorStatusAsync(userId);
+
+            return Ok(new
+            {
+                statusCode = 200,
+                message = "Counselor status fetched",
+                data = result,
+                error = (string)null
+            });
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Domain.Entities
         public int hourly_rate { get; set; }
         public string upi_id { get; set; }
         public int avg_rating { get; set; }
-        public string image_url { get; set; }
+        public string? image_url { get; set; }
         public bool is_deleted { get; set; } = false;
     }
 

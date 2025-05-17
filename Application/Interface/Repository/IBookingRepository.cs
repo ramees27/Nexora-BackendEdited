@@ -18,7 +18,10 @@ namespace Application.Interface.Repository
         Task<List<ActivityGetDTOForUser>> GetScheduledBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetCompletedBookings(Guid studentId);
         Task<List<ActivityGetDTOForUser>> GetRejectedandCancelledBookings(Guid studentId);
-      
+        //Task<bool> UpdateBookingStatusAsync(Guid bookingId);
+        Task<bool> CancelBookingByUserAfterPayment(Guid bookingId);
+
+
 
     }
 }
